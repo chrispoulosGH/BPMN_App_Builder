@@ -1,0 +1,220 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Activate_New_AIA_Customer" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Activate_New_AIA_Customer" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>5</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>BBNMS LS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>16188</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCMULE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30686</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCSF</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30685</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Cart and Checkout UI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33921</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce P O Discovery</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33824</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Coverage Map Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33760</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Customer Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31468</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Platform Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32470</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Sales</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33758</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Sales Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32411</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MPSYS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>8841</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>T Data</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21948</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1" name="Customer">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Call_Rep</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Sales Agent">
+        <bpmn:flowNodeRef>Task_Search_Address_Service_Qualification</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Apply_Promotions_Top_Offers</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Rate_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Equipment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Build_Cart</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Create_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Shipping</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Fork_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3" name="Billing Agent">
+        <bpmn:flowNodeRef>Task_Setup_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Approve_Biilling</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Shop  Purchase | Subdomain: Order Plan/Device | Product: Broadband | Business Flow: Activate New AIA Customer</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Call_Rep" name="Call Rep"/>
+    <bpmn:task id="Task_Search_Address_Service_Qualification" name="Search Address Service Qualification"/>
+    <bpmn:task id="Task_Apply_Promotions_Top_Offers" name="Apply Promotions Top Offers"/>
+    <bpmn:task id="Task_Select_Rate_Plan" name="Select Rate Plan"/>
+    <bpmn:task id="Task_Select_Equipment" name="Select Equipment"/>
+    <bpmn:task id="Task_Build_Cart" name="Build Cart"/>
+    <bpmn:task id="Task_Create_Account" name="Create Account"/>
+    <bpmn:task id="Task_Check_Credit" name="Check Credit"/>
+    <bpmn:task id="Task_Setup_Shipping" name="Setup Shipping"/>
+    <bpmn:task id="Task_Setup_Billing" name="Setup Billing"/>
+    <bpmn:task id="Task_Approve_Biilling" name="Approve Biilling"/>
+    <bpmn:task id="Task_Review_Submit_Order" name="Review Submit Order"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:exclusiveGateway id="Gateway_Fork_1" name="Fork 6"/>
+    <bpmn:exclusiveGateway id="Gateway_Join_1" name="Join 6"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Call_Rep"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Call_Rep" targetRef="Task_Search_Address_Service_Qualification"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Search_Address_Service_Qualification" targetRef="Task_Apply_Promotions_Top_Offers"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Apply_Promotions_Top_Offers" targetRef="Task_Select_Rate_Plan"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Select_Rate_Plan" targetRef="Task_Select_Equipment"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Select_Equipment" targetRef="Task_Build_Cart"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Build_Cart" targetRef="Task_Create_Account"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Check_Credit" targetRef="Task_Setup_Shipping"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Setup_Billing" targetRef="Task_Approve_Biilling"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Create_Account" targetRef="Gateway_Fork_1"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Gateway_Fork_1" targetRef="Task_Check_Credit"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Gateway_Fork_1" targetRef="Task_Setup_Billing"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Setup_Shipping" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Approve_Biilling" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Gateway_Join_1" targetRef="Task_Review_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_Review_Submit_Order" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text/>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Call_Rep"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>CCMULE, IDP Coverage Map Cloud, IDP Platform Cloud, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Search_Address_Service_Qualification"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>IDP IDM, IDP Customer Graph Cloud, CCMULE, CSI Customer Care, T Data, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Apply_Promotions_Top_Offers"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>CCSF, IDP Cart and Checkout UI, CSI Customer Care, CCMULE, Digital IDP, IDP Web Sales Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Select_Rate_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>IDP Cart and Checkout UI, IDP Commerce P O Discovery, CCMULE, Digital IDP, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Select_Equipment"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>CSI Customer Care, CCSF, Digital IDP, CCMULE, IDP Cart and Checkout UI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Build_Cart"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>BBNMS LS, Digital IDP, IDP IDM, CCMULE, IDP Customer Graph Cloud, MPSYS, CCSF, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Create_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>CCMULE, CCSF, IDP Web Sales</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Check_Credit"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>Digital IDP, CCMULE, IDP Coverage Map Cloud, IDP Platform Cloud, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Setup_Shipping"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>CCMULE, Digital IDP, IDP Coverage Map Cloud, IDP Cart and Checkout UI, CCSF, IDP Platform Cloud, IDP Customer Graph Cloud, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Setup_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text/>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Approve_Biilling"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>CCMULE, IDP Cart and Checkout UI, CSI Customer Care, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Review_Submit_Order"/>
+  </bpmn:process>
+</bpmn:definitions>

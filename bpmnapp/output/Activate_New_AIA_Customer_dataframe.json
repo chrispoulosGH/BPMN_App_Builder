@@ -1,0 +1,359 @@
+[
+  {
+    "objectType": "lane",
+    "x": 70,
+    "y": 80,
+    "width": 2506,
+    "height": 200
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 150,
+    "y": 162,
+    "width": 36,
+    "height": 36
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 330,
+    "y": 140,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "lane",
+    "x": 70,
+    "y": 280,
+    "width": 2506,
+    "height": 330
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 510,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 690,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 870,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1050,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1230,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1410,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1770,
+    "y": 330,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1950,
+    "y": 330,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 2310,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 2490,
+    "y": 502,
+    "width": 36,
+    "height": 36
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1590,
+    "y": 495,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 2130,
+    "y": 495,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "objectType": "lane",
+    "x": 70,
+    "y": 610,
+    "width": 2506,
+    "height": 200
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1770,
+    "y": 670,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "flowNodeRef",
+    "x": 1950,
+    "y": 670,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "startEvent",
+    "x": 150,
+    "y": 162,
+    "width": 36,
+    "height": 36
+  },
+  {
+    "objectType": "task",
+    "x": 330,
+    "y": 140,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 510,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 690,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 870,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1050,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1230,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1410,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1770,
+    "y": 330,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1950,
+    "y": 330,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1770,
+    "y": 670,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 1950,
+    "y": 670,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "task",
+    "x": 2310,
+    "y": 480,
+    "width": 100,
+    "height": 80
+  },
+  {
+    "objectType": "endEvent",
+    "x": 2490,
+    "y": 502,
+    "width": 36,
+    "height": 36
+  },
+  {
+    "objectType": "exclusiveGateway",
+    "x": 1590,
+    "y": 495,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "objectType": "exclusiveGateway",
+    "x": 2130,
+    "y": 495,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 186,
+    "y": 180,
+    "width": 144,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 430,
+    "y": 180,
+    "width": 80,
+    "height": 340
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 610,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 790,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 970,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1150,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1330,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1870,
+    "y": 370,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1870,
+    "y": 710,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1510,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1640,
+    "y": 370,
+    "width": 130,
+    "height": 150
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 1640,
+    "y": 520,
+    "width": 130,
+    "height": 190
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 2050,
+    "y": 370,
+    "width": 80,
+    "height": 150
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 2050,
+    "y": 520,
+    "width": 80,
+    "height": 190
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 2180,
+    "y": 520,
+    "width": 130,
+    "height": 0
+  },
+  {
+    "objectType": "sequenceFlow",
+    "x": 2410,
+    "y": 520,
+    "width": 80,
+    "height": 0
+  }
+]

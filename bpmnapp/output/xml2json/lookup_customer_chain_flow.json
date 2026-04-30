@@ -1,0 +1,222 @@
+[
+  {
+    "id": "Task_175",
+    "type": "task",
+    "name": "CCSF",
+    "x": 370,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_176",
+    "type": "task",
+    "name": "CCMULE",
+    "x": 640,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_177",
+    "type": "task",
+    "name": "IDP-Cloud-CG",
+    "x": 910,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_178",
+    "type": "task",
+    "name": "DPG - Sales & Sunrise",
+    "x": 1180,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_179",
+    "type": "task",
+    "name": "Platform Support ATTFEDGOV1",
+    "x": 1450,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_180",
+    "type": "task",
+    "name": "eTRACS",
+    "x": 1720,
+    "y": 242.5,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Start_1",
+    "type": "event",
+    "name": "Request\nReceived",
+    "x": 180,
+    "y": 256.5,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "End_1",
+    "type": "event",
+    "name": "Completed",
+    "x": 1990,
+    "y": 256.5,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "Flow_181",
+    "sourceRef": "Start_1",
+    "targetRef": "Task_175",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 216,
+        "y": 274.5
+      },
+      {
+        "x": 370,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_182",
+    "sourceRef": "Task_175",
+    "targetRef": "Task_176",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 490,
+        "y": 274.5
+      },
+      {
+        "x": 640,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_183",
+    "sourceRef": "Task_176",
+    "targetRef": "Task_177",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 760,
+        "y": 274.5
+      },
+      {
+        "x": 910,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_184",
+    "sourceRef": "Task_177",
+    "targetRef": "Task_178",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1030,
+        "y": 274.5
+      },
+      {
+        "x": 1180,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_185",
+    "sourceRef": "Task_178",
+    "targetRef": "Task_179",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1300,
+        "y": 274.5
+      },
+      {
+        "x": 1450,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_186",
+    "sourceRef": "Task_179",
+    "targetRef": "Task_180",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1570,
+        "y": 274.5
+      },
+      {
+        "x": 1720,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_187",
+    "sourceRef": "Task_180",
+    "targetRef": "End_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1840,
+        "y": 274.5
+      },
+      {
+        "x": 1990,
+        "y": 274.5
+      }
+    ],
+    "color": null
+  }
+]

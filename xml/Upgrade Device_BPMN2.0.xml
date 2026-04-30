@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Upgrade_Device" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Upgrade_Device" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>4</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Halo C AM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27460</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Cart and Checkout UI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33921</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce Cart Pricing</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33825</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Customer Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31468</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Upper Funnel Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31548</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Sales</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33758</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP WebAcctMgmt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32768</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MPSYS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>8841</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OCE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23488</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Products Offers Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32560</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>YODA</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21053</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Log_into_AT_T_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Account_Overview</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Upgrade_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Filter_and_Compare_Phones</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Phone</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Customize_the_Phone</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Add_ons</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Cart</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Checkout</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Schedule_Device_Delivery_Pickup</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Online | Domain: Use  Manage | Subdomain: Upgrade Device / Equipment | Product: Mobility | Business Flow: Upgrade Device</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Log_into_AT_T_Account" name="Log into AT T Account"/>
+    <bpmn:task id="Task_Go_to_Account_Overview" name="Go to Account Overview"/>
+    <bpmn:task id="Task_Check_Upgrade_Eligibility" name="Check Upgrade Eligibility"/>
+    <bpmn:task id="Task_Filter_and_Compare_Phones" name="Filter and Compare Phones"/>
+    <bpmn:task id="Task_Select_Phone" name="Select Phone"/>
+    <bpmn:task id="Task_Customize_the_Phone" name="Customize the Phone"/>
+    <bpmn:task id="Task_Select_Add_ons" name="Select Add ons"/>
+    <bpmn:task id="Task_Review_Cart" name="Review Cart"/>
+    <bpmn:task id="Task_Checkout" name="Checkout"/>
+    <bpmn:task id="Task_Schedule_Device_Delivery_Pickup" name="Schedule Device Delivery Pickup"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Log_into_AT_T_Account" targetRef="Task_Go_to_Account_Overview"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Go_to_Account_Overview" targetRef="Task_Check_Upgrade_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Check_Upgrade_Eligibility" targetRef="Task_Filter_and_Compare_Phones"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Filter_and_Compare_Phones" targetRef="Task_Select_Phone"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Select_Phone" targetRef="Task_Customize_the_Phone"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Customize_the_Phone" targetRef="Task_Select_Add_ons"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Select_Add_ons" targetRef="Task_Review_Cart"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Review_Cart" targetRef="Task_Checkout"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Checkout" targetRef="Task_Schedule_Device_Delivery_Pickup"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Schedule_Device_Delivery_Pickup" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>IDP WebAcctMgmt, IDP IDM, MPSYS, Halo C AM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>Products Offers Cloud, TLG MOB, IDP Customer Graph Cloud, IDP WebAcctMgmt, MPSYS, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Go_to_Account_Overview"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>IDP Web Sales, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Check_Upgrade_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>IDP Web Sales, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Filter_and_Compare_Phones"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Commerce Cart Pricing</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Select_Phone"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Commerce Cart Pricing, IDP Web Sales</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Customize_the_Phone"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>IDP Upper Funnel Cloud, Digital IDP, IDP Web Sales, IDP Customer Graph Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Select_Add_ons"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Commerce Cart Pricing</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Review_Cart"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>IDP Cart and Checkout UI, IDP Commerce Cart Pricing, IDP WebAcctMgmt, IDP Web Sales</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Checkout"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>YODA, IDP Web Sales, IDP Upper Funnel Cloud, OCE</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Schedule_Device_Delivery_Pickup"/>
+  </bpmn:process>
+</bpmn:definitions>

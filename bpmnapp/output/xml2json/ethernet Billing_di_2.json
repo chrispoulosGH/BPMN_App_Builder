@@ -1,0 +1,691 @@
+[
+  {
+    "id": "Task_ADOPT_ValidateContract",
+    "type": "task",
+    "name": "Validate Contract / Identify Contract Event (ADOPT)",
+    "x": 330,
+    "y": 180,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "all contract automation applications"
+    ]
+  },
+  {
+    "id": "Task_MITT_InitiateMigration",
+    "type": "task",
+    "name": "Initiate Account Migration (DCS\u2192UB) (MITT)",
+    "x": 690,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "MITT",
+      "DSM",
+      "DCS-CR60",
+      "GCP",
+      "CADM"
+    ]
+  },
+  {
+    "id": "Task_MITT_ConvertUSOC",
+    "type": "task",
+    "name": "Convert Variable-rated USOCs \u2192 Fixed-rated USOCs (Billing Inventory)",
+    "x": 870,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "MITT",
+      "CADM"
+    ]
+  },
+  {
+    "id": "Task_DCS_AssignUSOC_COS",
+    "type": "task",
+    "name": "Convert Default USOC \u2192 Fixed-rate USOC; Assign COS (bandwidth/interface/switched vs dedicated)",
+    "x": 1050,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "DCS-CR60"
+    ]
+  },
+  {
+    "id": "Task_DCS_SendStartBilling",
+    "type": "task",
+    "name": "Send Start Billing Order with Fixed-rate USOC + Rate to CADM",
+    "x": 1230,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "DCS-CR60",
+      "CADM"
+    ]
+  },
+  {
+    "id": "Task_Token_Continue",
+    "type": "task",
+    "name": "Continue ASOC Token ID Logic (no contract impact)",
+    "x": 700,
+    "y": 290,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_UB_ExtractDeterminants",
+    "type": "task",
+    "name": "Extract Rate Determinants from Service Order Data",
+    "x": 1410,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "CADM",
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_UB_UseCustRate",
+    "type": "task",
+    "name": "Use Customer-specific Rate",
+    "x": 1950,
+    "y": -100,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_UB_UseDefaultRate",
+    "type": "task",
+    "name": "Use Default Rate",
+    "x": 1950,
+    "y": 180,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_BGW_GetDiscounts",
+    "type": "task",
+    "name": "Retrieve Customer-specific Discounts (Rate Plan/Discounts/Status)",
+    "x": 2270,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "BGW"
+    ]
+  },
+  {
+    "id": "Task_UB_ApplyDiscounts",
+    "type": "task",
+    "name": "Apply Discounts to PBI",
+    "x": 2460,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_UB_GenerateInvoice",
+    "type": "task",
+    "name": "Generate Invoice (UB)",
+    "x": 2760,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "UB"
+    ]
+  },
+  {
+    "id": "Task_UB_LookupRate",
+    "type": "task",
+    "name": "Lookup Rate in SA/SA-UP (UB Rate Tables)",
+    "x": 1590,
+    "y": 40,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "SA-SA/UP",
+      "UB"
+    ],
+    "subProcessFileName": "Manage Account_BPMN2.0_di.json"
+  },
+  {
+    "id": "Start_Message_ServiceOrder",
+    "type": "event",
+    "name": "Ethernet Service Order Received",
+    "x": 150,
+    "y": 202,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "End_Invoice",
+    "type": "event",
+    "name": "Invoice Generated",
+    "x": 2942,
+    "y": 62,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "Gateway_ContractTouching",
+    "name": "Contract-touching event?",
+    "soureRef": [
+      "Task_ADOPT_ValidateContract"
+    ],
+    "targetRef": [
+      "Task_MITT_InitiateMigration",
+      "Task_Token_Continue"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 510,
+    "y": 195,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_CustSpecificRate",
+    "name": "Customer-specific rate exists?",
+    "soureRef": [
+      "Task_UB_LookupRate"
+    ],
+    "targetRef": [
+      "Task_UB_UseCustRate",
+      "Task_UB_UseDefaultRate"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 1770,
+    "y": 55,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_19e13sd",
+    "name": "",
+    "soureRef": [
+      "Task_UB_UseCustRate",
+      "Task_UB_UseDefaultRate"
+    ],
+    "targetRef": [
+      "Task_BGW_GetDiscounts"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 2145,
+    "y": 55,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_0v4ghyp",
+    "name": "",
+    "soureRef": [
+      "Task_Token_Continue",
+      "Task_UB_ApplyDiscounts"
+    ],
+    "targetRef": [
+      "Task_UB_GenerateInvoice"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 2655,
+    "y": 55,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_1",
+    "sourceRef": "Start_Message_ServiceOrder",
+    "targetRef": "Task_ADOPT_ValidateContract",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 220
+      },
+      {
+        "x": 330,
+        "y": 220
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_2",
+    "sourceRef": "Task_ADOPT_ValidateContract",
+    "targetRef": "Gateway_ContractTouching",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 220
+      },
+      {
+        "x": 510,
+        "y": 220
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_Yes",
+    "sourceRef": "Gateway_ContractTouching",
+    "targetRef": "Task_MITT_InitiateMigration",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 560,
+        "y": 220
+      },
+      {
+        "x": 590,
+        "y": 220
+      },
+      {
+        "x": 590,
+        "y": 80
+      },
+      {
+        "x": 690,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_3",
+    "sourceRef": "Task_MITT_InitiateMigration",
+    "targetRef": "Task_MITT_ConvertUSOC",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 80
+      },
+      {
+        "x": 870,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_4",
+    "sourceRef": "Task_MITT_ConvertUSOC",
+    "targetRef": "Task_DCS_AssignUSOC_COS",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 80
+      },
+      {
+        "x": 1050,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_5",
+    "sourceRef": "Task_DCS_AssignUSOC_COS",
+    "targetRef": "Task_DCS_SendStartBilling",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 80
+      },
+      {
+        "x": 1230,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_6",
+    "sourceRef": "Task_DCS_SendStartBilling",
+    "targetRef": "Task_UB_ExtractDeterminants",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 80
+      },
+      {
+        "x": 1410,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_7",
+    "sourceRef": "Task_UB_ExtractDeterminants",
+    "targetRef": "Task_UB_LookupRate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 80
+      },
+      {
+        "x": 1590,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_8",
+    "sourceRef": "Task_UB_LookupRate",
+    "targetRef": "Gateway_CustSpecificRate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 80
+      },
+      {
+        "x": 1770,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_CustRate",
+    "sourceRef": "Gateway_CustSpecificRate",
+    "targetRef": "Task_UB_UseCustRate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1820,
+        "y": 80
+      },
+      {
+        "x": 1850,
+        "y": 80
+      },
+      {
+        "x": 1850,
+        "y": -60
+      },
+      {
+        "x": 1950,
+        "y": -60
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_DefaultRate",
+    "sourceRef": "Gateway_CustSpecificRate",
+    "targetRef": "Task_UB_UseDefaultRate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1820,
+        "y": 80
+      },
+      {
+        "x": 1850,
+        "y": 80
+      },
+      {
+        "x": 1850,
+        "y": 220
+      },
+      {
+        "x": 1950,
+        "y": 220
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_10",
+    "sourceRef": "Task_BGW_GetDiscounts",
+    "targetRef": "Task_UB_ApplyDiscounts",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2370,
+        "y": 80
+      },
+      {
+        "x": 2460,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_12",
+    "sourceRef": "Task_UB_GenerateInvoice",
+    "targetRef": "End_Invoice",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2860,
+        "y": 80
+      },
+      {
+        "x": 2942,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_No",
+    "sourceRef": "Gateway_ContractTouching",
+    "targetRef": "Task_Token_Continue",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 560,
+        "y": 220
+      },
+      {
+        "x": 590,
+        "y": 220
+      },
+      {
+        "x": 590,
+        "y": 330
+      },
+      {
+        "x": 700,
+        "y": 330
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_O2I_Token_to_Invoice",
+    "sourceRef": "Task_Token_Continue",
+    "targetRef": "Gateway_0v4ghyp",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 800,
+        "y": 330
+      },
+      {
+        "x": 2680,
+        "y": 330
+      },
+      {
+        "x": 2680,
+        "y": 105
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_19amf8t",
+    "sourceRef": "Task_UB_UseCustRate",
+    "targetRef": "Gateway_19e13sd",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": -60
+      },
+      {
+        "x": 2170,
+        "y": -60
+      },
+      {
+        "x": 2170,
+        "y": 55
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_0x6h0dd",
+    "sourceRef": "Task_UB_UseDefaultRate",
+    "targetRef": "Gateway_19e13sd",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 220
+      },
+      {
+        "x": 2170,
+        "y": 220
+      },
+      {
+        "x": 2170,
+        "y": 105
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_0txsfjn",
+    "sourceRef": "Gateway_19e13sd",
+    "targetRef": "Task_BGW_GetDiscounts",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2195,
+        "y": 80
+      },
+      {
+        "x": 2270,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_17acu8m",
+    "sourceRef": "Task_UB_ApplyDiscounts",
+    "targetRef": "Gateway_0v4ghyp",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2560,
+        "y": 80
+      },
+      {
+        "x": 2655,
+        "y": 80
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_1pe5czc",
+    "sourceRef": "Gateway_0v4ghyp",
+    "targetRef": "Task_UB_GenerateInvoice",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2705,
+        "y": 80
+      },
+      {
+        "x": 2760,
+        "y": 80
+      }
+    ],
+    "color": null
+  }
+]

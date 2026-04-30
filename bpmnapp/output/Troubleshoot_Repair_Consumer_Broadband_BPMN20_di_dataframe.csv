@@ -1,0 +1,14 @@
+business_flow,e2eux_sequence,gateway,e2eux_actor,e2eux
+Troubleshoot,0,,,Provision Device
+Troubleshoot,1,,,Log Into Device
+Troubleshoot,2,,,Review Jobs
+Troubleshoot,3,,,Select Job View Comments
+Troubleshoot,4,,,Contact Customer Verify ETA
+Troubleshoot,5,,,Arrive on Prem Update Job
+Troubleshoot,6,,,Review Order w Customer
+Troubleshoot,7,,,Isolate Resolve
+Troubleshoot,8,,,Create Submit Damage Claim
+Troubleshoot,9,,,Submit Bury Request
+Troubleshoot,10,,,Check Quality True Test
+Troubleshoot,11,,,Upload True Test Scope Results
+Troubleshoot,12,,,Close Job

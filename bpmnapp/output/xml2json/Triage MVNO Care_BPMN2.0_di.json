@@ -1,0 +1,327 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 480,
+    "width": 1246,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Assess_Account_Subscriber_Management_Issues",
+    "type": "task",
+    "name": "Assess Account Subscriber Management Issues",
+    "x": 510,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "CSI Parent Triage"
+    ]
+  },
+  {
+    "id": "Task_Assess_Device_or_Equipment_Issues",
+    "type": "task",
+    "name": "Assess Device or Equipment Issues",
+    "x": 1050,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CCR Relational CCR R",
+      "CSI Product and Offer Mgt",
+      "CSI Order and Subscription Mngt",
+      "TORCH"
+    ]
+  },
+  {
+    "id": "Task_Assess_General_Issues",
+    "type": "task",
+    "name": "Assess General Issues",
+    "x": 1050,
+    "y": 130,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Parent Triage",
+      "CSI Network Management",
+      "eCDW",
+      "PEARS",
+      "GRID GDDN"
+    ]
+  },
+  {
+    "id": "Task_Assess_Network_Service_Connectivity_Issues",
+    "type": "task",
+    "name": "Assess Network Service Connectivity Issues",
+    "x": 690,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "CSI Network Management"
+    ]
+  },
+  {
+    "id": "Task_Assess_Porting_Issues",
+    "type": "task",
+    "name": "Assess Porting Issues",
+    "x": 330,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Network Management",
+      "TLG MOB",
+      "CS FOBPM"
+    ]
+  },
+  {
+    "id": "Task_Assess_Service_Features_Functionality_Issues",
+    "type": "task",
+    "name": "Assess Service Features Functionality Issues",
+    "x": 870,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TORCH",
+      "CSI Network Management",
+      "SC Switch Control TSC",
+      "TLG MOB",
+      "CSI Customer Care"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 302,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 1230,
+    "y": 302,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Assess_Porting_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 320
+      },
+      {
+        "x": 330,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Assess_Porting_Issues",
+    "targetRef": "Task_Assess_Account_Subscriber_Management_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 320
+      },
+      {
+        "x": 510,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Assess_Account_Subscriber_Management_Issues",
+    "targetRef": "Task_Assess_Network_Service_Connectivity_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 320
+      },
+      {
+        "x": 690,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Assess_Network_Service_Connectivity_Issues",
+    "targetRef": "Task_Assess_Service_Features_Functionality_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 320
+      },
+      {
+        "x": 870,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Assess_Service_Features_Functionality_Issues",
+    "targetRef": "Task_Assess_General_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 320
+      },
+      {
+        "x": 1000,
+        "y": 320
+      },
+      {
+        "x": 1000,
+        "y": 170
+      },
+      {
+        "x": 1020,
+        "y": 170
+      },
+      {
+        "x": 1050,
+        "y": 170
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Assess_Service_Features_Functionality_Issues",
+    "targetRef": "Task_Assess_Device_or_Equipment_Issues",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 320
+      },
+      {
+        "x": 1000,
+        "y": 320
+      },
+      {
+        "x": 1000,
+        "y": 470
+      },
+      {
+        "x": 1020,
+        "y": 470
+      },
+      {
+        "x": 1050,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Assess_General_Issues",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 170
+      },
+      {
+        "x": 1180,
+        "y": 170
+      },
+      {
+        "x": 1200,
+        "y": 170
+      },
+      {
+        "x": 1200,
+        "y": 320
+      },
+      {
+        "x": 1230,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Assess_Device_or_Equipment_Issues",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 470
+      },
+      {
+        "x": 1180,
+        "y": 470
+      },
+      {
+        "x": 1200,
+        "y": 470
+      },
+      {
+        "x": 1200,
+        "y": 320
+      },
+      {
+        "x": 1230,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  }
+]

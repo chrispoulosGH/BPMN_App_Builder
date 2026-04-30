@@ -1,0 +1,203 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 1246,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Billing",
+    "type": "task",
+    "name": "Billing",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Manual_Invoicing",
+    "type": "task",
+    "name": "Manual Invoicing",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Mediation_Usage",
+    "type": "task",
+    "name": "Mediation Usage",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Payment_Dispute_Management",
+    "type": "task",
+    "name": "Payment Dispute Management",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Payments_Reconciliation",
+    "type": "task",
+    "name": "Payments Reconciliation",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 1230,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Mediation_Usage",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Mediation_Usage",
+    "targetRef": "Task_Payments_Reconciliation",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Payments_Reconciliation",
+    "targetRef": "Task_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Billing",
+    "targetRef": "Task_Manual_Invoicing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Manual_Invoicing",
+    "targetRef": "Task_Payment_Dispute_Management",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Payment_Dispute_Management",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

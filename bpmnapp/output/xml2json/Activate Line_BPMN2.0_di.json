@@ -1,0 +1,1300 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 630,
+    "width": 4666,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Activate_Line_Self_Service",
+    "type": "task",
+    "name": "Activate Line Self Service",
+    "x": 330,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Web Support",
+      "myATT Mobile App"
+    ]
+  },
+  {
+    "id": "Task_Authenticate_Customer",
+    "type": "task",
+    "name": "Authenticate Customer",
+    "x": 1590,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP IDM",
+      "Avertack",
+      "Halo E AM",
+      "MPSYS",
+      "CCSF",
+      "GRID GDDN",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Authorize_Credit_Check",
+    "type": "task",
+    "name": "Authorize Credit Check",
+    "x": 2490,
+    "y": 130,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CAS",
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Auto_Summarize_Notes",
+    "type": "task",
+    "name": "Auto Summarize Notes",
+    "x": 4470,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "AA",
+      "CCDL",
+      "CAST"
+    ]
+  },
+  {
+    "id": "Task_Complete_and_Submit_Order",
+    "type": "task",
+    "name": "Complete and Submit Order",
+    "x": 4110,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Digital IDP",
+      "TLG MOB",
+      "CSI Customer Care",
+      "Avertack",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Handoff_to_Agent_from_IVR",
+    "type": "task",
+    "name": "Handoff to Agent from IVR",
+    "x": 1230,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS CRM",
+      "ATT Coral Desktop",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "type": "task",
+    "name": "IVR Menu Retrieve Customer Info Route Call",
+    "x": 690,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ECO USP",
+      "CSI Customer Care",
+      "ATT CCT APIGEE",
+      "ISAAC WFE",
+      "IDP Chat VA ANDi",
+      "ATT CCT Service Access Gateway",
+      "IDP Customer Graph Cloud",
+      "CCT ATT IPCS",
+      "DialogFlow",
+      "ATT CCT AEP",
+      "PC GCP BI"
+    ]
+  },
+  {
+    "id": "Task_LIC_to_OPUS_Authenticate_optional",
+    "type": "task",
+    "name": "LIC to OPUS Authenticate optional",
+    "x": 2490,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "FED US",
+      "T Data",
+      "Avertack",
+      "CPC",
+      "IDP IDM",
+      "TLG MOB",
+      "CCR Relational CCR R",
+      "CSI Customer Care"
+    ]
+  },
+  {
+    "id": "Task_LIC_to_OPUS_Search_CTN_optional",
+    "type": "task",
+    "name": "LIC to OPUS Search CTN optional",
+    "x": 2130,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "FED US",
+      "T Data",
+      "INLAP",
+      "CSI Customer Care",
+      "CSI Parent Triage",
+      "TLG MOB",
+      "CSI Product and Offer Mgt",
+      "CCM Clarify CM"
+    ]
+  },
+  {
+    "id": "Task_Recap_Call",
+    "type": "task",
+    "name": "Recap Call",
+    "x": 4290,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT Coral Desktop",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_Receive_Call",
+    "type": "task",
+    "name": "Receive Call",
+    "x": 510,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "HVD VDI",
+      "Sonus TCCS"
+    ]
+  },
+  {
+    "id": "Task_Record_Monitor_Call",
+    "type": "task",
+    "name": "Record Monitor Call",
+    "x": 1230,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ECRMI",
+      "ATT VERINT CQM",
+      "Qfiniti Call Recording"
+    ]
+  },
+  {
+    "id": "Task_Reserve_Subscriber_Number",
+    "type": "task",
+    "name": "Reserve Subscriber Number",
+    "x": 3030,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Review_Billing_Order",
+    "type": "task",
+    "name": "Review Billing Order",
+    "x": 3390,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "ORACLE SCM",
+      "T Data"
+    ]
+  },
+  {
+    "id": "Task_Review_Lines_in_Accounts_Services",
+    "type": "task",
+    "name": "Review Lines in Accounts Services",
+    "x": 1950,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_Search_Customer_Service_Address",
+    "type": "task",
+    "name": "Search Customer Service Address",
+    "x": 2490,
+    "y": 580,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C",
+      "FED US",
+      "OVALS",
+      "T Data",
+      "CSI Parent Triage",
+      "CCSF",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Setup_Payment",
+    "type": "task",
+    "name": "Setup Payment",
+    "x": 3750,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Transcribe_Redact_SPI",
+    "type": "task",
+    "name": "Transcribe Redact SPI",
+    "x": 1230,
+    "y": 580,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Sonus TCCS",
+      "SC SPI",
+      "ATT Coral Desktop",
+      "RAISR"
+    ]
+  },
+  {
+    "id": "Task_Validate_Order",
+    "type": "task",
+    "name": "Validate Order",
+    "x": 2850,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "FED CPC",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Add_a_Line",
+    "type": "task",
+    "name": "Add a Line",
+    "x": 1770,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Platform Support ATTFEDGOV1",
+      "DPG Sales Sunrise",
+      "eTRACS",
+      "GRID AC",
+      "IDP BUPS",
+      "TLG MOB",
+      "IDP Customer Graph Cloud",
+      "CCSF",
+      "CSI Credit and Val",
+      "CCMULE",
+      "FED US",
+      "CSI Customer Care",
+      "CCM Clarify CM"
+    ],
+    "subProcessFileName": "Add a Line_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Change_Rate_Plan",
+    "type": "task",
+    "name": "Change Rate Plan",
+    "x": 3210,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "EDP",
+      "TLG MOB",
+      "OPUS C"
+    ],
+    "subProcessFileName": "Change Rate Plan_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Inquire_Billing",
+    "type": "task",
+    "name": "Inquire Billing",
+    "x": 870,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT CCTP ICM GEN ADAPTER FRAME",
+      "ATT CCTP CTI FRAME"
+    ],
+    "subProcessFileName": "Inquire Billing_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Purchase_Product",
+    "type": "task",
+    "name": "Purchase Product",
+    "x": 2490,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CCSF"
+    ],
+    "subProcessFileName": "Purchase Product_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Review_Terms_Conditions",
+    "type": "task",
+    "name": "Review Terms Conditions",
+    "x": 3930,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB"
+    ],
+    "subProcessFileName": "Review Terms Conditions_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Skip_Trade_In",
+    "type": "task",
+    "name": "Skip Trade In",
+    "x": 3570,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB",
+      "CSI Customer Care"
+    ],
+    "subProcessFileName": "Skip Trade In_BPMN2.0_di.json"
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 452,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 4650,
+    "y": 452,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork P1",
+    "soureRef": [
+      "Task_Inquire_Billing"
+    ],
+    "targetRef": [
+      "Task_Handoff_to_Agent_from_IVR",
+      "Task_Record_Monitor_Call",
+      "Task_Transcribe_Redact_SPI"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1050,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join P1",
+    "soureRef": [
+      "Task_Handoff_to_Agent_from_IVR",
+      "Task_Record_Monitor_Call",
+      "Task_Transcribe_Redact_SPI"
+    ],
+    "targetRef": [
+      "Task_Authenticate_Customer"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1410,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_2",
+    "name": "Fork P2",
+    "soureRef": [
+      "Task_LIC_to_OPUS_Search_CTN_optional"
+    ],
+    "targetRef": [
+      "Task_Authorize_Credit_Check",
+      "Task_LIC_to_OPUS_Authenticate_optional",
+      "Task_Purchase_Product",
+      "Task_Search_Customer_Service_Address"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2310,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_2",
+    "name": "Join P2",
+    "soureRef": [
+      "Task_Authorize_Credit_Check",
+      "Task_LIC_to_OPUS_Authenticate_optional",
+      "Task_Purchase_Product",
+      "Task_Search_Customer_Service_Address"
+    ],
+    "targetRef": [
+      "Task_Validate_Order"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2670,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Handoff_to_Agent_from_IVR",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1100,
+        "y": 470
+      },
+      {
+        "x": 1130,
+        "y": 470
+      },
+      {
+        "x": 1130,
+        "y": 320
+      },
+      {
+        "x": 1200,
+        "y": 320
+      },
+      {
+        "x": 1230,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Record_Monitor_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1100,
+        "y": 470
+      },
+      {
+        "x": 1230,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Transcribe_Redact_SPI",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1100,
+        "y": 470
+      },
+      {
+        "x": 1130,
+        "y": 470
+      },
+      {
+        "x": 1130,
+        "y": 620
+      },
+      {
+        "x": 1200,
+        "y": 620
+      },
+      {
+        "x": 1230,
+        "y": 620
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Authorize_Credit_Check",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2360,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 170
+      },
+      {
+        "x": 2460,
+        "y": 170
+      },
+      {
+        "x": 2490,
+        "y": 170
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_LIC_to_OPUS_Authenticate_optional",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2360,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 320
+      },
+      {
+        "x": 2460,
+        "y": 320
+      },
+      {
+        "x": 2490,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Purchase_Product",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2360,
+        "y": 470
+      },
+      {
+        "x": 2490,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Search_Customer_Service_Address",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2360,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 470
+      },
+      {
+        "x": 2390,
+        "y": 620
+      },
+      {
+        "x": 2460,
+        "y": 620
+      },
+      {
+        "x": 2490,
+        "y": 620
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "Task_Authenticate_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1460,
+        "y": 470
+      },
+      {
+        "x": 1590,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Gateway_Join_2",
+    "targetRef": "Task_Validate_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2720,
+        "y": 470
+      },
+      {
+        "x": 2850,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Activate_Line_Self_Service",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 470
+      },
+      {
+        "x": 330,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Activate_Line_Self_Service",
+    "targetRef": "Task_Receive_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 470
+      },
+      {
+        "x": 510,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Add_a_Line",
+    "targetRef": "Task_Review_Lines_in_Accounts_Services",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 470
+      },
+      {
+        "x": 1950,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Authenticate_Customer",
+    "targetRef": "Task_Add_a_Line",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 470
+      },
+      {
+        "x": 1770,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Authorize_Credit_Check",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 170
+      },
+      {
+        "x": 2620,
+        "y": 170
+      },
+      {
+        "x": 2640,
+        "y": 170
+      },
+      {
+        "x": 2640,
+        "y": 470
+      },
+      {
+        "x": 2670,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Auto_Summarize_Notes",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 4570,
+        "y": 470
+      },
+      {
+        "x": 4650,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_16",
+    "sourceRef": "Task_Change_Rate_Plan",
+    "targetRef": "Task_Review_Billing_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3310,
+        "y": 470
+      },
+      {
+        "x": 3390,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_17",
+    "sourceRef": "Task_Complete_and_Submit_Order",
+    "targetRef": "Task_Recap_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 4210,
+        "y": 470
+      },
+      {
+        "x": 4290,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_18",
+    "sourceRef": "Task_Handoff_to_Agent_from_IVR",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 320
+      },
+      {
+        "x": 1360,
+        "y": 320
+      },
+      {
+        "x": 1380,
+        "y": 320
+      },
+      {
+        "x": 1380,
+        "y": 470
+      },
+      {
+        "x": 1410,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_19",
+    "sourceRef": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "targetRef": "Task_Inquire_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 470
+      },
+      {
+        "x": 870,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_20",
+    "sourceRef": "Task_Inquire_Billing",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 470
+      },
+      {
+        "x": 1050,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_21",
+    "sourceRef": "Task_LIC_to_OPUS_Authenticate_optional",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 320
+      },
+      {
+        "x": 2620,
+        "y": 320
+      },
+      {
+        "x": 2640,
+        "y": 320
+      },
+      {
+        "x": 2640,
+        "y": 470
+      },
+      {
+        "x": 2670,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_22",
+    "sourceRef": "Task_LIC_to_OPUS_Search_CTN_optional",
+    "targetRef": "Gateway_Fork_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 470
+      },
+      {
+        "x": 2310,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_23",
+    "sourceRef": "Task_Purchase_Product",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 470
+      },
+      {
+        "x": 2670,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_24",
+    "sourceRef": "Task_Recap_Call",
+    "targetRef": "Task_Auto_Summarize_Notes",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 4390,
+        "y": 470
+      },
+      {
+        "x": 4470,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_25",
+    "sourceRef": "Task_Receive_Call",
+    "targetRef": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 470
+      },
+      {
+        "x": 690,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_26",
+    "sourceRef": "Task_Record_Monitor_Call",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 470
+      },
+      {
+        "x": 1410,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_27",
+    "sourceRef": "Task_Reserve_Subscriber_Number",
+    "targetRef": "Task_Change_Rate_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3130,
+        "y": 470
+      },
+      {
+        "x": 3210,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_28",
+    "sourceRef": "Task_Review_Billing_Order",
+    "targetRef": "Task_Skip_Trade_In",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3490,
+        "y": 470
+      },
+      {
+        "x": 3570,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_29",
+    "sourceRef": "Task_Review_Lines_in_Accounts_Services",
+    "targetRef": "Task_LIC_to_OPUS_Search_CTN_optional",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 470
+      },
+      {
+        "x": 2130,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_30",
+    "sourceRef": "Task_Review_Terms_Conditions",
+    "targetRef": "Task_Complete_and_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 4030,
+        "y": 470
+      },
+      {
+        "x": 4110,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_31",
+    "sourceRef": "Task_Search_Customer_Service_Address",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 620
+      },
+      {
+        "x": 2620,
+        "y": 620
+      },
+      {
+        "x": 2640,
+        "y": 620
+      },
+      {
+        "x": 2640,
+        "y": 470
+      },
+      {
+        "x": 2670,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_32",
+    "sourceRef": "Task_Setup_Payment",
+    "targetRef": "Task_Review_Terms_Conditions",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3850,
+        "y": 470
+      },
+      {
+        "x": 3930,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_33",
+    "sourceRef": "Task_Skip_Trade_In",
+    "targetRef": "Task_Setup_Payment",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3670,
+        "y": 470
+      },
+      {
+        "x": 3750,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_34",
+    "sourceRef": "Task_Transcribe_Redact_SPI",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 620
+      },
+      {
+        "x": 1360,
+        "y": 620
+      },
+      {
+        "x": 1380,
+        "y": 620
+      },
+      {
+        "x": 1380,
+        "y": 470
+      },
+      {
+        "x": 1410,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_35",
+    "sourceRef": "Task_Validate_Order",
+    "targetRef": "Task_Reserve_Subscriber_Number",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2950,
+        "y": 470
+      },
+      {
+        "x": 3030,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  }
+]

@@ -1,0 +1,207 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_BOPIS" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_BOPIS" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>11</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>BWSFMC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30687</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>73</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCMule CLM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33686</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCMule Sales</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33687</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18678</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCSF</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30685</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPOP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>29607</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>EDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18211</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED COMS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23283</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce Cart Pricing</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33825</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce Checkout Services</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33827</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce P O Discovery</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33824</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP OMNI ODS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32166</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Order Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31543</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Sales Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32411</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ISBUS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31292</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MSGRTR</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25316</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OCE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23488</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OPUS C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18257</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ORACLE SCM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18249</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>YODA</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21053</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>myATT Mobile App</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30558</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Shop_Browse</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Notify_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Pickup_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Online | Domain: Shop  Purchase | Subdomain: Order Plan/Device | Product: Mobility | Business Flow: BOPIS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Shop_Browse" name="Shop Browse"/>
+    <bpmn:task id="Task_Submit_Order" name="Submit Order"/>
+    <bpmn:task id="Task_Notify_Customer" name="Notify Customer"/>
+    <bpmn:task id="Task_Pickup_Order" name="Pickup Order"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Shop_Browse"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Shop_Browse" targetRef="Task_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Submit_Order" targetRef="Task_Notify_Customer"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Notify_Customer" targetRef="Task_Pickup_Order"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Pickup_Order" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>ORACLE SCM, OCE, IDP Web Sales Cloud, IDP Commerce P O Discovery, myATT Mobile App, IDP Commerce Cart Pricing, CPOP, CAPM, IDP Commerce Checkout Services</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Shop_Browse"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>IDP OMNI ODS, MSGRTR, myATT Mobile App, IDP Order Graph Cloud, OCE, FED COMS, IDP Web Sales Cloud, TLG MOB, CSI Product and Offer Mgt, CCPM, CCSF, CCMule CLM, ISBUS, ORACLE SCM, CCMule Sales, YODA, EDP</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Submit_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>ISBUS, myATT Mobile App, MSGRTR, BWSFMC, CCMule CLM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Notify_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>CCSF, OPUS C, CCMule Sales, IDP OMNI ODS, IDP Order Graph Cloud, MSGRTR, EDP, myATT Mobile App, ISBUS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Pickup_Order"/>
+  </bpmn:process>
+</bpmn:definitions>

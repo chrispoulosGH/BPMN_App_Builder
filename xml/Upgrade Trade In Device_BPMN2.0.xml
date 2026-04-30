@@ -1,0 +1,280 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Upgrade_Trade_In_Device" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Upgrade_Trade_In_Device" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>7</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>Avertack</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25114</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>73</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18224</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPOP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>29607</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CS BOBPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>EDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18211</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Enabler C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18263</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED COMS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23283</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23205</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED US</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24433</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRID GDDN</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22509</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRP ICAP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>29349</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP WebAcctMgmt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32768</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>INLAP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31374</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OPUS C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18257</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ORACLE SCM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18249</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Optical</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17595</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SC Switch Control TSC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18198</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>T Data</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21948</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>UPM Prime Biller</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>29675</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>YODA</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21053</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Lookup_Authenticate_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Top_Offers</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Upgrade_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Configure_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Apply_Promotions</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Capture_TCP</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Park_Upgrade</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_for_Fraud</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Payment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Mobility | Business Flow: Upgrade Trade In Device</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Lookup_Authenticate_Customer" name="Lookup Authenticate Customer"/>
+    <bpmn:task id="Task_Check_Top_Offers" name="Check Top Offers"/>
+    <bpmn:task id="Task_Submit_Order" name="Submit Order"/>
+    <bpmn:task id="Task_Check_Upgrade_Eligibility" name="Check Upgrade Eligibility"/>
+    <bpmn:task id="Task_Configure_Account" name="Configure Account"/>
+    <bpmn:task id="Task_Apply_Promotions" name="Apply Promotions"/>
+    <bpmn:task id="Task_Setup_Billing" name="Setup Billing"/>
+    <bpmn:task id="Task_Capture_TCP" name="Capture TCP"/>
+    <bpmn:task id="Task_Park_Upgrade" name="Park Upgrade"/>
+    <bpmn:task id="Task_Check_for_Fraud" name="Check for Fraud"/>
+    <bpmn:task id="Task_Setup_Payment" name="Setup Payment"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Lookup_Authenticate_Customer"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Lookup_Authenticate_Customer" targetRef="Task_Check_Top_Offers"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Setup_Payment" targetRef="Task_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Check_Top_Offers" targetRef="Task_Check_Upgrade_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Check_Upgrade_Eligibility" targetRef="Task_Configure_Account"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Configure_Account" targetRef="Task_Apply_Promotions"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Apply_Promotions" targetRef="Task_Setup_Billing"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Setup_Billing" targetRef="Task_Capture_TCP"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Capture_TCP" targetRef="Task_Park_Upgrade"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Park_Upgrade" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Check_for_Fraud" targetRef="Task_Setup_Payment"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Submit_Order" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>CSI Customer Care, CSI Parent Triage, IDP IDM, IDP WebAcctMgmt, INLAP, T Data, Digital IDP, GRID GDDN, Avertack, OPUS C, CSI Product and Offer Mgt, TLG MOB, FED US</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Lookup_Authenticate_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>OPUS C, CSI Customer Care, TLG MOB, T Data, CAS, GRP ICAP</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Check_Top_Offers"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CSI Customer Care, OPUS C, FED COMS, CS BOBPM, Enabler C, SC Switch Control TSC, TLG MOB, ORACLE SCM, Avertack, YODA, Digital IDP</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Submit_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>TLG MOB, OPUS C, T Data</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Check_Upgrade_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, UPM Prime Biller, OPUS C, CPC, CPOP, ORACLE SCM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Configure_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>FED CPC, OPUS C</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Apply_Promotions"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>EDP, FED CPC, T Data, CSI Customer Care, CAPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Setup_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>EDP, TLG MOB, Optical, CSI Customer Care, OPUS C</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Capture_TCP"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>OPUS C, T Data, TLG MOB, FED CPC</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Park_Upgrade"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>YODA, OPUS C, CSI Customer Care, Digital IDP, Avertack, FED COMS, ORACLE SCM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>TLG MOB, OPUS C, UPM Prime Biller, CAPM, YODA</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Setup_Payment"/>
+  </bpmn:process>
+</bpmn:definitions>

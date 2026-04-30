@@ -1,0 +1,555 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Customer",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2506,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_2",
+    "type": "lane",
+    "name": "Sales Agent",
+    "x": 70,
+    "y": 280,
+    "height": 330,
+    "width": 2506,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_3",
+    "type": "lane",
+    "name": "Billing Agent",
+    "x": 70,
+    "y": 610,
+    "height": 200,
+    "width": 2506,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Apply_Promotions_Top_Offers",
+    "type": "task",
+    "name": "Apply Promotions Top Offers",
+    "x": 690,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Build_Cart",
+    "type": "task",
+    "name": "Build Cart",
+    "x": 1230,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Call_Sales_Rep",
+    "type": "task",
+    "name": "Call Sales Rep",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Check_Credit",
+    "type": "task",
+    "name": "Check Credit",
+    "x": 1770,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Create_Account",
+    "type": "task",
+    "name": "Create Account",
+    "x": 1410,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Review_Submit_Order",
+    "type": "task",
+    "name": "Review Submit Order",
+    "x": 2310,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Search_Address_Service_Qualification",
+    "type": "task",
+    "name": "Search Address Service Qualification",
+    "x": 510,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Equipment",
+    "type": "task",
+    "name": "Select Equipment",
+    "x": 1050,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Rate_Plan",
+    "type": "task",
+    "name": "Select Rate Plan",
+    "x": 870,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Setup_Billing",
+    "type": "task",
+    "name": "Setup Billing",
+    "x": 1770,
+    "y": 670,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Setup_Shipping",
+    "type": "task",
+    "name": "Setup Shipping",
+    "x": 1950,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2490,
+    "y": 502,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork P1",
+    "soureRef": [
+      "Task_Create_Account"
+    ],
+    "targetRef": [
+      "Task_Check_Credit",
+      "Task_Setup_Billing"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1590,
+    "y": 495,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join P1",
+    "soureRef": [
+      "Task_Setup_Billing",
+      "Task_Setup_Shipping"
+    ],
+    "targetRef": [
+      "Task_Review_Submit_Order"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2130,
+    "y": 495,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Check_Credit",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1640,
+        "y": 520
+      },
+      {
+        "x": 1670,
+        "y": 520
+      },
+      {
+        "x": 1670,
+        "y": 370
+      },
+      {
+        "x": 1740,
+        "y": 370
+      },
+      {
+        "x": 1770,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Setup_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1640,
+        "y": 520
+      },
+      {
+        "x": 1670,
+        "y": 520
+      },
+      {
+        "x": 1670,
+        "y": 710
+      },
+      {
+        "x": 1740,
+        "y": 710
+      },
+      {
+        "x": 1770,
+        "y": 710
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "Task_Review_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2180,
+        "y": 520
+      },
+      {
+        "x": 2310,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Call_Sales_Rep",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Apply_Promotions_Top_Offers",
+    "targetRef": "Task_Select_Rate_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 520
+      },
+      {
+        "x": 870,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Build_Cart",
+    "targetRef": "Task_Create_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 520
+      },
+      {
+        "x": 1410,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Call_Sales_Rep",
+    "targetRef": "Task_Search_Address_Service_Qualification",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 520
+      },
+      {
+        "x": 480,
+        "y": 520
+      },
+      {
+        "x": 510,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Check_Credit",
+    "targetRef": "Task_Setup_Shipping",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 370
+      },
+      {
+        "x": 1950,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Create_Account",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 520
+      },
+      {
+        "x": 1590,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Review_Submit_Order",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 520
+      },
+      {
+        "x": 2490,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Search_Address_Service_Qualification",
+    "targetRef": "Task_Apply_Promotions_Top_Offers",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 520
+      },
+      {
+        "x": 690,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Select_Equipment",
+    "targetRef": "Task_Build_Cart",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 520
+      },
+      {
+        "x": 1230,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Select_Rate_Plan",
+    "targetRef": "Task_Select_Equipment",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 520
+      },
+      {
+        "x": 1050,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Setup_Billing",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 710
+      },
+      {
+        "x": 1900,
+        "y": 710
+      },
+      {
+        "x": 2100,
+        "y": 710
+      },
+      {
+        "x": 2100,
+        "y": 520
+      },
+      {
+        "x": 2130,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Setup_Shipping",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 370
+      },
+      {
+        "x": 2080,
+        "y": 370
+      },
+      {
+        "x": 2100,
+        "y": 370
+      },
+      {
+        "x": 2100,
+        "y": 520
+      },
+      {
+        "x": 2130,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  }
+]

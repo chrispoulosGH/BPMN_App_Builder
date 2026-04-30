@@ -1,0 +1,498 @@
+[
+  {
+    "id": "Task_188",
+    "type": "task",
+    "name": "ABPT",
+    "x": 370,
+    "y": 400,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_189",
+    "type": "task",
+    "name": "T.Data",
+    "x": 640,
+    "y": 400,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_191",
+    "type": "task",
+    "name": "IDP-IDM",
+    "x": 1140,
+    "y": 250,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_192",
+    "type": "task",
+    "name": "Amp-MM - Invenio",
+    "x": 1410,
+    "y": 250,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_193",
+    "type": "task",
+    "name": "GRP-ICAP",
+    "x": 1140,
+    "y": 400,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_194",
+    "type": "task",
+    "name": "IDP-Commerce-ES",
+    "x": 1140,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_195",
+    "type": "task",
+    "name": "SHM",
+    "x": 1410,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_196",
+    "type": "task",
+    "name": "IDP-Order Graph Cloud",
+    "x": 1680,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_197",
+    "type": "task",
+    "name": "TRiP",
+    "x": 1950,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_198",
+    "type": "task",
+    "name": "Nimbus",
+    "x": 2220,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_199",
+    "type": "task",
+    "name": "TDICE",
+    "x": 2490,
+    "y": 550,
+    "height": 64,
+    "width": 120,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Start_1",
+    "type": "event",
+    "name": "Request\nReceived",
+    "x": 180,
+    "y": 414,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "End_1",
+    "type": "event",
+    "name": "Completed",
+    "x": 2990,
+    "y": 414,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "ParGW_190_fork",
+    "name": "",
+    "soureRef": [
+      "Task_189"
+    ],
+    "targetRef": [
+      "Task_191",
+      "Task_193",
+      "Task_194"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 910,
+    "y": 407,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "ParGW_190_join",
+    "name": "",
+    "soureRef": [
+      "Task_192",
+      "Task_193",
+      "Task_199"
+    ],
+    "targetRef": [
+      "End_1"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2760,
+    "y": 407,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Flow_200",
+    "sourceRef": "Start_1",
+    "targetRef": "Task_188",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 216,
+        "y": 432
+      },
+      {
+        "x": 370,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_201",
+    "sourceRef": "Task_188",
+    "targetRef": "Task_189",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 490,
+        "y": 432
+      },
+      {
+        "x": 640,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_202",
+    "sourceRef": "Task_189",
+    "targetRef": "ParGW_190_fork",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 760,
+        "y": 432
+      },
+      {
+        "x": 910,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_203",
+    "sourceRef": "ParGW_190_fork",
+    "targetRef": "Task_191",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 935,
+        "y": 407
+      },
+      {
+        "x": 935,
+        "y": 282
+      },
+      {
+        "x": 1140,
+        "y": 282
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_204",
+    "sourceRef": "Task_191",
+    "targetRef": "Task_192",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1260,
+        "y": 282
+      },
+      {
+        "x": 1410,
+        "y": 282
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_205",
+    "sourceRef": "ParGW_190_fork",
+    "targetRef": "Task_193",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 960,
+        "y": 432
+      },
+      {
+        "x": 1140,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_206",
+    "sourceRef": "ParGW_190_fork",
+    "targetRef": "Task_194",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 935,
+        "y": 457
+      },
+      {
+        "x": 935,
+        "y": 582
+      },
+      {
+        "x": 1140,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_207",
+    "sourceRef": "Task_194",
+    "targetRef": "Task_195",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1260,
+        "y": 582
+      },
+      {
+        "x": 1410,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_208",
+    "sourceRef": "Task_195",
+    "targetRef": "Task_196",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1530,
+        "y": 582
+      },
+      {
+        "x": 1680,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_209",
+    "sourceRef": "Task_196",
+    "targetRef": "Task_197",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1800,
+        "y": 582
+      },
+      {
+        "x": 1950,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_210",
+    "sourceRef": "Task_197",
+    "targetRef": "Task_198",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2070,
+        "y": 582
+      },
+      {
+        "x": 2220,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_211",
+    "sourceRef": "Task_198",
+    "targetRef": "Task_199",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2340,
+        "y": 582
+      },
+      {
+        "x": 2490,
+        "y": 582
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_212",
+    "sourceRef": "Task_192",
+    "targetRef": "ParGW_190_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1530,
+        "y": 282
+      },
+      {
+        "x": 2785,
+        "y": 282
+      },
+      {
+        "x": 2785,
+        "y": 407
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_213",
+    "sourceRef": "Task_193",
+    "targetRef": "ParGW_190_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1260,
+        "y": 432
+      },
+      {
+        "x": 2760,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_214",
+    "sourceRef": "Task_199",
+    "targetRef": "ParGW_190_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2610,
+        "y": 582
+      },
+      {
+        "x": 2785,
+        "y": 582
+      },
+      {
+        "x": 2785,
+        "y": 457
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_215",
+    "sourceRef": "ParGW_190_join",
+    "targetRef": "End_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2810,
+        "y": 432
+      },
+      {
+        "x": 2990,
+        "y": 432
+      }
+    ],
+    "color": null
+  }
+]

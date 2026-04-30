@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Get_Technical_Support" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Get_Technical_Support" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>4</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>1</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>6</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>AVT</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>19105</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Chat</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>23872</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>GRID AC</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>22510</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Halo C AM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>27460</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Upper Funnel Cloud</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>31548</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Web Support</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>30635</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP WebAcctMgmt</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32768</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Log_into_AT_T_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Online_Support_Portal</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Wireless_Support</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Self_Service_Solutions</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Get_Live_Support</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Confirm_Resolution</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Follow_Up_Post_Support</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Online | Domain: Service  Support | Subdomain: Report Issue | Product: Mobility | Business Flow: Get Technical Support</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Log_into_AT_T_Account" name="Log into AT T Account"/>
+    <bpmn:task id="Task_Go_to_Online_Support_Portal" name="Go to Online Support Portal"/>
+    <bpmn:task id="Task_Go_to_Wireless_Support" name="Go to Wireless Support"/>
+    <bpmn:task id="Task_Self_Service_Solutions" name="Self Service Solutions"/>
+    <bpmn:task id="Task_Get_Live_Support" name="Get Live Support"/>
+    <bpmn:task id="Task_Confirm_Resolution" name="Confirm Resolution"/>
+    <bpmn:task id="Task_Follow_Up_Post_Support" name="Follow Up Post Support"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Log_into_AT_T_Account" targetRef="Task_Go_to_Online_Support_Portal"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Go_to_Online_Support_Portal" targetRef="Task_Go_to_Wireless_Support"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Go_to_Wireless_Support" targetRef="Task_Self_Service_Solutions"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Self_Service_Solutions" targetRef="Task_Get_Live_Support"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Get_Live_Support" targetRef="Task_Confirm_Resolution"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Confirm_Resolution" targetRef="Task_Follow_Up_Post_Support"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Follow_Up_Post_Support" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>IDP WebAcctMgmt, Halo C AM, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>IDP Web Support, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Go_to_Online_Support_Portal"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>IDP Web Support, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Go_to_Wireless_Support"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Web Support</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Self_Service_Solutions"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>Chat, GRID AC, IDP Web Support, AVT, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Get_Live_Support"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>IDP Web Support, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Confirm_Resolution"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>Chat, IDP Web Support</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Follow_Up_Post_Support"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Get_Technical_Support" name="Line of Business: Mass Markets | Channel: Online | Domain: Service  Support | Subdomain: Report Issue | Product: Mobility | Business Flow: Get Technical Support">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Get_Technical_Support" bpmnElement="Process_Get_Technical_Support">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="80" width="1606" height="200"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" stroke="blue">
+        <dc:Bounds x="150" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Log_into_AT_T_Account_di" bpmnElement="Task_Log_into_AT_T_Account" stroke="blue">
+        <dc:Bounds x="330" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Go_to_Online_Support_Portal_di" bpmnElement="Task_Go_to_Online_Support_Portal" stroke="blue">
+        <dc:Bounds x="510" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Go_to_Wireless_Support_di" bpmnElement="Task_Go_to_Wireless_Support" stroke="blue">
+        <dc:Bounds x="690" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Self_Service_Solutions_di" bpmnElement="Task_Self_Service_Solutions" stroke="blue">
+        <dc:Bounds x="870" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Get_Live_Support_di" bpmnElement="Task_Get_Live_Support" stroke="blue">
+        <dc:Bounds x="1050" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Confirm_Resolution_di" bpmnElement="Task_Confirm_Resolution" stroke="blue">
+        <dc:Bounds x="1230" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Follow_Up_Post_Support_di" bpmnElement="Task_Follow_Up_Post_Support" stroke="blue">
+        <dc:Bounds x="1410" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" stroke="blue">
+        <dc:Bounds x="1590" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="388.0" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="388.0" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_7_di" bpmnElement="TextAnnotation_7">
+        <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380.0" y="230.0"/>
+        <di:waypoint x="380.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="560.0" y="230.0"/>
+        <di:waypoint x="560.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="740.0" y="230.0"/>
+        <di:waypoint x="740.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="920.0" y="230.0"/>
+        <di:waypoint x="920.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="1100.0" y="230.0"/>
+        <di:waypoint x="1100.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="1280.0" y="230.0"/>
+        <di:waypoint x="1280.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_7_di" bpmnElement="Association_7">
+        <di:waypoint x="1460.0" y="230.0"/>
+        <di:waypoint x="1460.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" stroke="blue">
+        <di:waypoint x="186" y="180.0"/>
+        <di:waypoint x="330" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" stroke="blue">
+        <di:waypoint x="430" y="180.0"/>
+        <di:waypoint x="510" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" stroke="blue">
+        <di:waypoint x="610" y="180.0"/>
+        <di:waypoint x="690" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" stroke="blue">
+        <di:waypoint x="790" y="180.0"/>
+        <di:waypoint x="870" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" stroke="blue">
+        <di:waypoint x="970" y="180.0"/>
+        <di:waypoint x="1050" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" stroke="blue">
+        <di:waypoint x="1150" y="180.0"/>
+        <di:waypoint x="1230" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" stroke="blue">
+        <di:waypoint x="1330" y="180.0"/>
+        <di:waypoint x="1410" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" stroke="blue">
+        <di:waypoint x="1510" y="180.0"/>
+        <di:waypoint x="1590" y="180.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

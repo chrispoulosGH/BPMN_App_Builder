@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Post_Paid_Billing_w_Radius" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Post_Paid_Billing_w_Radius" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>4</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>ERBI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18284</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Enabler C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18263</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Oracle GL</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17987</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>PRM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22475</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>WebTrax C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18209</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>eCDW</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18201</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>vTM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24481</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Mediation_Usage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Payments_Reconciliation</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Manual_Invoicing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Payment_Dispute_Management</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: MVNO | Domain: Service  Support | Subdomain: Resolve Issue | Product: Wholesale Mobility | Business Flow: Post Paid Billing w Radius</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Mediation_Usage" name="Mediation Usage"/>
+    <bpmn:task id="Task_Payments_Reconciliation" name="Payments Reconciliation"/>
+    <bpmn:task id="Task_Billing" name="Billing"/>
+    <bpmn:task id="Task_Manual_Invoicing" name="Manual Invoicing"/>
+    <bpmn:task id="Task_Payment_Dispute_Management" name="Payment Dispute Management"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Mediation_Usage"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Mediation_Usage" targetRef="Task_Payments_Reconciliation"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Payments_Reconciliation" targetRef="Task_Billing"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Billing" targetRef="Task_Manual_Invoicing"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Manual_Invoicing" targetRef="Task_Payment_Dispute_Management"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Payment_Dispute_Management" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>TLG MOB, Enabler C</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Mediation_Usage"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>vTM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Payments_Reconciliation"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>PRM, WebTrax C, Oracle GL, eCDW</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>WebTrax C, Oracle GL, eCDW</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Manual_Invoicing"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>ERBI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Payment_Dispute_Management"/>
+  </bpmn:process>
+</bpmn:definitions>

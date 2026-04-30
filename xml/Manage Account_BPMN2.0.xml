@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Manage_Account" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Manage_Account" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Halo C AM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27460</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP BUPS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33847</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Commerce Cart Pricing</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33825</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Customer Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31468</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Upper Funnel Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31548</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Sales</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33758</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP WebAcctMgmt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32768</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MPSYS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>8841</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OCE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23488</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Products Offers Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32560</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Log_into_AT_T_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Account_Overview</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Opt_in_out_of_Paperless_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_View_Latest_Bill</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Services</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Change_My_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Compare_and_Select_Wireless_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Pay_Activation_Costs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Manage_Profile</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Update_Sign_In_Information</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Change_Security_Questions</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Update_Billing_Address</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Update_Marketing_Notifications</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Go_to_Payments</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Manage_Payment_Methods</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Opt_in_out_of_AutoPay</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Online | Domain: Use  Manage | Subdomain: Change Settings  Prefrences | Product: Mobility | Business Flow: Manage Account</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Log_into_AT_T_Account" name="Log into AT T Account"/>
+    <bpmn:task id="Task_Go_to_Account_Overview" name="Go to Account Overview"/>
+    <bpmn:task id="Task_Opt_in_out_of_Paperless_Billing" name="Opt in out of Paperless Billing"/>
+    <bpmn:task id="Task_Go_to_Billing" name="Go to Billing"/>
+    <bpmn:task id="Task_View_Latest_Bill" name="View Latest Bill"/>
+    <bpmn:task id="Task_Go_to_Services" name="Go to Services"/>
+    <bpmn:task id="Task_Select_Change_My_Plan" name="Select Change My Plan"/>
+    <bpmn:task id="Task_Compare_and_Select_Wireless_Plan" name="Compare and Select Wireless Plan"/>
+    <bpmn:task id="Task_Pay_Activation_Costs" name="Pay Activation Costs"/>
+    <bpmn:task id="Task_Manage_Profile" name="Manage Profile"/>
+    <bpmn:task id="Task_Update_Sign_In_Information" name="Update Sign In Information"/>
+    <bpmn:task id="Task_Change_Security_Questions" name="Change Security Questions"/>
+    <bpmn:task id="Task_Update_Billing_Address" name="Update Billing Address"/>
+    <bpmn:task id="Task_Update_Marketing_Notifications" name="Update Marketing Notifications"/>
+    <bpmn:task id="Task_Go_to_Payments" name="Go to Payments"/>
+    <bpmn:task id="Task_Manage_Payment_Methods" name="Manage Payment Methods"/>
+    <bpmn:task id="Task_Opt_in_out_of_AutoPay" name="Opt in out of AutoPay"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Log_into_AT_T_Account" targetRef="Task_Go_to_Account_Overview"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Opt_in_out_of_AutoPay" targetRef="Task_Opt_in_out_of_Paperless_Billing"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Opt_in_out_of_Paperless_Billing" targetRef="Task_Go_to_Billing"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Go_to_Billing" targetRef="Task_View_Latest_Bill"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_View_Latest_Bill" targetRef="Task_Go_to_Services"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Go_to_Services" targetRef="Task_Select_Change_My_Plan"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Select_Change_My_Plan" targetRef="Task_Compare_and_Select_Wireless_Plan"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Compare_and_Select_Wireless_Plan" targetRef="Task_Pay_Activation_Costs"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Go_to_Account_Overview" targetRef="Task_Manage_Profile"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Manage_Profile" targetRef="Task_Update_Sign_In_Information"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Update_Sign_In_Information" targetRef="Task_Change_Security_Questions"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Change_Security_Questions" targetRef="Task_Update_Billing_Address"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Update_Billing_Address" targetRef="Task_Update_Marketing_Notifications"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_Update_Marketing_Notifications" targetRef="Task_Go_to_Payments"/>
+    <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_Go_to_Payments" targetRef="Task_Manage_Payment_Methods"/>
+    <bpmn:sequenceFlow id="Flow_17" sourceRef="Task_Manage_Payment_Methods" targetRef="Task_Opt_in_out_of_AutoPay"/>
+    <bpmn:sequenceFlow id="Flow_18" sourceRef="Task_Pay_Activation_Costs" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>IDP WebAcctMgmt, IDP IDM, MPSYS, Halo C AM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Log_into_AT_T_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>TLG MOB, IDP WebAcctMgmt, MPSYS, IDP Customer Graph Cloud, IDP Upper Funnel Cloud, Products Offers Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Go_to_Account_Overview"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>IDP WebAcctMgmt, IDP Upper Funnel Cloud, IDP BUPS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Opt_in_out_of_Paperless_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>IDP WebAcctMgmt, Digital IDP, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Go_to_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP BUPS, IDP WebAcctMgmt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_View_Latest_Bill"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>IDP WebAcctMgmt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Go_to_Services"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP WebAcctMgmt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Select_Change_My_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>IDP WebAcctMgmt, IDP Commerce Cart Pricing, IDP Upper Funnel Cloud, IDP Web Sales</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Compare_and_Select_Wireless_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>IDP Upper Funnel Cloud, OCE</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Pay_Activation_Costs"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>MPSYS, IDP Upper Funnel Cloud, Products Offers Cloud, IDP Customer Graph Cloud, IDP WebAcctMgmt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Manage_Profile"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>IDP IDM, MPSYS, IDP Upper Funnel Cloud, IDP Customer Graph Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Update_Sign_In_Information"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>IDP IDM, IDP Upper Funnel Cloud, MPSYS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Change_Security_Questions"/>
+    <bpmn:textAnnotation id="TextAnnotation_13">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Customer Graph Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_13" sourceRef="TextAnnotation_13" targetRef="Task_Update_Billing_Address"/>
+    <bpmn:textAnnotation id="TextAnnotation_14">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP Customer Graph Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_14" sourceRef="TextAnnotation_14" targetRef="Task_Update_Marketing_Notifications"/>
+    <bpmn:textAnnotation id="TextAnnotation_15">
+      <bpmn:text>IDP WebAcctMgmt, IDP Upper Funnel Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_15" sourceRef="TextAnnotation_15" targetRef="Task_Go_to_Payments"/>
+    <bpmn:textAnnotation id="TextAnnotation_16">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP WebAcctMgmt, IDP BUPS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_16" sourceRef="TextAnnotation_16" targetRef="Task_Manage_Payment_Methods"/>
+    <bpmn:textAnnotation id="TextAnnotation_17">
+      <bpmn:text>IDP Upper Funnel Cloud, IDP WebAcctMgmt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_17" sourceRef="TextAnnotation_17" targetRef="Task_Opt_in_out_of_AutoPay"/>
+  </bpmn:process>
+</bpmn:definitions>

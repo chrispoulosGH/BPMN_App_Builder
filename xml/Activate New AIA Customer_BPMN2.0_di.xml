@@ -1,0 +1,495 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Activate_New_AIA_Customer" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Activate_New_AIA_Customer" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>1</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>2</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>5</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>BBNMS LS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>16188</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CCMULE</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>30686</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CCSF</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>30685</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Customer Care</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20182</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Digital IDP</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>27531</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Cart and Checkout UI</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>33921</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Commerce P O Discovery</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>33824</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Coverage Map Cloud</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>33760</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Customer Graph Cloud</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>31468</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP IDM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32765</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Platform Cloud</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32470</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Web Sales</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>33758</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>IDP Web Sales Cloud</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32411</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>MPSYS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>8841</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>T Data</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>21948</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1" name="Customer">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Call_Rep</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Sales Agent">
+        <bpmn:flowNodeRef>Task_Search_Address_Service_Qualification</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Apply_Promotions_Top_Offers</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Rate_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Equipment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Build_Cart</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Create_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Shipping</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Fork_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3" name="Billing Agent">
+        <bpmn:flowNodeRef>Task_Setup_Billing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Approve_Biilling</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Shop  Purchase | Subdomain: Order Plan/Device | Product: Broadband | Business Flow: Activate New AIA Customer</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Call_Rep" name="Call Rep"/>
+    <bpmn:task id="Task_Search_Address_Service_Qualification" name="Search Address Service Qualification"/>
+    <bpmn:task id="Task_Apply_Promotions_Top_Offers" name="Apply Promotions Top Offers"/>
+    <bpmn:task id="Task_Select_Rate_Plan" name="Select Rate Plan"/>
+    <bpmn:task id="Task_Select_Equipment" name="Select Equipment"/>
+    <bpmn:task id="Task_Build_Cart" name="Build Cart"/>
+    <bpmn:task id="Task_Create_Account" name="Create Account"/>
+    <bpmn:task id="Task_Check_Credit" name="Check Credit"/>
+    <bpmn:task id="Task_Setup_Shipping" name="Setup Shipping"/>
+    <bpmn:task id="Task_Setup_Billing" name="Setup Billing"/>
+    <bpmn:task id="Task_Approve_Biilling" name="Approve Biilling"/>
+    <bpmn:task id="Task_Review_Submit_Order" name="Review Submit Order"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:exclusiveGateway id="Gateway_Fork_1" name="Fork 6"/>
+    <bpmn:exclusiveGateway id="Gateway_Join_1" name="Join 6"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Call_Rep"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Call_Rep" targetRef="Task_Search_Address_Service_Qualification"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Search_Address_Service_Qualification" targetRef="Task_Apply_Promotions_Top_Offers"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Apply_Promotions_Top_Offers" targetRef="Task_Select_Rate_Plan"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Select_Rate_Plan" targetRef="Task_Select_Equipment"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Select_Equipment" targetRef="Task_Build_Cart"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Build_Cart" targetRef="Task_Create_Account"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Check_Credit" targetRef="Task_Setup_Shipping"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Setup_Billing" targetRef="Task_Approve_Biilling"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Create_Account" targetRef="Gateway_Fork_1"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Gateway_Fork_1" targetRef="Task_Check_Credit"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Gateway_Fork_1" targetRef="Task_Setup_Billing"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Setup_Shipping" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Approve_Biilling" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Gateway_Join_1" targetRef="Task_Review_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_Review_Submit_Order" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text/>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Call_Rep"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>CCMULE, IDP Coverage Map Cloud, IDP Platform Cloud, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Search_Address_Service_Qualification"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>IDP IDM, IDP Customer Graph Cloud, CCMULE, CSI Customer Care, T Data, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Apply_Promotions_Top_Offers"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>CCSF, IDP Cart and Checkout UI, CSI Customer Care, CCMULE, Digital IDP, IDP Web Sales Cloud</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Select_Rate_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>IDP Cart and Checkout UI, IDP Commerce P O Discovery, CCMULE, Digital IDP, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Select_Equipment"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>CSI Customer Care, CCSF, Digital IDP, CCMULE, IDP Cart and Checkout UI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Build_Cart"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>BBNMS LS, Digital IDP, IDP IDM, CCMULE, IDP Customer Graph Cloud, MPSYS, CCSF, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Create_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>CCMULE, CCSF, IDP Web Sales</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Check_Credit"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>Digital IDP, CCMULE, IDP Coverage Map Cloud, IDP Platform Cloud, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Setup_Shipping"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>CCMULE, Digital IDP, IDP Coverage Map Cloud, IDP Cart and Checkout UI, CCSF, IDP Platform Cloud, IDP Customer Graph Cloud, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Setup_Billing"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text/>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Approve_Biilling"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>CCMULE, IDP Cart and Checkout UI, CSI Customer Care, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Review_Submit_Order"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Activate_New_AIA_Customer" name="Line of Business: Mass Markets | Channel: Retail | Domain: Shop  Purchase | Subdomain: Order Plan/Device | Product: Broadband | Business Flow: Activate New AIA Customer">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Activate_New_AIA_Customer" bpmnElement="Process_Activate_New_AIA_Customer">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="80" width="2506" height="200"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="170.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_2_di" bpmnElement="Lane_2" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="280" width="2506" height="330"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="435.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_di" bpmnElement="Lane_3" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="610" width="2506" height="200"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="700.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" stroke="blue">
+        <dc:Bounds x="150" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Call_Rep_di" bpmnElement="Task_Call_Rep" stroke="blue">
+        <dc:Bounds x="330" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Search_Address_Service_Qualification_di" bpmnElement="Task_Search_Address_Service_Qualification" stroke="blue">
+        <dc:Bounds x="510" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Apply_Promotions_Top_Offers_di" bpmnElement="Task_Apply_Promotions_Top_Offers" stroke="blue">
+        <dc:Bounds x="690" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Rate_Plan_di" bpmnElement="Task_Select_Rate_Plan" stroke="blue">
+        <dc:Bounds x="870" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Equipment_di" bpmnElement="Task_Select_Equipment" stroke="blue">
+        <dc:Bounds x="1050" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Build_Cart_di" bpmnElement="Task_Build_Cart" stroke="blue">
+        <dc:Bounds x="1230" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Create_Account_di" bpmnElement="Task_Create_Account" stroke="blue">
+        <dc:Bounds x="1410" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Check_Credit_di" bpmnElement="Task_Check_Credit" stroke="blue">
+        <dc:Bounds x="1770" y="330.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Setup_Shipping_di" bpmnElement="Task_Setup_Shipping" stroke="blue">
+        <dc:Bounds x="1950" y="330.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Review_Submit_Order_di" bpmnElement="Task_Review_Submit_Order" stroke="blue">
+        <dc:Bounds x="2310" y="480.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Fork_1_di" bpmnElement="Gateway_Fork_1" stroke="blue">
+        <dc:Bounds x="1590" y="495.0" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Join_1_di" bpmnElement="Gateway_Join_1" stroke="blue">
+        <dc:Bounds x="2130" y="495.0" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" stroke="blue">
+        <dc:Bounds x="2490" y="502.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Setup_Billing_di" bpmnElement="Task_Setup_Billing" stroke="blue">
+        <dc:Bounds x="1770" y="670.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Approve_Biilling_di" bpmnElement="Task_Approve_Biilling" stroke="blue">
+        <dc:Bounds x="1950" y="670.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="838.0" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="838.0" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="510" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="690" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="870" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="1050" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="1230" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_7_di" bpmnElement="TextAnnotation_7">
+        <dc:Bounds x="1410" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1410" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_8_di" bpmnElement="TextAnnotation_8">
+        <dc:Bounds x="1770" y="420.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1770" y="420.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_9_di" bpmnElement="TextAnnotation_9">
+        <dc:Bounds x="1950" y="420.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="420.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_10_di" bpmnElement="TextAnnotation_10">
+        <dc:Bounds x="1770" y="760.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1770" y="760.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_11_di" bpmnElement="TextAnnotation_11">
+        <dc:Bounds x="1950" y="760.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="760.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_12_di" bpmnElement="TextAnnotation_12">
+        <dc:Bounds x="2310" y="570.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2310" y="570.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380.0" y="230.0"/>
+        <di:waypoint x="380.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="560.0" y="570.0"/>
+        <di:waypoint x="560.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="740.0" y="570.0"/>
+        <di:waypoint x="740.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="920.0" y="570.0"/>
+        <di:waypoint x="920.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="1100.0" y="570.0"/>
+        <di:waypoint x="1100.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="1280.0" y="570.0"/>
+        <di:waypoint x="1280.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_7_di" bpmnElement="Association_7">
+        <di:waypoint x="1460.0" y="570.0"/>
+        <di:waypoint x="1460.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_8_di" bpmnElement="Association_8">
+        <di:waypoint x="1820.0" y="420.0"/>
+        <di:waypoint x="1820.0" y="410.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_9_di" bpmnElement="Association_9">
+        <di:waypoint x="2000.0" y="420.0"/>
+        <di:waypoint x="2000.0" y="410.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10_di" bpmnElement="Association_10">
+        <di:waypoint x="1820.0" y="760.0"/>
+        <di:waypoint x="1820.0" y="750.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_11_di" bpmnElement="Association_11">
+        <di:waypoint x="2000.0" y="760.0"/>
+        <di:waypoint x="2000.0" y="750.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_12_di" bpmnElement="Association_12">
+        <di:waypoint x="2360.0" y="570.0"/>
+        <di:waypoint x="2360.0" y="560.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" stroke="blue">
+        <di:waypoint x="186" y="180.0"/>
+        <di:waypoint x="330" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" stroke="blue">
+        <di:waypoint x="430" y="180.0"/>
+        <di:waypoint x="460" y="180.0"/>
+        <di:waypoint x="460" y="520.0"/>
+        <di:waypoint x="480" y="520.0"/>
+        <di:waypoint x="510" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" stroke="blue">
+        <di:waypoint x="610" y="520.0"/>
+        <di:waypoint x="690" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" stroke="blue">
+        <di:waypoint x="790" y="520.0"/>
+        <di:waypoint x="870" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" stroke="blue">
+        <di:waypoint x="970" y="520.0"/>
+        <di:waypoint x="1050" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" stroke="blue">
+        <di:waypoint x="1150" y="520.0"/>
+        <di:waypoint x="1230" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" stroke="blue">
+        <di:waypoint x="1330" y="520.0"/>
+        <di:waypoint x="1410" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" stroke="blue">
+        <di:waypoint x="1870" y="370.0"/>
+        <di:waypoint x="1950" y="370.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9" stroke="blue">
+        <di:waypoint x="1870" y="710.0"/>
+        <di:waypoint x="1950" y="710.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" stroke="blue">
+        <di:waypoint x="1510" y="520.0"/>
+        <di:waypoint x="1590" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11" stroke="blue">
+        <di:waypoint x="1640" y="520.0"/>
+        <di:waypoint x="1670" y="520.0"/>
+        <di:waypoint x="1670" y="370.0"/>
+        <di:waypoint x="1740" y="370.0"/>
+        <di:waypoint x="1770" y="370.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12" stroke="blue">
+        <di:waypoint x="1640" y="520.0"/>
+        <di:waypoint x="1670" y="520.0"/>
+        <di:waypoint x="1670" y="710.0"/>
+        <di:waypoint x="1740" y="710.0"/>
+        <di:waypoint x="1770" y="710.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13" stroke="blue">
+        <di:waypoint x="2050" y="370.0"/>
+        <di:waypoint x="2080" y="370.0"/>
+        <di:waypoint x="2100" y="370.0"/>
+        <di:waypoint x="2100" y="520.0"/>
+        <di:waypoint x="2130" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14" stroke="blue">
+        <di:waypoint x="2050" y="710.0"/>
+        <di:waypoint x="2080" y="710.0"/>
+        <di:waypoint x="2100" y="710.0"/>
+        <di:waypoint x="2100" y="520.0"/>
+        <di:waypoint x="2130" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15_di" bpmnElement="Flow_15" stroke="blue">
+        <di:waypoint x="2180" y="520.0"/>
+        <di:waypoint x="2310" y="520.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16_di" bpmnElement="Flow_16" stroke="blue">
+        <di:waypoint x="2410" y="520.0"/>
+        <di:waypoint x="2490" y="520.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

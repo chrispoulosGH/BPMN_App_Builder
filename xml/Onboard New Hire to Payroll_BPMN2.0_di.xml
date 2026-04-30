@@ -1,0 +1,346 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Onboard_New_Hire_to_Payroll" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Onboard_New_Hire_to_Payroll" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>1</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>5</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>1</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>CorpFin GL</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32412</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Halo E ILM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>24424</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Infor</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>30763</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Workday</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>29338</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Log_Into_Workday</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Create_Job_Requisition</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Journalization</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Create_Job_Offer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Accept_Decline_Offer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Determine_Calculation_Group</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Calculate_Time_Code</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Convert_Time_Code_to_Pay_Component</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Calculate_P_R_PxQ_ADP_Tax_Remittance</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Map_P_R_Pay_Component_to_GL</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Payroll_to_General_Ledger</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Corporate Systems | Channel: Human Resources | Domain: Onboard | Subdomain: Hiring Guidelines | Product: SOX | Business Flow: Onboard New Hire to Payroll</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Log_Into_Workday" name="Log Into Workday"/>
+    <bpmn:task id="Task_Create_Job_Requisition" name="Create Job Requisition"/>
+    <bpmn:task id="Task_Journalization" name="Journalization"/>
+    <bpmn:task id="Task_Create_Job_Offer" name="Create Job Offer"/>
+    <bpmn:task id="Task_Accept_Decline_Offer" name="Accept Decline Offer"/>
+    <bpmn:task id="Task_Determine_Calculation_Group" name="Determine Calculation Group"/>
+    <bpmn:task id="Task_Calculate_Time_Code" name="Calculate Time Code"/>
+    <bpmn:task id="Task_Convert_Time_Code_to_Pay_Component" name="Convert Time Code to Pay Component"/>
+    <bpmn:task id="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance" name="Calculate P R PxQ ADP Tax Remittance"/>
+    <bpmn:task id="Task_Map_P_R_Pay_Component_to_GL" name="Map P R Pay Component to GL"/>
+    <bpmn:task id="Task_Payroll_to_General_Ledger" name="Payroll to General Ledger"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Log_Into_Workday"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Log_Into_Workday" targetRef="Task_Create_Job_Requisition"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Payroll_to_General_Ledger" targetRef="Task_Journalization"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Create_Job_Requisition" targetRef="Task_Create_Job_Offer"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Create_Job_Offer" targetRef="Task_Accept_Decline_Offer"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Accept_Decline_Offer" targetRef="Task_Determine_Calculation_Group"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Determine_Calculation_Group" targetRef="Task_Calculate_Time_Code"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Calculate_Time_Code" targetRef="Task_Convert_Time_Code_to_Pay_Component"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Convert_Time_Code_to_Pay_Component" targetRef="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance" targetRef="Task_Map_P_R_Pay_Component_to_GL"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Map_P_R_Pay_Component_to_GL" targetRef="Task_Payroll_to_General_Ledger"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Journalization" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>Workday, Halo E ILM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Log_Into_Workday"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>Workday</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Create_Job_Requisition"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CorpFin GL</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Journalization"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>Workday</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Create_Job_Offer"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>Workday</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Accept_Decline_Offer"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>Workday, Infor</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Determine_Calculation_Group"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>Infor</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Calculate_Time_Code"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>Workday, Infor</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Convert_Time_Code_to_Pay_Component"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>Workday</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>Workday</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Map_P_R_Pay_Component_to_GL"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>Workday, CorpFin GL</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Payroll_to_General_Ledger"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Onboard_New_Hire_to_Payroll" name="Line of Business: Corporate Systems | Channel: Human Resources | Domain: Onboard | Subdomain: Hiring Guidelines | Product: SOX | Business Flow: Onboard New Hire to Payroll">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Onboard_New_Hire_to_Payroll" bpmnElement="Process_Onboard_New_Hire_to_Payroll">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="80" width="2326" height="200"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" stroke="blue">
+        <dc:Bounds x="150" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Log_Into_Workday_di" bpmnElement="Task_Log_Into_Workday" stroke="blue">
+        <dc:Bounds x="330" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Create_Job_Requisition_di" bpmnElement="Task_Create_Job_Requisition" stroke="blue">
+        <dc:Bounds x="510" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Journalization_di" bpmnElement="Task_Journalization" stroke="blue">
+        <dc:Bounds x="2130" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Create_Job_Offer_di" bpmnElement="Task_Create_Job_Offer" stroke="blue">
+        <dc:Bounds x="690" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Accept_Decline_Offer_di" bpmnElement="Task_Accept_Decline_Offer" stroke="blue">
+        <dc:Bounds x="870" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Determine_Calculation_Group_di" bpmnElement="Task_Determine_Calculation_Group" stroke="blue">
+        <dc:Bounds x="1050" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Calculate_Time_Code_di" bpmnElement="Task_Calculate_Time_Code" stroke="blue">
+        <dc:Bounds x="1230" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Convert_Time_Code_to_Pay_Component_di" bpmnElement="Task_Convert_Time_Code_to_Pay_Component" stroke="blue">
+        <dc:Bounds x="1410" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance_di" bpmnElement="Task_Calculate_P_R_PxQ_ADP_Tax_Remittance" stroke="blue">
+        <dc:Bounds x="1590" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Map_P_R_Pay_Component_to_GL_di" bpmnElement="Task_Map_P_R_Pay_Component_to_GL" stroke="blue">
+        <dc:Bounds x="1770" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Payroll_to_General_Ledger_di" bpmnElement="Task_Payroll_to_General_Ledger" stroke="blue">
+        <dc:Bounds x="1950" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" stroke="blue">
+        <dc:Bounds x="2310" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="748.0" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="748.0" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="2130" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2130" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_7_di" bpmnElement="TextAnnotation_7">
+        <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_8_di" bpmnElement="TextAnnotation_8">
+        <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_9_di" bpmnElement="TextAnnotation_9">
+        <dc:Bounds x="1590" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1590" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_10_di" bpmnElement="TextAnnotation_10">
+        <dc:Bounds x="1770" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1770" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_11_di" bpmnElement="TextAnnotation_11">
+        <dc:Bounds x="1950" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380.0" y="230.0"/>
+        <di:waypoint x="380.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="560.0" y="230.0"/>
+        <di:waypoint x="560.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="2180.0" y="230.0"/>
+        <di:waypoint x="2180.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="740.0" y="230.0"/>
+        <di:waypoint x="740.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="920.0" y="230.0"/>
+        <di:waypoint x="920.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="1100.0" y="230.0"/>
+        <di:waypoint x="1100.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_7_di" bpmnElement="Association_7">
+        <di:waypoint x="1280.0" y="230.0"/>
+        <di:waypoint x="1280.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_8_di" bpmnElement="Association_8">
+        <di:waypoint x="1460.0" y="230.0"/>
+        <di:waypoint x="1460.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_9_di" bpmnElement="Association_9">
+        <di:waypoint x="1640.0" y="230.0"/>
+        <di:waypoint x="1640.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10_di" bpmnElement="Association_10">
+        <di:waypoint x="1820.0" y="230.0"/>
+        <di:waypoint x="1820.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_11_di" bpmnElement="Association_11">
+        <di:waypoint x="2000.0" y="230.0"/>
+        <di:waypoint x="2000.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" stroke="blue">
+        <di:waypoint x="186" y="180.0"/>
+        <di:waypoint x="330" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" stroke="blue">
+        <di:waypoint x="430" y="180.0"/>
+        <di:waypoint x="510" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" stroke="blue">
+        <di:waypoint x="2050" y="180.0"/>
+        <di:waypoint x="2130" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" stroke="blue">
+        <di:waypoint x="610" y="180.0"/>
+        <di:waypoint x="690" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" stroke="blue">
+        <di:waypoint x="790" y="180.0"/>
+        <di:waypoint x="870" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" stroke="blue">
+        <di:waypoint x="970" y="180.0"/>
+        <di:waypoint x="1050" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" stroke="blue">
+        <di:waypoint x="1150" y="180.0"/>
+        <di:waypoint x="1230" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" stroke="blue">
+        <di:waypoint x="1330" y="180.0"/>
+        <di:waypoint x="1410" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9" stroke="blue">
+        <di:waypoint x="1510" y="180.0"/>
+        <di:waypoint x="1590" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" stroke="blue">
+        <di:waypoint x="1690" y="180.0"/>
+        <di:waypoint x="1770" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11" stroke="blue">
+        <di:waypoint x="1870" y="180.0"/>
+        <di:waypoint x="1950" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12" stroke="blue">
+        <di:waypoint x="2230" y="180.0"/>
+        <di:waypoint x="2310" y="180.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,483 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2506,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Authenticate_Customer",
+    "type": "task",
+    "name": "Authenticate Customer",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP IDM",
+      "MPSYS",
+      "Avertack",
+      "GRID GDDN",
+      "CCSF",
+      "Halo E AM",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Auto_Summarize_Notes",
+    "type": "task",
+    "name": "Auto Summarize Notes",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "AA",
+      "CAST",
+      "CCDL"
+    ]
+  },
+  {
+    "id": "Task_Handoff_to_Agent_from_IVR",
+    "type": "task",
+    "name": "Handoff to Agent from IVR",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS CRM",
+      "ATT Coral Desktop",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_Inquire_Billing_via_IVR_Routing",
+    "type": "task",
+    "name": "Inquire Billing via IVR Routing",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS CRM",
+      "PC GCP BI",
+      "CCSF",
+      "ATT CCT Service Access Gateway",
+      "DialogFlow",
+      "OPUS C",
+      "ECO USP",
+      "CCT ATT IPCS",
+      "IDP Customer Graph Cloud",
+      "CSI Customer Care",
+      "ISAAC WFE",
+      "ATT CCT AEP",
+      "ATT CCT APIGEE",
+      "IDP Chat VA ANDi"
+    ]
+  },
+  {
+    "id": "Task_Integrate_Telephony",
+    "type": "task",
+    "name": "Integrate Telephony",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT CCTP CTI FRAME",
+      "ATT CCTP ICM GEN ADAPTER FRAME"
+    ]
+  },
+  {
+    "id": "Task_Lookup_Customer",
+    "type": "task",
+    "name": "Lookup Customer",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "IDP BUPS",
+      "CCM Clarify CM",
+      "CCSF",
+      "CCMULE",
+      "Platform Support ATTFEDGOV1",
+      "TLG MOB",
+      "eTRACS",
+      "DPG Sales Sunrise",
+      "FED US",
+      "IDP Customer Graph Cloud",
+      "CSI Credit and Val"
+    ]
+  },
+  {
+    "id": "Task_Recap_Call",
+    "type": "task",
+    "name": "Recap Call",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CCSF",
+      "ATT Coral Desktop"
+    ]
+  },
+  {
+    "id": "Task_Receive_Call",
+    "type": "task",
+    "name": "Receive Call",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "HVD VDI",
+      "Sonus TCCS"
+    ]
+  },
+  {
+    "id": "Task_Record_Monitor_Call",
+    "type": "task",
+    "name": "Record Monitor Call",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ECRMI",
+      "ATT VERINT CQM",
+      "Qfiniti Call Recording"
+    ]
+  },
+  {
+    "id": "Task_Search_Customer_Billing_History",
+    "type": "task",
+    "name": "Search Customer Billing History",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CCSF",
+      "CCMULE",
+      "LS CRM"
+    ]
+  },
+  {
+    "id": "Task_Transcribe_Redact_SPI",
+    "type": "task",
+    "name": "Transcribe Redact SPI",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SC SPI",
+      "RAISR",
+      "RAISR PORTAL"
+    ]
+  },
+  {
+    "id": "Task_View_Bill",
+    "type": "task",
+    "name": "View Bill",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CCSF",
+      "LS CRM",
+      "CCMULE",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2490,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Receive_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Receive_Call",
+    "targetRef": "Task_Inquire_Billing_via_IVR_Routing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_View_Bill",
+    "targetRef": "Task_Recap_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Recap_Call",
+    "targetRef": "Task_Auto_Summarize_Notes",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Inquire_Billing_via_IVR_Routing",
+    "targetRef": "Task_Integrate_Telephony",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Integrate_Telephony",
+    "targetRef": "Task_Handoff_to_Agent_from_IVR",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Handoff_to_Agent_from_IVR",
+    "targetRef": "Task_Transcribe_Redact_SPI",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Transcribe_Redact_SPI",
+    "targetRef": "Task_Record_Monitor_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Record_Monitor_Call",
+    "targetRef": "Task_Authenticate_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Authenticate_Customer",
+    "targetRef": "Task_Lookup_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Lookup_Customer",
+    "targetRef": "Task_Search_Customer_Billing_History",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Search_Customer_Billing_History",
+    "targetRef": "Task_View_Bill",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Auto_Summarize_Notes",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

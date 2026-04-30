@@ -1,0 +1,383 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2326,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Accept_Decline_Offer",
+    "type": "task",
+    "name": "Accept Decline Offer",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Calculate_P_R_PxQ_ADP_Tax_Remittance",
+    "type": "task",
+    "name": "Calculate P R PxQ ADP Tax Remittance",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Calculate_Time_Code",
+    "type": "task",
+    "name": "Calculate Time Code",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Convert_Time_Code_to_Pay_Component",
+    "type": "task",
+    "name": "Convert Time Code to Pay Component",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Create_Job_Offer",
+    "type": "task",
+    "name": "Create Job Offer",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Create_Job_Requisition",
+    "type": "task",
+    "name": "Create Job Requisition",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Determine_Calculation_Group",
+    "type": "task",
+    "name": "Determine Calculation Group",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Journalization",
+    "type": "task",
+    "name": "Journalization",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Log_Into_Workday",
+    "type": "task",
+    "name": "Log Into Workday",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Map_P_R_Pay_Component_to_GL",
+    "type": "task",
+    "name": "Map P R Pay Component to GL",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Payroll_to_General_Ledger",
+    "type": "task",
+    "name": "Payroll to General Ledger",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2310,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Log_Into_Workday",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Log_Into_Workday",
+    "targetRef": "Task_Create_Job_Requisition",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Payroll_to_General_Ledger",
+    "targetRef": "Task_Journalization",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Create_Job_Requisition",
+    "targetRef": "Task_Create_Job_Offer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Create_Job_Offer",
+    "targetRef": "Task_Accept_Decline_Offer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Accept_Decline_Offer",
+    "targetRef": "Task_Determine_Calculation_Group",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Determine_Calculation_Group",
+    "targetRef": "Task_Calculate_Time_Code",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Calculate_Time_Code",
+    "targetRef": "Task_Convert_Time_Code_to_Pay_Component",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Convert_Time_Code_to_Pay_Component",
+    "targetRef": "Task_Calculate_P_R_PxQ_ADP_Tax_Remittance",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Calculate_P_R_PxQ_ADP_Tax_Remittance",
+    "targetRef": "Task_Map_P_R_Pay_Component_to_GL",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Map_P_R_Pay_Component_to_GL",
+    "targetRef": "Task_Payroll_to_General_Ledger",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Journalization",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

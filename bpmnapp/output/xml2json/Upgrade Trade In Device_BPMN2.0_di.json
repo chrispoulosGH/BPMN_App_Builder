@@ -1,0 +1,461 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2326,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Apply_Promotions",
+    "type": "task",
+    "name": "Apply Promotions",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "FED CPC",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Capture_TCP",
+    "type": "task",
+    "name": "Capture TCP",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "EDP",
+      "TLG MOB",
+      "Optical",
+      "CSI Customer Care",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Check_Top_Offers",
+    "type": "task",
+    "name": "Check Top Offers",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "GRP ICAP",
+      "CAS",
+      "T Data",
+      "CSI Customer Care",
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Check_Upgrade_Eligibility",
+    "type": "task",
+    "name": "Check Upgrade Eligibility",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C",
+      "T Data"
+    ]
+  },
+  {
+    "id": "Task_Check_for_Fraud",
+    "type": "task",
+    "name": "Check for Fraud",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Avertack",
+      "ORACLE SCM",
+      "FED COMS",
+      "Digital IDP",
+      "CSI Customer Care",
+      "OPUS C",
+      "YODA"
+    ]
+  },
+  {
+    "id": "Task_Configure_Account",
+    "type": "task",
+    "name": "Configure Account",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "UPM Prime Biller",
+      "OPUS C",
+      "CPC",
+      "CPOP",
+      "ORACLE SCM"
+    ]
+  },
+  {
+    "id": "Task_Lookup_Authenticate_Customer",
+    "type": "task",
+    "name": "Lookup Authenticate Customer",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "CSI Parent Triage",
+      "IDP IDM",
+      "IDP WebAcctMgmt",
+      "INLAP",
+      "T Data",
+      "Digital IDP",
+      "GRID GDDN",
+      "Avertack",
+      "OPUS C",
+      "CSI Product and Offer Mgt",
+      "TLG MOB",
+      "FED US"
+    ]
+  },
+  {
+    "id": "Task_Park_Upgrade",
+    "type": "task",
+    "name": "Park Upgrade",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "FED CPC",
+      "T Data",
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Setup_Billing",
+    "type": "task",
+    "name": "Setup Billing",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "EDP",
+      "CSI Customer Care",
+      "FED CPC",
+      "T Data",
+      "CAPM"
+    ]
+  },
+  {
+    "id": "Task_Setup_Payment",
+    "type": "task",
+    "name": "Setup Payment",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "UPM Prime Biller",
+      "OPUS C",
+      "TLG MOB",
+      "YODA",
+      "CAPM"
+    ]
+  },
+  {
+    "id": "Task_Submit_Order",
+    "type": "task",
+    "name": "Submit Order",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "Avertack",
+      "ORACLE SCM",
+      "TLG MOB",
+      "SC Switch Control TSC",
+      "Enabler C",
+      "CS BOBPM",
+      "FED COMS",
+      "OPUS C",
+      "YODA",
+      "Digital IDP"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2310,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Lookup_Authenticate_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Lookup_Authenticate_Customer",
+    "targetRef": "Task_Check_Top_Offers",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Setup_Payment",
+    "targetRef": "Task_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Check_Top_Offers",
+    "targetRef": "Task_Check_Upgrade_Eligibility",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Check_Upgrade_Eligibility",
+    "targetRef": "Task_Configure_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Configure_Account",
+    "targetRef": "Task_Apply_Promotions",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Apply_Promotions",
+    "targetRef": "Task_Setup_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Setup_Billing",
+    "targetRef": "Task_Capture_TCP",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Capture_TCP",
+    "targetRef": "Task_Park_Upgrade",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Park_Upgrade",
+    "targetRef": "Task_Check_for_Fraud",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Check_for_Fraud",
+    "targetRef": "Task_Setup_Payment",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Submit_Order",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

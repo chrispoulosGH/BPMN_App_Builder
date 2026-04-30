@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Nat_Dist_Buy_Wireless" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Nat_Dist_Buy_Wireless" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>10</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>Avertack</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25114</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18224</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Network Management</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20188</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED COMS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23283</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GEARS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17784</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OPCC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22770</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>PEARS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18436</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SARA Plus DSI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32298</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Authenticate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Address</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Features</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Credit_Policy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Provision_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Customer_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Customer_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Reserve_Number</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_for_Fraud</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Apply_Top_Offers</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Mobility | Business Flow: Nat Dist Buy Wireless</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Authenticate" name="Authenticate"/>
+    <bpmn:task id="Task_Validate_Address" name="Validate Address"/>
+    <bpmn:task id="Task_Select_Features" name="Select Features"/>
+    <bpmn:task id="Task_Submit_Order" name="Submit Order"/>
+    <bpmn:task id="Task_Submit_Credit_Policy" name="Submit Credit Policy"/>
+    <bpmn:task id="Task_Provision_Device" name="Provision Device"/>
+    <bpmn:task id="Task_Verify_Customer_Eligibility" name="Verify Customer Eligibility"/>
+    <bpmn:task id="Task_Verify_Customer_Account" name="Verify Customer Account"/>
+    <bpmn:task id="Task_Check_Credit" name="Check Credit"/>
+    <bpmn:task id="Task_Reserve_Number" name="Reserve Number"/>
+    <bpmn:task id="Task_Select_Device" name="Select Device"/>
+    <bpmn:task id="Task_Select_Plan" name="Select Plan"/>
+    <bpmn:task id="Task_Check_for_Fraud" name="Check for Fraud"/>
+    <bpmn:task id="Task_Apply_Top_Offers" name="Apply Top Offers"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Authenticate"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Authenticate" targetRef="Task_Validate_Address"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Apply_Top_Offers" targetRef="Task_Select_Features"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Select_Features" targetRef="Task_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Submit_Order" targetRef="Task_Submit_Credit_Policy"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Submit_Credit_Policy" targetRef="Task_Provision_Device"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Validate_Address" targetRef="Task_Verify_Customer_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Verify_Customer_Eligibility" targetRef="Task_Verify_Customer_Account"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Verify_Customer_Account" targetRef="Task_Check_Credit"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Check_Credit" targetRef="Task_Reserve_Number"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Reserve_Number" targetRef="Task_Select_Device"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Select_Device" targetRef="Task_Select_Plan"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Select_Plan" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Check_for_Fraud" targetRef="Task_Apply_Top_Offers"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_Provision_Device" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>CSI Customer Care, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Authenticate"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>SARA Plus DSI, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Validate_Address"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>SARA Plus DSI, CSI Parent Triage</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Select_Features"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>TLG MOB, FED COMS, CSI Product and Offer Mgt, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Submit_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, FED COMS, OPCC, SARA Plus DSI, CAS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Submit_Credit_Policy"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>Avertack, Digital IDP, SARA Plus DSI, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Provision_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>CAS, GEARS, SARA Plus DSI, PEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Verify_Customer_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>SARA Plus DSI, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Verify_Customer_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>TLG MOB, SARA Plus DSI, CAS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Check_Credit"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>TLG MOB, SARA Plus DSI, CSI Network Management, PEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Reserve_Number"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>CPC, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Select_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Select_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_13">
+      <bpmn:text>SARA Plus DSI, Digital IDP, Avertack</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_13" sourceRef="TextAnnotation_13" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:textAnnotation id="TextAnnotation_14">
+      <bpmn:text>CSI Parent Triage, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_14" sourceRef="TextAnnotation_14" targetRef="Task_Apply_Top_Offers"/>
+  </bpmn:process>
+</bpmn:definitions>

@@ -1,0 +1,52 @@
+objectType,name,x,y,width,height
+lane,Customer,70,80,2506,200
+flowNodeRef,Start,150,162,36,36
+flowNodeRef,Call Rep,330,140,100,80
+lane,Sales Agent,70,280,2506,330
+flowNodeRef,Search Address Service Qualification,510,480,100,80
+flowNodeRef,Apply Promotions Top Offers,690,480,100,80
+flowNodeRef,Select Rate Plan,870,480,100,80
+flowNodeRef,Select Equipment,1050,480,100,80
+flowNodeRef,Build Cart,1230,480,100,80
+flowNodeRef,Create Account,1410,480,100,80
+flowNodeRef,Check Credit,1770,330,100,80
+flowNodeRef,Setup Shipping,1950,330,100,80
+flowNodeRef,Review Submit Order,2310,480,100,80
+flowNodeRef,End,2490,502,36,36
+flowNodeRef,Fork 6,1590,495,50,50
+flowNodeRef,Join 6,2130,495,50,50
+lane,Billing Agent,70,610,2506,200
+flowNodeRef,Setup Billing,1770,670,100,80
+flowNodeRef,Approve Biilling,1950,670,100,80
+startEvent,Start,150,162,36,36
+task,Call Rep,330,140,100,80
+task,Search Address Service Qualification,510,480,100,80
+task,Apply Promotions Top Offers,690,480,100,80
+task,Select Rate Plan,870,480,100,80
+task,Select Equipment,1050,480,100,80
+task,Build Cart,1230,480,100,80
+task,Create Account,1410,480,100,80
+task,Check Credit,1770,330,100,80
+task,Setup Shipping,1950,330,100,80
+task,Setup Billing,1770,670,100,80
+task,Approve Biilling,1950,670,100,80
+task,Review Submit Order,2310,480,100,80
+endEvent,End,2490,502,36,36
+exclusiveGateway,Fork 6,1590,495,50,50
+exclusiveGateway,Join 6,2130,495,50,50
+sequenceFlow,,186,180,144,0
+sequenceFlow,,430,180,80,340
+sequenceFlow,,610,520,80,0
+sequenceFlow,,790,520,80,0
+sequenceFlow,,970,520,80,0
+sequenceFlow,,1150,520,80,0
+sequenceFlow,,1330,520,80,0
+sequenceFlow,,1870,370,80,0
+sequenceFlow,,1870,710,80,0
+sequenceFlow,,1510,520,80,0
+sequenceFlow,,1640,370,130,150
+sequenceFlow,,1640,520,130,190
+sequenceFlow,,2050,370,80,150
+sequenceFlow,,2050,520,80,190
+sequenceFlow,,2180,520,130,0
+sequenceFlow,,2410,520,80,0

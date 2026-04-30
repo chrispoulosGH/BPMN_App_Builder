@@ -1,0 +1,473 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2866,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Apply_Discounts",
+    "type": "task",
+    "name": "Apply Discounts",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Checkout",
+    "type": "task",
+    "name": "Checkout",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Choose_Phone_Plan",
+    "type": "task",
+    "name": "Choose Phone Plan",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Confirm_Purchase",
+    "type": "task",
+    "name": "Confirm Purchase",
+    "x": 2670,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Customize_the_Phone",
+    "type": "task",
+    "name": "Customize the Phone",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Enter_Billing_Information",
+    "type": "task",
+    "name": "Enter Billing Information",
+    "x": 2490,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Filter_and_Compare_Phones",
+    "type": "task",
+    "name": "Filter and Compare Phones",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Go_to_att_com",
+    "type": "task",
+    "name": "Go to att com",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Pick_a_Phone",
+    "type": "task",
+    "name": "Pick a Phone",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Review_Cart",
+    "type": "task",
+    "name": "Review Cart",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Add_ons",
+    "type": "task",
+    "name": "Select Add ons",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Phones_Devices",
+    "type": "task",
+    "name": "Select Phones Devices",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Start_New_Wireless_Service",
+    "type": "task",
+    "name": "Select Start New Wireless Service",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Select_Wireless",
+    "type": "task",
+    "name": "Select Wireless",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2850,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Go_to_att_com",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Go_to_att_com",
+    "targetRef": "Task_Select_Wireless",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Select_Add_ons",
+    "targetRef": "Task_Review_Cart",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Review_Cart",
+    "targetRef": "Task_Checkout",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Checkout",
+    "targetRef": "Task_Enter_Billing_Information",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Enter_Billing_Information",
+    "targetRef": "Task_Confirm_Purchase",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 180
+      },
+      {
+        "x": 2670,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Select_Wireless",
+    "targetRef": "Task_Select_Phones_Devices",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Select_Phones_Devices",
+    "targetRef": "Task_Filter_and_Compare_Phones",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Filter_and_Compare_Phones",
+    "targetRef": "Task_Pick_a_Phone",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Pick_a_Phone",
+    "targetRef": "Task_Customize_the_Phone",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Customize_the_Phone",
+    "targetRef": "Task_Select_Start_New_Wireless_Service",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Select_Start_New_Wireless_Service",
+    "targetRef": "Task_Apply_Discounts",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Apply_Discounts",
+    "targetRef": "Task_Choose_Phone_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Choose_Phone_Plan",
+    "targetRef": "Task_Select_Add_ons",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Confirm_Purchase",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 180
+      },
+      {
+        "x": 2850,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

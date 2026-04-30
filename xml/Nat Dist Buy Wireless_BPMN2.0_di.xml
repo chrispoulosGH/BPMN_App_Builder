@@ -1,0 +1,478 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Nat_Dist_Buy_Wireless" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Nat_Dist_Buy_Wireless" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>2</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>3</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>10</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>Avertack</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>25114</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CAS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18224</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CPC</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>17765</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Customer Care</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20182</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Network Management</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20188</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Parent Triage</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>17690</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Product and Offer Mgt</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20180</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Digital IDP</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>27531</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>FED COMS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>23283</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>GEARS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>17784</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>OPCC</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>22770</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>PEARS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18436</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>SARA Plus DSI</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32298</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>TLG MOB</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18193</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Authenticate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Address</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Features</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Credit_Policy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Provision_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Customer_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Customer_Account</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Reserve_Number</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_for_Fraud</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Apply_Top_Offers</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Mobility | Business Flow: Nat Dist Buy Wireless</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Authenticate" name="Authenticate"/>
+    <bpmn:task id="Task_Validate_Address" name="Validate Address"/>
+    <bpmn:task id="Task_Select_Features" name="Select Features"/>
+    <bpmn:task id="Task_Submit_Order" name="Submit Order"/>
+    <bpmn:task id="Task_Submit_Credit_Policy" name="Submit Credit Policy"/>
+    <bpmn:task id="Task_Provision_Device" name="Provision Device"/>
+    <bpmn:task id="Task_Verify_Customer_Eligibility" name="Verify Customer Eligibility"/>
+    <bpmn:task id="Task_Verify_Customer_Account" name="Verify Customer Account"/>
+    <bpmn:task id="Task_Check_Credit" name="Check Credit"/>
+    <bpmn:task id="Task_Reserve_Number" name="Reserve Number"/>
+    <bpmn:task id="Task_Select_Device" name="Select Device"/>
+    <bpmn:task id="Task_Select_Plan" name="Select Plan"/>
+    <bpmn:task id="Task_Check_for_Fraud" name="Check for Fraud"/>
+    <bpmn:task id="Task_Apply_Top_Offers" name="Apply Top Offers"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Authenticate"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Authenticate" targetRef="Task_Validate_Address"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Apply_Top_Offers" targetRef="Task_Select_Features"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Select_Features" targetRef="Task_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Submit_Order" targetRef="Task_Submit_Credit_Policy"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Submit_Credit_Policy" targetRef="Task_Provision_Device"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Validate_Address" targetRef="Task_Verify_Customer_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Verify_Customer_Eligibility" targetRef="Task_Verify_Customer_Account"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Verify_Customer_Account" targetRef="Task_Check_Credit"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Check_Credit" targetRef="Task_Reserve_Number"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Reserve_Number" targetRef="Task_Select_Device"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Select_Device" targetRef="Task_Select_Plan"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Select_Plan" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Check_for_Fraud" targetRef="Task_Apply_Top_Offers"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_Provision_Device" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>CSI Customer Care, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Authenticate"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>SARA Plus DSI, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Validate_Address"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>SARA Plus DSI, CSI Parent Triage</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Select_Features"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>TLG MOB, FED COMS, CSI Product and Offer Mgt, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Submit_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, FED COMS, OPCC, SARA Plus DSI, CAS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Submit_Credit_Policy"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>Avertack, Digital IDP, SARA Plus DSI, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Provision_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>CAS, GEARS, SARA Plus DSI, PEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Verify_Customer_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>SARA Plus DSI, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Verify_Customer_Account"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>TLG MOB, SARA Plus DSI, CAS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Check_Credit"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>TLG MOB, SARA Plus DSI, CSI Network Management, PEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Reserve_Number"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>CPC, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Select_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Select_Plan"/>
+    <bpmn:textAnnotation id="TextAnnotation_13">
+      <bpmn:text>SARA Plus DSI, Digital IDP, Avertack</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_13" sourceRef="TextAnnotation_13" targetRef="Task_Check_for_Fraud"/>
+    <bpmn:textAnnotation id="TextAnnotation_14">
+      <bpmn:text>CSI Parent Triage, SARA Plus DSI</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_14" sourceRef="TextAnnotation_14" targetRef="Task_Apply_Top_Offers"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Nat_Dist_Buy_Wireless" name="Line of Business: Mass Markets | Channel: Retail | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Mobility | Business Flow: Nat Dist Buy Wireless">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Nat_Dist_Buy_Wireless" bpmnElement="Process_Nat_Dist_Buy_Wireless">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="80" width="2866" height="200"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" stroke="blue">
+        <dc:Bounds x="150" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Authenticate_di" bpmnElement="Task_Authenticate" stroke="blue">
+        <dc:Bounds x="330" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Validate_Address_di" bpmnElement="Task_Validate_Address" stroke="blue">
+        <dc:Bounds x="510" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Features_di" bpmnElement="Task_Select_Features" stroke="blue">
+        <dc:Bounds x="2130" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Submit_Order_di" bpmnElement="Task_Submit_Order" stroke="blue">
+        <dc:Bounds x="2310" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Submit_Credit_Policy_di" bpmnElement="Task_Submit_Credit_Policy" stroke="blue">
+        <dc:Bounds x="2490" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Provision_Device_di" bpmnElement="Task_Provision_Device" stroke="blue">
+        <dc:Bounds x="2670" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Verify_Customer_Eligibility_di" bpmnElement="Task_Verify_Customer_Eligibility" stroke="blue">
+        <dc:Bounds x="690" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Verify_Customer_Account_di" bpmnElement="Task_Verify_Customer_Account" stroke="blue">
+        <dc:Bounds x="870" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Check_Credit_di" bpmnElement="Task_Check_Credit" stroke="blue">
+        <dc:Bounds x="1050" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Reserve_Number_di" bpmnElement="Task_Reserve_Number" stroke="blue">
+        <dc:Bounds x="1230" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Device_di" bpmnElement="Task_Select_Device" stroke="blue">
+        <dc:Bounds x="1410" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Plan_di" bpmnElement="Task_Select_Plan" stroke="blue">
+        <dc:Bounds x="1590" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Check_for_Fraud_di" bpmnElement="Task_Check_for_Fraud" stroke="blue">
+        <dc:Bounds x="1770" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Apply_Top_Offers_di" bpmnElement="Task_Apply_Top_Offers" stroke="blue">
+        <dc:Bounds x="1950" y="140.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" stroke="blue">
+        <dc:Bounds x="2850" y="162.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="1018.0" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="1018.0" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="2130" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2130" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="2310" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2310" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="2490" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2490" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="2670" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2670" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_7_di" bpmnElement="TextAnnotation_7">
+        <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_8_di" bpmnElement="TextAnnotation_8">
+        <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_9_di" bpmnElement="TextAnnotation_9">
+        <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_10_di" bpmnElement="TextAnnotation_10">
+        <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_11_di" bpmnElement="TextAnnotation_11">
+        <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1410" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_12_di" bpmnElement="TextAnnotation_12">
+        <dc:Bounds x="1590" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1590" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_13_di" bpmnElement="TextAnnotation_13">
+        <dc:Bounds x="1770" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1770" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_14_di" bpmnElement="TextAnnotation_14">
+        <dc:Bounds x="1950" y="230.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="230.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380.0" y="230.0"/>
+        <di:waypoint x="380.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="560.0" y="230.0"/>
+        <di:waypoint x="560.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="2180.0" y="230.0"/>
+        <di:waypoint x="2180.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="2360.0" y="230.0"/>
+        <di:waypoint x="2360.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="2540.0" y="230.0"/>
+        <di:waypoint x="2540.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="2720.0" y="230.0"/>
+        <di:waypoint x="2720.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_7_di" bpmnElement="Association_7">
+        <di:waypoint x="740.0" y="230.0"/>
+        <di:waypoint x="740.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_8_di" bpmnElement="Association_8">
+        <di:waypoint x="920.0" y="230.0"/>
+        <di:waypoint x="920.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_9_di" bpmnElement="Association_9">
+        <di:waypoint x="1100.0" y="230.0"/>
+        <di:waypoint x="1100.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10_di" bpmnElement="Association_10">
+        <di:waypoint x="1280.0" y="230.0"/>
+        <di:waypoint x="1280.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_11_di" bpmnElement="Association_11">
+        <di:waypoint x="1460.0" y="230.0"/>
+        <di:waypoint x="1460.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_12_di" bpmnElement="Association_12">
+        <di:waypoint x="1640.0" y="230.0"/>
+        <di:waypoint x="1640.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_13_di" bpmnElement="Association_13">
+        <di:waypoint x="1820.0" y="230.0"/>
+        <di:waypoint x="1820.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_14_di" bpmnElement="Association_14">
+        <di:waypoint x="2000.0" y="230.0"/>
+        <di:waypoint x="2000.0" y="220.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" stroke="blue">
+        <di:waypoint x="186" y="180.0"/>
+        <di:waypoint x="330" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" stroke="blue">
+        <di:waypoint x="430" y="180.0"/>
+        <di:waypoint x="510" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" stroke="blue">
+        <di:waypoint x="2050" y="180.0"/>
+        <di:waypoint x="2130" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" stroke="blue">
+        <di:waypoint x="2230" y="180.0"/>
+        <di:waypoint x="2310" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" stroke="blue">
+        <di:waypoint x="2410" y="180.0"/>
+        <di:waypoint x="2490" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" stroke="blue">
+        <di:waypoint x="2590" y="180.0"/>
+        <di:waypoint x="2670" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" stroke="blue">
+        <di:waypoint x="610" y="180.0"/>
+        <di:waypoint x="690" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" stroke="blue">
+        <di:waypoint x="790" y="180.0"/>
+        <di:waypoint x="870" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9" stroke="blue">
+        <di:waypoint x="970" y="180.0"/>
+        <di:waypoint x="1050" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" stroke="blue">
+        <di:waypoint x="1150" y="180.0"/>
+        <di:waypoint x="1230" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11" stroke="blue">
+        <di:waypoint x="1330" y="180.0"/>
+        <di:waypoint x="1410" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12" stroke="blue">
+        <di:waypoint x="1510" y="180.0"/>
+        <di:waypoint x="1590" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13" stroke="blue">
+        <di:waypoint x="1690" y="180.0"/>
+        <di:waypoint x="1770" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14" stroke="blue">
+        <di:waypoint x="1870" y="180.0"/>
+        <di:waypoint x="1950" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15_di" bpmnElement="Flow_15" stroke="blue">
+        <di:waypoint x="2770" y="180.0"/>
+        <di:waypoint x="2850" y="180.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

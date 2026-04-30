@@ -1,0 +1,291 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Customer",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_2",
+    "type": "lane",
+    "name": "AE",
+    "x": 70,
+    "y": 280,
+    "height": 200,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_3",
+    "type": "lane",
+    "name": "Billing Agent",
+    "x": 70,
+    "y": 480,
+    "height": 200,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Call_AE",
+    "type": "task",
+    "name": "Call AE",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Change_Plan",
+    "type": "task",
+    "name": "Change Plan",
+    "x": 690,
+    "y": 340,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Lookup_Authenticate_Customer",
+    "type": "task",
+    "name": "Lookup Authenticate Customer",
+    "x": 510,
+    "y": 340,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Setup_Billing",
+    "type": "task",
+    "name": "Setup Billing",
+    "x": 1050,
+    "y": 540,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Submit_Order",
+    "type": "task",
+    "name": "Submit Order",
+    "x": 1230,
+    "y": 340,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Validate_Order",
+    "type": "task",
+    "name": "Validate Order",
+    "x": 870,
+    "y": 340,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 1410,
+    "y": 362,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Call_AE",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Call_AE",
+    "targetRef": "Task_Lookup_Authenticate_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 380
+      },
+      {
+        "x": 480,
+        "y": 380
+      },
+      {
+        "x": 510,
+        "y": 380
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Lookup_Authenticate_Customer",
+    "targetRef": "Task_Change_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 380
+      },
+      {
+        "x": 690,
+        "y": 380
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Change_Plan",
+    "targetRef": "Task_Validate_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 380
+      },
+      {
+        "x": 870,
+        "y": 380
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Validate_Order",
+    "targetRef": "Task_Setup_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 380
+      },
+      {
+        "x": 1000,
+        "y": 380
+      },
+      {
+        "x": 1000,
+        "y": 580
+      },
+      {
+        "x": 1020,
+        "y": 580
+      },
+      {
+        "x": 1050,
+        "y": 580
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Setup_Billing",
+    "targetRef": "Task_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 580
+      },
+      {
+        "x": 1180,
+        "y": 580
+      },
+      {
+        "x": 1180,
+        "y": 380
+      },
+      {
+        "x": 1200,
+        "y": 380
+      },
+      {
+        "x": 1230,
+        "y": 380
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Submit_Order",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 380
+      },
+      {
+        "x": 1410,
+        "y": 380
+      }
+    ],
+    "color": "blue"
+  }
+]

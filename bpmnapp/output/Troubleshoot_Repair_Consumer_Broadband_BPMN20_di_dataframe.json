@@ -1,0 +1,93 @@
+[
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "0",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Provision Device"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "1",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Log Into Device"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "2",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Review Jobs"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "3",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Select Job View Comments"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "4",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Contact Customer Verify ETA"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "5",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Arrive on Prem Update Job"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "6",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Review Order w Customer"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "7",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Isolate Resolve"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "8",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Create Submit Damage Claim"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "9",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Submit Bury Request"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "10",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Check Quality True Test"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "11",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Upload True Test Scope Results"
+  },
+  {
+    "business_flow": "Troubleshoot",
+    "e2eux_sequence": "12",
+    "gateway": "",
+    "e2eux_actor": "",
+    "e2eux": "Close Job"
+  }
+]

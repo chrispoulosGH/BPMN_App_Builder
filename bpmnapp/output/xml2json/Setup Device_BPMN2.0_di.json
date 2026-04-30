@@ -1,0 +1,156 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 886,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Confirm_Network_Connection",
+    "type": "task",
+    "name": "Confirm Network Connection",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CS FOBPM",
+      "IDP Customer Graph Cloud",
+      "TLG MOB",
+      "SC Switch Control TSC"
+    ]
+  },
+  {
+    "id": "Task_Device_Sent_to_Customer",
+    "type": "task",
+    "name": "Device Sent to Customer",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "YODA",
+      "MOBNT IMEI Trigger",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Device_on_Wi_Fi",
+    "type": "task",
+    "name": "Device on Wi Fi",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "YODA",
+      "TLG MOB",
+      "SC Switch Control TSC"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 870,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Device_Sent_to_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Device_Sent_to_Customer",
+    "targetRef": "Task_Device_on_Wi_Fi",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Device_on_Wi_Fi",
+    "targetRef": "Task_Confirm_Network_Connection",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Confirm_Network_Connection",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

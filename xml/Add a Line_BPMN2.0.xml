@@ -1,0 +1,229 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Add_a_Line" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Add_a_Line" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>8</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>Avertack</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25114</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18224</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CS FOBPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19181</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI CPSVC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23901</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>EDD</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17689</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>EDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18211</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED COMS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23283</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23205</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED US</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24433</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED iCAS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23439</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP WebAcctMgmt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32768</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>INLAP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31374</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OPUS C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18257</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ORACLE SCM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18249</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>T Data</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21948</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TSRM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24290</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Lookup_Authenticate_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Credit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Device_Plan_Features</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Pricing</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Reserve_CTN</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Billing_Payments</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_PIN</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Retail | Domain: Use  Manage | Subdomain: Change Plan / Change Speed | Product: Mobility | Business Flow: Add a Line</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Lookup_Authenticate_Customer" name="Lookup Authenticate Customer"/>
+    <bpmn:task id="Task_Check_Credit" name="Check Credit"/>
+    <bpmn:task id="Task_Select_Device_Plan_Features" name="Select Device Plan Features"/>
+    <bpmn:task id="Task_Validate_Pricing" name="Validate Pricing"/>
+    <bpmn:task id="Task_Reserve_CTN" name="Reserve CTN"/>
+    <bpmn:task id="Task_Setup_Billing_Payments" name="Setup Billing Payments"/>
+    <bpmn:task id="Task_Validate_PIN" name="Validate PIN"/>
+    <bpmn:task id="Task_Submit_Order" name="Submit Order"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Lookup_Authenticate_Customer"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Lookup_Authenticate_Customer" targetRef="Task_Check_Credit"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Check_Credit" targetRef="Task_Select_Device_Plan_Features"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Select_Device_Plan_Features" targetRef="Task_Validate_Pricing"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Validate_Pricing" targetRef="Task_Reserve_CTN"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Reserve_CTN" targetRef="Task_Setup_Billing_Payments"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Setup_Billing_Payments" targetRef="Task_Validate_PIN"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Validate_PIN" targetRef="Task_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Submit_Order" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>CS FOBPM, IDP WebAcctMgmt, CSI Customer Care, OPUS C, T Data, CAS, FED US, TLG MOB, Digital IDP, CSI Product and Offer Mgt, INLAP, Avertack, IDP IDM, TSRM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Lookup_Authenticate_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>OPUS C, TLG MOB, CAS, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Check_Credit"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CAS, T Data, FED CPC, CPC, OPUS C, TLG MOB, CSI Customer Care, Digital IDP</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Select_Device_Plan_Features"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>OPUS C, TLG MOB, FED CPC</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Validate_Pricing"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, OPUS C</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Reserve_CTN"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>CSI Customer Care, CAS, CSI CPSVC, FED iCAS, OPUS C, T Data, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Setup_Billing_Payments"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>OPUS C, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Validate_PIN"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>TLG MOB, OPUS C, Digital IDP, EDD, FED COMS, ORACLE SCM, EDP, FED iCAS, Avertack, CSI Customer Care, CSI Parent Triage</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Submit_Order"/>
+  </bpmn:process>
+</bpmn:definitions>

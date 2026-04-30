@@ -1,0 +1,330 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Activate_Provision_Service" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Activate_Provision_Service" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>2</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>3</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>1</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>CS FOBPM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>19181</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Customer Care</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20182</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Network Management</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20188</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Order and Subscription Mngt</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20187</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Parent Triage</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>17690</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CSI Product and Offer Mgt</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>20180</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>FED GEARS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>24095</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>GRID GDDN</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>22509</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>PEARS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18436</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>SC Switch Control TSC</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18198</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>TLG MOB</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>18193</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1" name="Sales Agent">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Inquire_Account_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Market_Service_Area</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Manage_Subscriber_Number</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Network Technician">
+        <bpmn:flowNodeRef>Task_Prepare_Number_Port</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Device_SIM_Status</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Fork_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3" name="Service Agent">
+        <bpmn:flowNodeRef>Task_Activate_Service</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: MVNO | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Wholesale Mobility | Business Flow: Activate Provision Service</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Inquire_Account_Eligibility" name="Inquire Account Eligibility"/>
+    <bpmn:task id="Task_Prepare_Number_Port" name="Prepare Number Port"/>
+    <bpmn:task id="Task_Verify_Device_SIM_Status" name="Verify Device SIM Status"/>
+    <bpmn:task id="Task_Validate_Market_Service_Area" name="Validate Market Service Area"/>
+    <bpmn:task id="Task_Manage_Subscriber_Number" name="Manage Subscriber Number"/>
+    <bpmn:task id="Task_Activate_Service" name="Activate Service"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:exclusiveGateway id="Gateway_Fork_1" name="Fork 0"/>
+    <bpmn:exclusiveGateway id="Gateway_Join_1" name="Join 0"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Inquire_Account_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Prepare_Number_Port" targetRef="Task_Verify_Device_SIM_Status"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Validate_Market_Service_Area" targetRef="Task_Manage_Subscriber_Number"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Inquire_Account_Eligibility" targetRef="Gateway_Fork_1"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Gateway_Fork_1" targetRef="Task_Prepare_Number_Port"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Gateway_Fork_1" targetRef="Task_Validate_Market_Service_Area"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Verify_Device_SIM_Status" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Manage_Subscriber_Number" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Gateway_Join_1" targetRef="Task_Activate_Service"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Activate_Service" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>PEARS, CSI Customer Care, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Inquire_Account_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>CSI Network Management, PEARS, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Prepare_Number_Port"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>TLG MOB, CSI Product and Offer Mgt, CSI Network Management, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Verify_Device_SIM_Status"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>CSI Parent Triage, CSI Order and Subscription Mngt, FED GEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Validate_Market_Service_Area"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, CSI Network Management</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Manage_Subscriber_Number"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>CSI Network Management, TLG MOB, SC Switch Control TSC, CSI Product and Offer Mgt, CSI Customer Care, CS FOBPM, GRID GDDN, CSI Order and Subscription Mngt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Activate_Service"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Activate_Provision_Service" name="Line of Business: Mass Markets | Channel: MVNO | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Wholesale Mobility | Business Flow: Activate Provision Service">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Activate_Provision_Service" bpmnElement="Process_Activate_Provision_Service">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="80" width="1426" height="330"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="235.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_2_di" bpmnElement="Lane_2" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="410" width="1426" height="330"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="565.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_3_di" bpmnElement="Lane_3" isHorizontal="true" stroke="gray">
+        <dc:Bounds x="70" y="740" width="1426" height="200"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="70" y="830.0" width="30" height="20"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" stroke="blue">
+        <dc:Bounds x="150" y="152.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Inquire_Account_Eligibility_di" bpmnElement="Task_Inquire_Account_Eligibility" stroke="blue">
+        <dc:Bounds x="330" y="130.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Validate_Market_Service_Area_di" bpmnElement="Task_Validate_Market_Service_Area" stroke="blue">
+        <dc:Bounds x="690" y="280.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Manage_Subscriber_Number_di" bpmnElement="Task_Manage_Subscriber_Number" stroke="blue">
+        <dc:Bounds x="870" y="280.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Prepare_Number_Port_di" bpmnElement="Task_Prepare_Number_Port" stroke="blue">
+        <dc:Bounds x="690" y="460.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Verify_Device_SIM_Status_di" bpmnElement="Task_Verify_Device_SIM_Status" stroke="blue">
+        <dc:Bounds x="870" y="460.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Fork_1_di" bpmnElement="Gateway_Fork_1" stroke="blue">
+        <dc:Bounds x="510" y="625.0" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Join_1_di" bpmnElement="Gateway_Join_1" stroke="blue">
+        <dc:Bounds x="1050" y="625.0" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Activate_Service_di" bpmnElement="Task_Activate_Service" stroke="blue">
+        <dc:Bounds x="1230" y="800.0" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" stroke="blue">
+        <dc:Bounds x="1410" y="822.0" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="298.0" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="298.0" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="220.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="220.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="690" y="550.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="550.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="870" y="550.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="550.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="690" y="370.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="370.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="870" y="370.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="370.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="1230" y="890.0" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="890.0" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380.0" y="220.0"/>
+        <di:waypoint x="380.0" y="210.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="740.0" y="550.0"/>
+        <di:waypoint x="740.0" y="540.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="920.0" y="550.0"/>
+        <di:waypoint x="920.0" y="540.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="740.0" y="370.0"/>
+        <di:waypoint x="740.0" y="360.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="920.0" y="370.0"/>
+        <di:waypoint x="920.0" y="360.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="1280.0" y="890.0"/>
+        <di:waypoint x="1280.0" y="880.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" stroke="blue">
+        <di:waypoint x="186" y="170.0"/>
+        <di:waypoint x="330" y="170.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" stroke="blue">
+        <di:waypoint x="790" y="500.0"/>
+        <di:waypoint x="870" y="500.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" stroke="blue">
+        <di:waypoint x="790" y="320.0"/>
+        <di:waypoint x="870" y="320.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" stroke="blue">
+        <di:waypoint x="430" y="170.0"/>
+        <di:waypoint x="460" y="170.0"/>
+        <di:waypoint x="460" y="650.0"/>
+        <di:waypoint x="480" y="650.0"/>
+        <di:waypoint x="510" y="650.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" stroke="blue">
+        <di:waypoint x="560" y="650.0"/>
+        <di:waypoint x="590" y="650.0"/>
+        <di:waypoint x="590" y="500.0"/>
+        <di:waypoint x="660" y="500.0"/>
+        <di:waypoint x="690" y="500.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" stroke="blue">
+        <di:waypoint x="560" y="650.0"/>
+        <di:waypoint x="590" y="650.0"/>
+        <di:waypoint x="590" y="320.0"/>
+        <di:waypoint x="660" y="320.0"/>
+        <di:waypoint x="690" y="320.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" stroke="blue">
+        <di:waypoint x="970" y="500.0"/>
+        <di:waypoint x="1000" y="500.0"/>
+        <di:waypoint x="1020" y="500.0"/>
+        <di:waypoint x="1020" y="650.0"/>
+        <di:waypoint x="1050" y="650.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" stroke="blue">
+        <di:waypoint x="970" y="320.0"/>
+        <di:waypoint x="1000" y="320.0"/>
+        <di:waypoint x="1020" y="320.0"/>
+        <di:waypoint x="1020" y="650.0"/>
+        <di:waypoint x="1050" y="650.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9" stroke="blue">
+        <di:waypoint x="1100" y="650.0"/>
+        <di:waypoint x="1130" y="650.0"/>
+        <di:waypoint x="1130" y="840.0"/>
+        <di:waypoint x="1200" y="840.0"/>
+        <di:waypoint x="1230" y="840.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" stroke="blue">
+        <di:waypoint x="1330" y="840.0"/>
+        <di:waypoint x="1410" y="840.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

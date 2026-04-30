@@ -1,0 +1,546 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Activate_Line" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Activate_Line" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>4</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>AA</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30176</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT CCT AEP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26150</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT CCT APIGEE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30793</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT CCT Service Access Gateway</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26215</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT CCTP CTI FRAME</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>9367</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT CCTP ICM GEN ADAPTER FRAME</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20813</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT Coral Desktop</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26959</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ATT VERINT CQM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>9248</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Avertack</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25114</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18224</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CAST</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33435</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCDL</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32255</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCM Clarify CM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18293</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCMULE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30686</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCR Relational CCR R</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19166</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCSF</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30685</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CCT ATT IPCS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>25363</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Credit and Val</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20186</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>DPG Sales Sunrise</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31479</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>DialogFlow</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31036</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Digital IDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>27531</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ECO USP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>34361</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ECRMI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>28024</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>EDP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18211</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED CPC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>23205</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED US</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24433</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRID AC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22510</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRID GDDN</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22509</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>HVD VDI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>29243</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Halo E AM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26224</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP BUPS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33847</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Chat VA ANDi</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30063</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Customer Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31468</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP IDM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>32765</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Web Support</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30635</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>INLAP</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31374</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ISAAC WFE</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>10593</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>LS CRM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>10056</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MPSYS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>8841</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OPUS C</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18257</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>ORACLE SCM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18249</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>OVALS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21269</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>PC GCP BI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31445</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Platform Support ATTFEDGOV1</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>33063</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Qfiniti Call Recording</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17611</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>RAISR</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>28167</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SC SPI</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26967</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>Sonus TCCS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>26630</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>T Data</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21948</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>eTRACS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>9313</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>myATT Mobile App</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>30558</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Activate_Line_Self_Service</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Receive_Call</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_LIC_to_OPUS_Search_CTN_optional</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_LIC_to_OPUS_Authenticate_optional</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Search_Customer_Service_Address</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Activate_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Authorize_Credit_Check</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Reserve_Subscriber_Number</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Arrange_Customer_Down_Payment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Billing_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Skip_Trade_In</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_IVR_Menu_Retrieve_Customer_Info_Route_Call</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Setup_Payment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Terms_Conditions</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Complete_and_Submit_Order</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Recap_Call</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Auto_Summarize_Notes</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Integrate_Telephony</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Handoff_to_Agent_from_IVR</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Transcribe_Redact_SPI</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Record_Monitor_Call</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Authenticate_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Lookup_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Lines_in_Accounts_Services</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Care | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Mobility | Business Flow: Activate Line</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Activate_Line_Self_Service" name="Activate Line Self Service"/>
+    <bpmn:task id="Task_Receive_Call" name="Receive Call"/>
+    <bpmn:task id="Task_LIC_to_OPUS_Search_CTN_optional" name="LIC to OPUS Search CTN optional"/>
+    <bpmn:task id="Task_LIC_to_OPUS_Authenticate_optional" name="LIC to OPUS Authenticate optional"/>
+    <bpmn:task id="Task_Search_Customer_Service_Address" name="Search Customer Service Address"/>
+    <bpmn:task id="Task_Activate_Customer" name="Activate Customer"/>
+    <bpmn:task id="Task_Authorize_Credit_Check" name="Authorize Credit Check"/>
+    <bpmn:task id="Task_Validate_Order" name="Validate Order"/>
+    <bpmn:task id="Task_Reserve_Subscriber_Number" name="Reserve Subscriber Number"/>
+    <bpmn:task id="Task_Arrange_Customer_Down_Payment" name="Arrange Customer Down Payment"/>
+    <bpmn:task id="Task_Review_Billing_Order" name="Review Billing Order"/>
+    <bpmn:task id="Task_Skip_Trade_In" name="Skip Trade In"/>
+    <bpmn:task id="Task_IVR_Menu_Retrieve_Customer_Info_Route_Call" name="IVR Menu Retrieve Customer Info Route Call"/>
+    <bpmn:task id="Task_Setup_Payment" name="Setup Payment"/>
+    <bpmn:task id="Task_Review_Terms_Conditions" name="Review Terms Conditions"/>
+    <bpmn:task id="Task_Complete_and_Submit_Order" name="Complete and Submit Order"/>
+    <bpmn:task id="Task_Recap_Call" name="Recap Call"/>
+    <bpmn:task id="Task_Auto_Summarize_Notes" name="Auto Summarize Notes"/>
+    <bpmn:task id="Task_Integrate_Telephony" name="Integrate Telephony"/>
+    <bpmn:task id="Task_Handoff_to_Agent_from_IVR" name="Handoff to Agent from IVR"/>
+    <bpmn:task id="Task_Transcribe_Redact_SPI" name="Transcribe Redact SPI"/>
+    <bpmn:task id="Task_Record_Monitor_Call" name="Record Monitor Call"/>
+    <bpmn:task id="Task_Authenticate_Customer" name="Authenticate Customer"/>
+    <bpmn:task id="Task_Lookup_Customer" name="Lookup Customer"/>
+    <bpmn:task id="Task_Review_Lines_in_Accounts_Services" name="Review Lines in Accounts Services"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Activate_Line_Self_Service"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Activate_Line_Self_Service" targetRef="Task_Receive_Call"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Review_Lines_in_Accounts_Services" targetRef="Task_LIC_to_OPUS_Search_CTN_optional"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_LIC_to_OPUS_Search_CTN_optional" targetRef="Task_LIC_to_OPUS_Authenticate_optional"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_LIC_to_OPUS_Authenticate_optional" targetRef="Task_Search_Customer_Service_Address"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Search_Customer_Service_Address" targetRef="Task_Activate_Customer"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Activate_Customer" targetRef="Task_Authorize_Credit_Check"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Authorize_Credit_Check" targetRef="Task_Validate_Order"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Validate_Order" targetRef="Task_Reserve_Subscriber_Number"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Reserve_Subscriber_Number" targetRef="Task_Arrange_Customer_Down_Payment"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Arrange_Customer_Down_Payment" targetRef="Task_Review_Billing_Order"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Review_Billing_Order" targetRef="Task_Skip_Trade_In"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Receive_Call" targetRef="Task_IVR_Menu_Retrieve_Customer_Info_Route_Call"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Skip_Trade_In" targetRef="Task_Setup_Payment"/>
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_Setup_Payment" targetRef="Task_Review_Terms_Conditions"/>
+    <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_Review_Terms_Conditions" targetRef="Task_Complete_and_Submit_Order"/>
+    <bpmn:sequenceFlow id="Flow_17" sourceRef="Task_Complete_and_Submit_Order" targetRef="Task_Recap_Call"/>
+    <bpmn:sequenceFlow id="Flow_18" sourceRef="Task_Recap_Call" targetRef="Task_Auto_Summarize_Notes"/>
+    <bpmn:sequenceFlow id="Flow_19" sourceRef="Task_IVR_Menu_Retrieve_Customer_Info_Route_Call" targetRef="Task_Integrate_Telephony"/>
+    <bpmn:sequenceFlow id="Flow_20" sourceRef="Task_Integrate_Telephony" targetRef="Task_Handoff_to_Agent_from_IVR"/>
+    <bpmn:sequenceFlow id="Flow_21" sourceRef="Task_Handoff_to_Agent_from_IVR" targetRef="Task_Transcribe_Redact_SPI"/>
+    <bpmn:sequenceFlow id="Flow_22" sourceRef="Task_Transcribe_Redact_SPI" targetRef="Task_Record_Monitor_Call"/>
+    <bpmn:sequenceFlow id="Flow_23" sourceRef="Task_Record_Monitor_Call" targetRef="Task_Authenticate_Customer"/>
+    <bpmn:sequenceFlow id="Flow_24" sourceRef="Task_Authenticate_Customer" targetRef="Task_Lookup_Customer"/>
+    <bpmn:sequenceFlow id="Flow_25" sourceRef="Task_Lookup_Customer" targetRef="Task_Review_Lines_in_Accounts_Services"/>
+    <bpmn:sequenceFlow id="Flow_26" sourceRef="Task_Auto_Summarize_Notes" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>IDP Web Support, myATT Mobile App</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Activate_Line_Self_Service"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>HVD VDI, Sonus TCCS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Receive_Call"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CSI Parent Triage, CCM Clarify CM, CSI Product and Offer Mgt, FED US, CSI Customer Care, INLAP, T Data, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_LIC_to_OPUS_Search_CTN_optional"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>Avertack, CPC, IDP IDM, TLG MOB, CCR Relational CCR R, CSI Customer Care, FED US, T Data</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_LIC_to_OPUS_Authenticate_optional"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>CSI Parent Triage, OPUS C, IDP Customer Graph Cloud, T Data, FED US, OVALS, TLG MOB, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Search_Customer_Service_Address"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>TLG MOB, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Activate_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>CAS, OPUS C, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Authorize_Credit_Check"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>OPUS C, FED CPC, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Validate_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>OPUS C, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Reserve_Subscriber_Number"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>OPUS C, TLG MOB, EDP, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Arrange_Customer_Down_Payment"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>OPUS C, ORACLE SCM, T Data</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Review_Billing_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>OPUS C, TLG MOB, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Skip_Trade_In"/>
+    <bpmn:textAnnotation id="TextAnnotation_13">
+      <bpmn:text>ATT CCT AEP, PC GCP BI, IDP Customer Graph Cloud, ECO USP, DialogFlow, CSI Customer Care, ATT CCT APIGEE, ISAAC WFE, IDP Chat VA ANDi, ATT CCT Service Access Gateway, CCT ATT IPCS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_13" sourceRef="TextAnnotation_13" targetRef="Task_IVR_Menu_Retrieve_Customer_Info_Route_Call"/>
+    <bpmn:textAnnotation id="TextAnnotation_14">
+      <bpmn:text>CSI Customer Care, OPUS C, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_14" sourceRef="TextAnnotation_14" targetRef="Task_Setup_Payment"/>
+    <bpmn:textAnnotation id="TextAnnotation_15">
+      <bpmn:text>TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_15" sourceRef="TextAnnotation_15" targetRef="Task_Review_Terms_Conditions"/>
+    <bpmn:textAnnotation id="TextAnnotation_16">
+      <bpmn:text>Digital IDP, Avertack, OPUS C, TLG MOB, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_16" sourceRef="TextAnnotation_16" targetRef="Task_Complete_and_Submit_Order"/>
+    <bpmn:textAnnotation id="TextAnnotation_17">
+      <bpmn:text>ATT Coral Desktop, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_17" sourceRef="TextAnnotation_17" targetRef="Task_Recap_Call"/>
+    <bpmn:textAnnotation id="TextAnnotation_18">
+      <bpmn:text>AA, CCDL, CAST</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_18" sourceRef="TextAnnotation_18" targetRef="Task_Auto_Summarize_Notes"/>
+    <bpmn:textAnnotation id="TextAnnotation_19">
+      <bpmn:text>ATT CCTP ICM GEN ADAPTER FRAME, ATT CCTP CTI FRAME</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_19" sourceRef="TextAnnotation_19" targetRef="Task_Integrate_Telephony"/>
+    <bpmn:textAnnotation id="TextAnnotation_20">
+      <bpmn:text>LS CRM, ATT Coral Desktop, CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_20" sourceRef="TextAnnotation_20" targetRef="Task_Handoff_to_Agent_from_IVR"/>
+    <bpmn:textAnnotation id="TextAnnotation_21">
+      <bpmn:text>Sonus TCCS, SC SPI, ATT Coral Desktop, RAISR</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_21" sourceRef="TextAnnotation_21" targetRef="Task_Transcribe_Redact_SPI"/>
+    <bpmn:textAnnotation id="TextAnnotation_22">
+      <bpmn:text>ECRMI, ATT VERINT CQM, Qfiniti Call Recording</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_22" sourceRef="TextAnnotation_22" targetRef="Task_Record_Monitor_Call"/>
+    <bpmn:textAnnotation id="TextAnnotation_23">
+      <bpmn:text>Avertack, IDP Customer Graph Cloud, CCSF, GRID GDDN, MPSYS, IDP IDM, Halo E AM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_23" sourceRef="TextAnnotation_23" targetRef="Task_Authenticate_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_24">
+      <bpmn:text>Platform Support ATTFEDGOV1, CCM Clarify CM, eTRACS, CCMULE, CSI Customer Care, CCSF, GRID AC, DPG Sales Sunrise, IDP Customer Graph Cloud, IDP BUPS, CSI Credit and Val, TLG MOB, FED US</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_24" sourceRef="TextAnnotation_24" targetRef="Task_Lookup_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_25">
+      <bpmn:text>CCSF</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_25" sourceRef="TextAnnotation_25" targetRef="Task_Review_Lines_in_Accounts_Services"/>
+  </bpmn:process>
+</bpmn:definitions>

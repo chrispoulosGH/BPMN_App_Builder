@@ -1,0 +1,582 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Customer",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2146,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_2",
+    "type": "lane",
+    "name": "Sales Agent",
+    "x": 70,
+    "y": 280,
+    "height": 330,
+    "width": 2146,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_3",
+    "type": "lane",
+    "name": "Billing Agent",
+    "x": 70,
+    "y": 610,
+    "height": 330,
+    "width": 2146,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Calls_Sales_Rep",
+    "type": "task",
+    "name": "Calls Sales Rep",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Lookup_Authenticate_Customer",
+    "type": "task",
+    "name": "Lookup Authenticate Customer",
+    "x": 510,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Avertack",
+      "CSI Product and Offer Mgt",
+      "TLG MOB",
+      "TSRM",
+      "Digital IDP",
+      "OPUS C",
+      "IDP IDM",
+      "CAS",
+      "T Data",
+      "FED US",
+      "CS FOBPM",
+      "INLAP",
+      "CSI Customer Care",
+      "IDP WebAcctMgmt"
+    ]
+  },
+  {
+    "id": "Task_Reserve_CTN",
+    "type": "task",
+    "name": "Reserve CTN",
+    "x": 1410,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Select_Device_Plan_Features",
+    "type": "task",
+    "name": "Select Device Plan Features",
+    "x": 870,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Digital IDP",
+      "TLG MOB",
+      "OPUS C",
+      "CSI Customer Care",
+      "FED CPC",
+      "CPC",
+      "CAS",
+      "T Data"
+    ]
+  },
+  {
+    "id": "Task_Submit_Order",
+    "type": "task",
+    "name": "Submit Order",
+    "x": 1950,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "EDD",
+      "FED COMS",
+      "ORACLE SCM",
+      "EDP",
+      "FED iCAS",
+      "Avertack",
+      "CSI Customer Care",
+      "TLG MOB",
+      "OPUS C",
+      "Digital IDP",
+      "CSI Parent Triage"
+    ]
+  },
+  {
+    "id": "Task_Validate_PIN",
+    "type": "task",
+    "name": "Validate PIN",
+    "x": 1770,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "CSI Customer Care"
+    ]
+  },
+  {
+    "id": "Task_Validate_Pricing",
+    "type": "task",
+    "name": "Validate Pricing",
+    "x": 1050,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB",
+      "FED CPC"
+    ]
+  },
+  {
+    "id": "Task_BOPIS",
+    "type": "task",
+    "name": "BOPIS",
+    "x": 690,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB",
+      "CAS",
+      "CSI Customer Care"
+    ],
+    "subProcessFileName": "BOPIS_BPMN2.0_di.json"
+  },
+  {
+    "id": "Task_Get_Technical_Support",
+    "type": "task",
+    "name": "Get Technical Support",
+    "x": 1410,
+    "y": 660,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI CPSVC",
+      "OPUS C",
+      "T Data",
+      "CSI Customer Care",
+      "CAS",
+      "TLG MOB",
+      "FED iCAS"
+    ],
+    "subProcessFileName": "Get Technical Support_BPMN2.0_di.json"
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2130,
+    "y": 352,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork P1",
+    "soureRef": [
+      "Task_Validate_Pricing"
+    ],
+    "targetRef": [
+      "Task_Get_Technical_Support",
+      "Task_Reserve_CTN"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1230,
+    "y": 825,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join P1",
+    "soureRef": [
+      "Task_Get_Technical_Support",
+      "Task_Reserve_CTN"
+    ],
+    "targetRef": [
+      "Task_Validate_PIN"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1590,
+    "y": 825,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Get_Technical_Support",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 850
+      },
+      {
+        "x": 1310,
+        "y": 850
+      },
+      {
+        "x": 1310,
+        "y": 700
+      },
+      {
+        "x": 1380,
+        "y": 700
+      },
+      {
+        "x": 1410,
+        "y": 700
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Reserve_CTN",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 850
+      },
+      {
+        "x": 1310,
+        "y": 850
+      },
+      {
+        "x": 1310,
+        "y": 520
+      },
+      {
+        "x": 1380,
+        "y": 520
+      },
+      {
+        "x": 1410,
+        "y": 520
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "Task_Validate_PIN",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1640,
+        "y": 850
+      },
+      {
+        "x": 1670,
+        "y": 850
+      },
+      {
+        "x": 1670,
+        "y": 370
+      },
+      {
+        "x": 1740,
+        "y": 370
+      },
+      {
+        "x": 1770,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Calls_Sales_Rep",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_BOPIS",
+    "targetRef": "Task_Select_Device_Plan_Features",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 370
+      },
+      {
+        "x": 870,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Calls_Sales_Rep",
+    "targetRef": "Task_Lookup_Authenticate_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 370
+      },
+      {
+        "x": 480,
+        "y": 370
+      },
+      {
+        "x": 510,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Get_Technical_Support",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 700
+      },
+      {
+        "x": 1540,
+        "y": 700
+      },
+      {
+        "x": 1560,
+        "y": 700
+      },
+      {
+        "x": 1560,
+        "y": 850
+      },
+      {
+        "x": 1590,
+        "y": 850
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Lookup_Authenticate_Customer",
+    "targetRef": "Task_BOPIS",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 370
+      },
+      {
+        "x": 690,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Reserve_CTN",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 520
+      },
+      {
+        "x": 1540,
+        "y": 520
+      },
+      {
+        "x": 1560,
+        "y": 520
+      },
+      {
+        "x": 1560,
+        "y": 850
+      },
+      {
+        "x": 1590,
+        "y": 850
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Select_Device_Plan_Features",
+    "targetRef": "Task_Validate_Pricing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 370
+      },
+      {
+        "x": 1050,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Submit_Order",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 370
+      },
+      {
+        "x": 2130,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Validate_PIN",
+    "targetRef": "Task_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 370
+      },
+      {
+        "x": 1950,
+        "y": 370
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Validate_Pricing",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 370
+      },
+      {
+        "x": 1180,
+        "y": 370
+      },
+      {
+        "x": 1180,
+        "y": 850
+      },
+      {
+        "x": 1200,
+        "y": 850
+      },
+      {
+        "x": 1230,
+        "y": 850
+      }
+    ],
+    "color": "blue"
+  }
+]

@@ -1,0 +1,788 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 4126,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Auto_Summarize_Notes",
+    "type": "task",
+    "name": "Auto Summarize Notes",
+    "x": 3930,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "AA",
+      "CAST",
+      "CCDL"
+    ]
+  },
+  {
+    "id": "Task_Check_Credit",
+    "type": "task",
+    "name": "Check Credit",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C",
+      "Avertack"
+    ]
+  },
+  {
+    "id": "Task_Check_for_Fraud",
+    "type": "task",
+    "name": "Check for Fraud",
+    "x": 3390,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "EDP",
+      "TLG MOB",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Complete_Payment_Sale",
+    "type": "task",
+    "name": "Complete Payment Sale",
+    "x": 3570,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CSI Customer Care",
+      "OPUS C",
+      "CAPM",
+      "FED COMS",
+      "CSI CPSVC"
+    ]
+  },
+  {
+    "id": "Task_Create_Account",
+    "type": "task",
+    "name": "Create Account",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB",
+      "CSI Parent Triage"
+    ]
+  },
+  {
+    "id": "Task_Create_New_Customer",
+    "type": "task",
+    "name": "Create New Customer",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_Handoff_to_Agent_from_IVR",
+    "type": "task",
+    "name": "Handoff to Agent from IVR",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS CRM",
+      "ATT Coral Desktop",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "type": "task",
+    "name": "IVR Menu Retrieve Customer Info Route Call",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT CCT APIGEE",
+      "ISAAC WFE",
+      "IDP Customer Graph Cloud",
+      "CCT ATT IPCS",
+      "DialogFlow",
+      "ECO USP",
+      "ATT CCT Service Access Gateway",
+      "PC GCP BI",
+      "CSI Customer Care",
+      "ATT CCT AEP",
+      "IDP Chat VA ANDi"
+    ]
+  },
+  {
+    "id": "Task_Integrate_Telephony",
+    "type": "task",
+    "name": "Integrate Telephony",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT CCTP CTI FRAME",
+      "ATT CCTP ICM GEN ADAPTER FRAME"
+    ]
+  },
+  {
+    "id": "Task_Port_Number",
+    "type": "task",
+    "name": "Port Number",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CAS",
+      "OPUS C",
+      "CPC"
+    ]
+  },
+  {
+    "id": "Task_Recap_Call",
+    "type": "task",
+    "name": "Recap Call",
+    "x": 3750,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT Coral Desktop",
+      "CCSF"
+    ]
+  },
+  {
+    "id": "Task_Receive_call",
+    "type": "task",
+    "name": "Receive call",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "HVD VDI",
+      "Sonus TCCS"
+    ]
+  },
+  {
+    "id": "Task_Record_Monitor_Call",
+    "type": "task",
+    "name": "Record Monitor Call",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "ATT VERINT CQM",
+      "Qfiniti Call Recording",
+      "ECRMI"
+    ]
+  },
+  {
+    "id": "Task_Review_Terms_Conditions",
+    "type": "task",
+    "name": "Review Terms Conditions",
+    "x": 3210,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Search_Customer_Service_Address",
+    "type": "task",
+    "name": "Search Customer Service Address",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "FED US",
+      "OVALS",
+      "CCSF",
+      "CSI Parent Triage",
+      "CCMULE",
+      "Digital IDP",
+      "T Data",
+      "INLAP",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Select_Number",
+    "type": "task",
+    "name": "Select Number",
+    "x": 2850,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "FED CPC",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Select_Phones_Bundle_Builder",
+    "type": "task",
+    "name": "Select Phones Bundle Builder",
+    "x": 2490,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Set_Up_Paperless_Billing_Autopay",
+    "type": "task",
+    "name": "Set Up Paperless Billing Autopay",
+    "x": 3030,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Transcribe_Redact_SPI",
+    "type": "task",
+    "name": "Transcribe Redact SPI",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SC SPI",
+      "RAISR",
+      "Sonus TCCS"
+    ]
+  },
+  {
+    "id": "Task_Validate_Order_and_Quote_Bundle_Builder",
+    "type": "task",
+    "name": "Validate Order and Quote Bundle Builder",
+    "x": 2670,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C",
+      "FED CPC"
+    ]
+  },
+  {
+    "id": "Task_View_Services_Available_to_Customer_Create_Account",
+    "type": "task",
+    "name": "View Services Available to Customer Create Account",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "MPSYS",
+      "FED iCAS",
+      "GRID GDDN",
+      "TLG MOB",
+      "IDP Customer Graph Cloud",
+      "IDP IDM",
+      "Avertack",
+      "CSI Customer Care",
+      "CCMULE",
+      "CCSF",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 4110,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Receive_call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Receive_call",
+    "targetRef": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Port_Number",
+    "targetRef": "Task_Create_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Create_Account",
+    "targetRef": "Task_Check_Credit",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Check_Credit",
+    "targetRef": "Task_Select_Phones_Bundle_Builder",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Select_Phones_Bundle_Builder",
+    "targetRef": "Task_Validate_Order_and_Quote_Bundle_Builder",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 180
+      },
+      {
+        "x": 2670,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Validate_Order_and_Quote_Bundle_Builder",
+    "targetRef": "Task_Select_Number",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 180
+      },
+      {
+        "x": 2850,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Select_Number",
+    "targetRef": "Task_Set_Up_Paperless_Billing_Autopay",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2950,
+        "y": 180
+      },
+      {
+        "x": 3030,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Set_Up_Paperless_Billing_Autopay",
+    "targetRef": "Task_Review_Terms_Conditions",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3130,
+        "y": 180
+      },
+      {
+        "x": 3210,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Review_Terms_Conditions",
+    "targetRef": "Task_Check_for_Fraud",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3310,
+        "y": 180
+      },
+      {
+        "x": 3390,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Check_for_Fraud",
+    "targetRef": "Task_Complete_Payment_Sale",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3490,
+        "y": 180
+      },
+      {
+        "x": 3570,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Complete_Payment_Sale",
+    "targetRef": "Task_Recap_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3670,
+        "y": 180
+      },
+      {
+        "x": 3750,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_IVR_Menu_Retrieve_Customer_Info_Route_Call",
+    "targetRef": "Task_Integrate_Telephony",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Recap_Call",
+    "targetRef": "Task_Auto_Summarize_Notes",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3850,
+        "y": 180
+      },
+      {
+        "x": 3930,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Integrate_Telephony",
+    "targetRef": "Task_Handoff_to_Agent_from_IVR",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_16",
+    "sourceRef": "Task_Handoff_to_Agent_from_IVR",
+    "targetRef": "Task_Transcribe_Redact_SPI",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_17",
+    "sourceRef": "Task_Transcribe_Redact_SPI",
+    "targetRef": "Task_Record_Monitor_Call",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_18",
+    "sourceRef": "Task_Record_Monitor_Call",
+    "targetRef": "Task_Create_New_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_19",
+    "sourceRef": "Task_Create_New_Customer",
+    "targetRef": "Task_Search_Customer_Service_Address",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_20",
+    "sourceRef": "Task_Search_Customer_Service_Address",
+    "targetRef": "Task_View_Services_Available_to_Customer_Create_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_21",
+    "sourceRef": "Task_View_Services_Available_to_Customer_Create_Account",
+    "targetRef": "Task_Port_Number",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_22",
+    "sourceRef": "Task_Auto_Summarize_Notes",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 4030,
+        "y": 180
+      },
+      {
+        "x": 4110,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

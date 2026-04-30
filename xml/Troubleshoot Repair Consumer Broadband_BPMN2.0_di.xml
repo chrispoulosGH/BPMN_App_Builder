@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:ns1="http://bpmn-builder/metadata" id="Definitions_Troubleshoot_Repair_Consumer_Broadband" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Troubleshoot_Repair_Consumer_Broadband" isExecutable="false">
+    <bpmn:extensionElements>
+      <ns1:journeyMetadata>
+        <ns1:domainSequences>
+          <ns1:sequence>4</ns1:sequence>
+        </ns1:domainSequences>
+        <ns1:subdomainSequences>
+          <ns1:sequence>3</ns1:sequence>
+        </ns1:subdomainSequences>
+        <ns1:businessFlowSequences>
+          <ns1:sequence>3</ns1:sequence>
+        </ns1:businessFlowSequences>
+        <ns1:applications>
+          <ns1:application>
+            <ns1:name>ABWS D</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>32007</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Atlas UI</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>28619</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>CAMS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>71</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Digital IDP</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>27531</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>ECM P8</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>19101</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>ECO Suite</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>10101</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>EDGE</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>19062</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>EXFOWorx</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>31529</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Enabler LS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>9899</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>FED FASTBPM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>27267</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Halo E AM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>26224</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>Intune</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>30989</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>LS OMS</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>10038</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>LSBBT</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>14311</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>MIMDM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>21011</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+          <ns1:application>
+            <ns1:name>SHM</ns1:name>
+            <ns1:correlationIds>
+              <ns1:id>26965</ns1:id>
+            </ns1:correlationIds>
+          </ns1:application>
+        </ns1:applications>
+      </ns1:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Provision_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Log_Into_Device</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Check_Quality_True_Test</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Upload_True_Test_Scope_Results</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Close_Job</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Jobs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Select_Job_View_Comments</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Contact_Customer_Verify_ETA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Arrive_on_Prem_Update_Job</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Isolate_Resolve</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Create_Submit_Damage_Claim</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Submit_Bury_Request</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review_Order_w_Customer</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Provision_Device" name="Provision Device"/>
+    <bpmn:task id="Task_Log_Into_Device" name="Log Into Device"/>
+    <bpmn:task id="Task_Check_Quality_True_Test" name="Check Quality True Test"/>
+    <bpmn:task id="Task_Upload_True_Test_Scope_Results" name="Upload True Test Scope Results"/>
+    <bpmn:task id="Task_Close_Job" name="Close Job"/>
+    <bpmn:task id="Task_Review_Jobs" name="Review Jobs"/>
+    <bpmn:task id="Task_Select_Job_View_Comments" name="Select Job View Comments"/>
+    <bpmn:task id="Task_Contact_Customer_Verify_ETA" name="Contact Customer Verify ETA"/>
+    <bpmn:task id="Task_Arrive_on_Prem_Update_Job" name="Arrive on Prem Update Job"/>
+    <bpmn:task id="Task_Isolate_Resolve" name="Isolate Resolve"/>
+    <bpmn:task id="Task_Create_Submit_Damage_Claim" name="Create Submit Damage Claim"/>
+    <bpmn:task id="Task_Submit_Bury_Request" name="Submit Bury Request"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Provision_Device"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Provision_Device" targetRef="Task_Log_Into_Device"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Submit_Bury_Request" targetRef="Task_Check_Quality_True_Test"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Check_Quality_True_Test" targetRef="Task_Upload_True_Test_Scope_Results"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Upload_True_Test_Scope_Results" targetRef="Task_Close_Job"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Log_Into_Device" targetRef="Task_Review_Jobs"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Review_Jobs" targetRef="Task_Select_Job_View_Comments"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Select_Job_View_Comments" targetRef="Task_Contact_Customer_Verify_ETA"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_Contact_Customer_Verify_ETA" targetRef="Task_Arrive_on_Prem_Update_Job"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Arrive_on_Prem_Update_Job" targetRef="Task_Review_Order_w_Customer"/>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_Review_Order_w_Customer" targetRef="Task_Isolate_Resolve"/>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_Isolate_Resolve" targetRef="Task_Create_Submit_Damage_Claim"/>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_Create_Submit_Damage_Claim" targetRef="Task_Submit_Bury_Request"/>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_Close_Job" targetRef="EndEvent_1"/>
+    <bpmn:subProcess id="Task_Review_Order_w_Customer" name="Review Order w Customer">
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    <bpmn:extensionElements><ns1:collapsedTaskFile taskRef="Task_Review_Order_w_Customer" fileName="Add a Line_BPMN2.0_di.xml"/></bpmn:extensionElements></bpmn:subProcess>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Field | Domain: Service  Support | Subdomain: Resolve Issue | Product: Broadband | Business Flow: Troubleshoot Repair Consumer Broadband</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 03/02/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>Atlas UI, Halo E AM, MIMDM, Intune</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Provision_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>Atlas UI, Halo E AM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Log_Into_Device"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>Atlas UI, LSBBT</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Check_Quality_True_Test"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>EXFOWorx</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Upload_True_Test_Scope_Results"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>Atlas UI, LSBBT, EDGE, ECO Suite, Enabler LS, ECM P8, FED FASTBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Close_Job"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>Atlas UI, EDGE, Digital IDP, FED FASTBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Review_Jobs"/>
+    <bpmn:textAnnotation id="TextAnnotation_7">
+      <bpmn:text>LS OMS, Atlas UI, EDGE, FED FASTBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_7" sourceRef="TextAnnotation_7" targetRef="Task_Select_Job_View_Comments"/>
+    <bpmn:textAnnotation id="TextAnnotation_8">
+      <bpmn:text>SHM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_8" sourceRef="TextAnnotation_8" targetRef="Task_Contact_Customer_Verify_ETA"/>
+    <bpmn:textAnnotation id="TextAnnotation_9">
+      <bpmn:text>EDGE, Atlas UI, FED FASTBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_9" sourceRef="TextAnnotation_9" targetRef="Task_Arrive_on_Prem_Update_Job"/>
+    <bpmn:textAnnotation id="TextAnnotation_10">
+      <bpmn:text>LS OMS, Atlas UI, EDGE, FED FASTBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_10" sourceRef="TextAnnotation_10" targetRef="Task_Review_Order_w_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_11">
+      <bpmn:text>Atlas UI, LSBBT</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_11" sourceRef="TextAnnotation_11" targetRef="Task_Isolate_Resolve"/>
+    <bpmn:textAnnotation id="TextAnnotation_12">
+      <bpmn:text>Atlas UI, CAMS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_12" sourceRef="TextAnnotation_12" targetRef="Task_Create_Submit_Damage_Claim"/>
+    <bpmn:textAnnotation id="TextAnnotation_13">
+      <bpmn:text>Atlas UI, ABWS D</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_13" sourceRef="TextAnnotation_13" targetRef="Task_Submit_Bury_Request"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Process_Troubleshoot_Repair_Consumer_Broadband" name="Line of Business: Mass Markets | Channel: Field | Domain: Service  Support | Subdomain: Resolve Issue | Product: Broadband | Business Flow: Troubleshoot Repair Consumer Broadband">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_Troubleshoot_Repair_Consumer_Broadband" bpmnElement="Process_Troubleshoot_Repair_Consumer_Broadband">
+      <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true" bioc:stroke="gray">
+        <dc:Bounds x="70" y="80" width="2686" height="200"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1" bioc:stroke="blue">
+        <dc:Bounds x="150" y="162" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Provision_Device_di" bpmnElement="Task_Provision_Device" bioc:stroke="blue">
+        <dc:Bounds x="330" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Log_Into_Device_di" bpmnElement="Task_Log_Into_Device" bioc:stroke="blue">
+        <dc:Bounds x="510" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Check_Quality_True_Test_di" bpmnElement="Task_Check_Quality_True_Test" bioc:stroke="blue">
+        <dc:Bounds x="2130" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Upload_True_Test_Scope_Results_di" bpmnElement="Task_Upload_True_Test_Scope_Results" bioc:stroke="blue">
+        <dc:Bounds x="2310" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Close_Job_di" bpmnElement="Task_Close_Job" bioc:stroke="blue">
+        <dc:Bounds x="2490" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Review_Jobs_di" bpmnElement="Task_Review_Jobs" bioc:stroke="blue">
+        <dc:Bounds x="690" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Select_Job_View_Comments_di" bpmnElement="Task_Select_Job_View_Comments" bioc:stroke="blue">
+        <dc:Bounds x="870" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Contact_Customer_Verify_ETA_di" bpmnElement="Task_Contact_Customer_Verify_ETA" bioc:stroke="blue">
+        <dc:Bounds x="1050" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Arrive_on_Prem_Update_Job_di" bpmnElement="Task_Arrive_on_Prem_Update_Job" bioc:stroke="blue">
+        <dc:Bounds x="1230" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Isolate_Resolve_di" bpmnElement="Task_Isolate_Resolve" bioc:stroke="blue">
+        <dc:Bounds x="1590" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Create_Submit_Damage_Claim_di" bpmnElement="Task_Create_Submit_Damage_Claim" bioc:stroke="blue">
+        <dc:Bounds x="1770" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Submit_Bury_Request_di" bpmnElement="Task_Submit_Bury_Request" bioc:stroke="blue">
+        <dc:Bounds x="1950" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1" bioc:stroke="blue">
+        <dc:Bounds x="2670" y="162" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mrimlr_di" bpmnElement="Task_Review_Order_w_Customer" bioc:stroke="blue">
+        <dc:Bounds x="1410" y="140" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_DiagramTitle_di" bpmnElement="TextAnnotation_DiagramTitle">
+        <dc:Bounds x="928" y="5" width="1000" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_LastUpdated_di" bpmnElement="TextAnnotation_LastUpdated">
+        <dc:Bounds x="928" y="35" width="240" height="25"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1_di" bpmnElement="TextAnnotation_1">
+        <dc:Bounds x="330" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="330" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_2_di" bpmnElement="TextAnnotation_2">
+        <dc:Bounds x="510" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_3_di" bpmnElement="TextAnnotation_3">
+        <dc:Bounds x="2130" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2130" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_4_di" bpmnElement="TextAnnotation_4">
+        <dc:Bounds x="2310" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2310" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_5_di" bpmnElement="TextAnnotation_5">
+        <dc:Bounds x="2490" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2490" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_6_di" bpmnElement="TextAnnotation_6">
+        <dc:Bounds x="690" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_7_di" bpmnElement="TextAnnotation_7">
+        <dc:Bounds x="870" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="870" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_8_di" bpmnElement="TextAnnotation_8">
+        <dc:Bounds x="1050" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1050" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_9_di" bpmnElement="TextAnnotation_9">
+        <dc:Bounds x="1230" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1230" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_10_di" bpmnElement="TextAnnotation_10">
+        <dc:Bounds x="1410" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1410" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_11_di" bpmnElement="TextAnnotation_11">
+        <dc:Bounds x="1590" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1590" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_12_di" bpmnElement="TextAnnotation_12">
+        <dc:Bounds x="1770" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1770" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_13_di" bpmnElement="TextAnnotation_13">
+        <dc:Bounds x="1950" y="230" width="100" height="40"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1950" y="230" width="100" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1" bioc:stroke="blue">
+        <di:waypoint x="186" y="180"/>
+        <di:waypoint x="330" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2" bioc:stroke="blue">
+        <di:waypoint x="430" y="180"/>
+        <di:waypoint x="510" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3" bioc:stroke="blue">
+        <di:waypoint x="2050" y="180"/>
+        <di:waypoint x="2130" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4" bioc:stroke="blue">
+        <di:waypoint x="2230" y="180"/>
+        <di:waypoint x="2310" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5" bioc:stroke="blue">
+        <di:waypoint x="2410" y="180"/>
+        <di:waypoint x="2490" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6" bioc:stroke="blue">
+        <di:waypoint x="610" y="180"/>
+        <di:waypoint x="690" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7" bioc:stroke="blue">
+        <di:waypoint x="790" y="180"/>
+        <di:waypoint x="870" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8" bioc:stroke="blue">
+        <di:waypoint x="970" y="180"/>
+        <di:waypoint x="1050" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9" bioc:stroke="blue">
+        <di:waypoint x="1150" y="180"/>
+        <di:waypoint x="1230" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10" bioc:stroke="blue">
+        <di:waypoint x="1330" y="180"/>
+        <di:waypoint x="1410" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11" bioc:stroke="blue">
+        <di:waypoint x="1510" y="180"/>
+        <di:waypoint x="1590" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12" bioc:stroke="blue">
+        <di:waypoint x="1690" y="180"/>
+        <di:waypoint x="1770" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13" bioc:stroke="blue">
+        <di:waypoint x="1870" y="180"/>
+        <di:waypoint x="1950" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14" bioc:stroke="blue">
+        <di:waypoint x="2590" y="180"/>
+        <di:waypoint x="2670" y="180"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1_di" bpmnElement="Association_1">
+        <di:waypoint x="380" y="230"/>
+        <di:waypoint x="380" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_2_di" bpmnElement="Association_2">
+        <di:waypoint x="560" y="230"/>
+        <di:waypoint x="560" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_3_di" bpmnElement="Association_3">
+        <di:waypoint x="2180" y="230"/>
+        <di:waypoint x="2180" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_4_di" bpmnElement="Association_4">
+        <di:waypoint x="2360" y="230"/>
+        <di:waypoint x="2360" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_5_di" bpmnElement="Association_5">
+        <di:waypoint x="2540" y="230"/>
+        <di:waypoint x="2540" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_6_di" bpmnElement="Association_6">
+        <di:waypoint x="740" y="230"/>
+        <di:waypoint x="740" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_7_di" bpmnElement="Association_7">
+        <di:waypoint x="920" y="230"/>
+        <di:waypoint x="920" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_8_di" bpmnElement="Association_8">
+        <di:waypoint x="1100" y="230"/>
+        <di:waypoint x="1100" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_9_di" bpmnElement="Association_9">
+        <di:waypoint x="1280" y="230"/>
+        <di:waypoint x="1280" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_10_di" bpmnElement="Association_10">
+        <di:waypoint x="1460" y="230"/>
+        <di:waypoint x="1460" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_11_di" bpmnElement="Association_11">
+        <di:waypoint x="1640" y="230"/>
+        <di:waypoint x="1640" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_12_di" bpmnElement="Association_12">
+        <di:waypoint x="1820" y="230"/>
+        <di:waypoint x="1820" y="220"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_13_di" bpmnElement="Association_13">
+        <di:waypoint x="2000" y="230"/>
+        <di:waypoint x="2000" y="220"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1xxvj1b">
+    <bpmndi:BPMNPlane id="BPMNPlane_0gjqeg8" bpmnElement="Task_Review_Order_w_Customer"/>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

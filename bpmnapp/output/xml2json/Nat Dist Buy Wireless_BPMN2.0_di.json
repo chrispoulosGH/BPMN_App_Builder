@@ -1,0 +1,527 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2866,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Apply_Top_Offers",
+    "type": "task",
+    "name": "Apply Top Offers",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SARA Plus DSI",
+      "CSI Parent Triage"
+    ]
+  },
+  {
+    "id": "Task_Authenticate",
+    "type": "task",
+    "name": "Authenticate",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Customer Care",
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Check_Credit",
+    "type": "task",
+    "name": "Check Credit",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CAS",
+      "SARA Plus DSI",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Check_for_Fraud",
+    "type": "task",
+    "name": "Check for Fraud",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Avertack",
+      "Digital IDP",
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Provision_Device",
+    "type": "task",
+    "name": "Provision Device",
+    "x": 2670,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Avertack",
+      "Digital IDP",
+      "SARA Plus DSI",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Reserve_Number",
+    "type": "task",
+    "name": "Reserve Number",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "PEARS",
+      "CSI Network Management",
+      "SARA Plus DSI",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Select_Device",
+    "type": "task",
+    "name": "Select Device",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CPC",
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Select_Features",
+    "type": "task",
+    "name": "Select Features",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Parent Triage",
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Select_Plan",
+    "type": "task",
+    "name": "Select Plan",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Submit_Credit_Policy",
+    "type": "task",
+    "name": "Submit Credit Policy",
+    "x": 2490,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPCC",
+      "FED COMS",
+      "SARA Plus DSI",
+      "CAS",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Submit_Order",
+    "type": "task",
+    "name": "Submit Order",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "FED COMS",
+      "CSI Product and Offer Mgt",
+      "SARA Plus DSI"
+    ]
+  },
+  {
+    "id": "Task_Validate_Address",
+    "type": "task",
+    "name": "Validate Address",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SARA Plus DSI",
+      "CSI Product and Offer Mgt"
+    ]
+  },
+  {
+    "id": "Task_Verify_Customer_Account",
+    "type": "task",
+    "name": "Verify Customer Account",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SARA Plus DSI",
+      "CSI Product and Offer Mgt"
+    ]
+  },
+  {
+    "id": "Task_Verify_Customer_Eligibility",
+    "type": "task",
+    "name": "Verify Customer Eligibility",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CAS",
+      "GEARS",
+      "SARA Plus DSI",
+      "PEARS"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2850,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Authenticate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Authenticate",
+    "targetRef": "Task_Validate_Address",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Apply_Top_Offers",
+    "targetRef": "Task_Select_Features",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Select_Features",
+    "targetRef": "Task_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Submit_Order",
+    "targetRef": "Task_Submit_Credit_Policy",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Submit_Credit_Policy",
+    "targetRef": "Task_Provision_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 180
+      },
+      {
+        "x": 2670,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Validate_Address",
+    "targetRef": "Task_Verify_Customer_Eligibility",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Verify_Customer_Eligibility",
+    "targetRef": "Task_Verify_Customer_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Verify_Customer_Account",
+    "targetRef": "Task_Check_Credit",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Check_Credit",
+    "targetRef": "Task_Reserve_Number",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Reserve_Number",
+    "targetRef": "Task_Select_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Select_Device",
+    "targetRef": "Task_Select_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Select_Plan",
+    "targetRef": "Task_Check_for_Fraud",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Check_for_Fraud",
+    "targetRef": "Task_Apply_Top_Offers",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Provision_Device",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 180
+      },
+      {
+        "x": 2850,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

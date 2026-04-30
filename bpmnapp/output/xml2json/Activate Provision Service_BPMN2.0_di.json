@@ -1,0 +1,446 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Sales Agent",
+    "x": 70,
+    "y": 80,
+    "height": 330,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_2",
+    "type": "lane",
+    "name": "Network Technician",
+    "x": 70,
+    "y": 410,
+    "height": 330,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Lane_3",
+    "type": "lane",
+    "name": "Service Agent",
+    "x": 70,
+    "y": 740,
+    "height": 200,
+    "width": 1426,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Activate_Service",
+    "type": "task",
+    "name": "Activate Service",
+    "x": 1230,
+    "y": 800,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Network Management",
+      "TLG MOB",
+      "SC Switch Control TSC",
+      "CSI Product and Offer Mgt",
+      "CSI Customer Care",
+      "CS FOBPM",
+      "GRID GDDN",
+      "CSI Order and Subscription Mngt"
+    ]
+  },
+  {
+    "id": "Task_Inquire_Account_Eligibility",
+    "type": "task",
+    "name": "Inquire Account Eligibility",
+    "x": 330,
+    "y": 130,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "PEARS",
+      "CSI Customer Care",
+      "CSI Product and Offer Mgt"
+    ]
+  },
+  {
+    "id": "Task_Manage_Subscriber_Number",
+    "type": "task",
+    "name": "Manage Subscriber Number",
+    "x": 870,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CSI Network Management"
+    ]
+  },
+  {
+    "id": "Task_Prepare_Number_Port",
+    "type": "task",
+    "name": "Prepare Number Port",
+    "x": 690,
+    "y": 460,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Network Management",
+      "PEARS",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Validate_Market_Service_Area",
+    "type": "task",
+    "name": "Validate Market Service Area",
+    "x": 690,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CSI Parent Triage",
+      "CSI Order and Subscription Mngt",
+      "FED GEARS"
+    ]
+  },
+  {
+    "id": "Task_Verify_Device_SIM_Status",
+    "type": "task",
+    "name": "Verify Device SIM Status",
+    "x": 870,
+    "y": 460,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CSI Product and Offer Mgt",
+      "CSI Network Management",
+      "CSI Customer Care"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 152,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 1410,
+    "y": 822,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork P1",
+    "soureRef": [
+      "Task_Inquire_Account_Eligibility"
+    ],
+    "targetRef": [
+      "Task_Prepare_Number_Port",
+      "Task_Validate_Market_Service_Area"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 510,
+    "y": 625,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join P1",
+    "soureRef": [
+      "Task_Manage_Subscriber_Number",
+      "Task_Verify_Device_SIM_Status"
+    ],
+    "targetRef": [
+      "Task_Activate_Service"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1050,
+    "y": 625,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Prepare_Number_Port",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 560,
+        "y": 650
+      },
+      {
+        "x": 590,
+        "y": 650
+      },
+      {
+        "x": 590,
+        "y": 500
+      },
+      {
+        "x": 660,
+        "y": 500
+      },
+      {
+        "x": 690,
+        "y": 500
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Validate_Market_Service_Area",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 560,
+        "y": 650
+      },
+      {
+        "x": 590,
+        "y": 650
+      },
+      {
+        "x": 590,
+        "y": 320
+      },
+      {
+        "x": 660,
+        "y": 320
+      },
+      {
+        "x": 690,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "Task_Activate_Service",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1100,
+        "y": 650
+      },
+      {
+        "x": 1130,
+        "y": 650
+      },
+      {
+        "x": 1130,
+        "y": 840
+      },
+      {
+        "x": 1200,
+        "y": 840
+      },
+      {
+        "x": 1230,
+        "y": 840
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Inquire_Account_Eligibility",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 170
+      },
+      {
+        "x": 330,
+        "y": 170
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Activate_Service",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 840
+      },
+      {
+        "x": 1410,
+        "y": 840
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Inquire_Account_Eligibility",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 170
+      },
+      {
+        "x": 460,
+        "y": 170
+      },
+      {
+        "x": 460,
+        "y": 650
+      },
+      {
+        "x": 480,
+        "y": 650
+      },
+      {
+        "x": 510,
+        "y": 650
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Manage_Subscriber_Number",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 320
+      },
+      {
+        "x": 1000,
+        "y": 320
+      },
+      {
+        "x": 1020,
+        "y": 320
+      },
+      {
+        "x": 1020,
+        "y": 650
+      },
+      {
+        "x": 1050,
+        "y": 650
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Prepare_Number_Port",
+    "targetRef": "Task_Verify_Device_SIM_Status",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 500
+      },
+      {
+        "x": 870,
+        "y": 500
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Validate_Market_Service_Area",
+    "targetRef": "Task_Manage_Subscriber_Number",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 320
+      },
+      {
+        "x": 870,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Verify_Device_SIM_Status",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 500
+      },
+      {
+        "x": 1000,
+        "y": 500
+      },
+      {
+        "x": 1020,
+        "y": 500
+      },
+      {
+        "x": 1020,
+        "y": 650
+      },
+      {
+        "x": 1050,
+        "y": 650
+      }
+    ],
+    "color": "blue"
+  }
+]

@@ -1,0 +1,396 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2146,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Check_Upgrade_Eligibility",
+    "type": "task",
+    "name": "Check Upgrade Eligibility",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Web Sales",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Checkout",
+    "type": "task",
+    "name": "Checkout",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Cart and Checkout UI",
+      "IDP Commerce Cart Pricing",
+      "IDP WebAcctMgmt",
+      "IDP Web Sales"
+    ]
+  },
+  {
+    "id": "Task_Customize_the_Phone",
+    "type": "task",
+    "name": "Customize the Phone",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Web Sales",
+      "IDP Upper Funnel Cloud",
+      "IDP Commerce Cart Pricing"
+    ]
+  },
+  {
+    "id": "Task_Filter_and_Compare_Phones",
+    "type": "task",
+    "name": "Filter and Compare Phones",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Web Sales",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Go_to_Account_Overview",
+    "type": "task",
+    "name": "Go to Account Overview",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "IDP WebAcctMgmt",
+      "MPSYS",
+      "TLG MOB",
+      "Products Offers Cloud",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Log_into_AT_T_Account",
+    "type": "task",
+    "name": "Log into AT T Account",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP IDM",
+      "MPSYS",
+      "Halo C AM"
+    ]
+  },
+  {
+    "id": "Task_Review_Cart",
+    "type": "task",
+    "name": "Review Cart",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "IDP Commerce Cart Pricing"
+    ]
+  },
+  {
+    "id": "Task_Schedule_Device_Delivery_Pickup",
+    "type": "task",
+    "name": "Schedule Device Delivery Pickup",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "YODA",
+      "IDP Web Sales",
+      "OCE"
+    ]
+  },
+  {
+    "id": "Task_Select_Add_ons",
+    "type": "task",
+    "name": "Select Add ons",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "Digital IDP",
+      "IDP Web Sales",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Select_Phone",
+    "type": "task",
+    "name": "Select Phone",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Commerce Cart Pricing",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2130,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Log_into_AT_T_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Log_into_AT_T_Account",
+    "targetRef": "Task_Go_to_Account_Overview",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Go_to_Account_Overview",
+    "targetRef": "Task_Check_Upgrade_Eligibility",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Check_Upgrade_Eligibility",
+    "targetRef": "Task_Filter_and_Compare_Phones",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Filter_and_Compare_Phones",
+    "targetRef": "Task_Select_Phone",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Select_Phone",
+    "targetRef": "Task_Customize_the_Phone",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Customize_the_Phone",
+    "targetRef": "Task_Select_Add_ons",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Select_Add_ons",
+    "targetRef": "Task_Review_Cart",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Review_Cart",
+    "targetRef": "Task_Checkout",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Checkout",
+    "targetRef": "Task_Schedule_Device_Delivery_Pickup",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Schedule_Device_Delivery_Pickup",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

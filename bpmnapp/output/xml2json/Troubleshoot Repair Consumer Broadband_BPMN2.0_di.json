@@ -1,0 +1,494 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2686,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Arrive_on_Prem_Update_Job",
+    "type": "task",
+    "name": "Arrive on Prem Update Job",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "FED FASTBPM",
+      "EDGE",
+      "Atlas UI"
+    ]
+  },
+  {
+    "id": "Task_Check_Quality_True_Test",
+    "type": "task",
+    "name": "Check Quality True Test",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "LSBBT"
+    ]
+  },
+  {
+    "id": "Task_Close_Job",
+    "type": "task",
+    "name": "Close Job",
+    "x": 2490,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "LSBBT",
+      "EDGE",
+      "ECO Suite",
+      "Enabler LS",
+      "ECM P8",
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Contact_Customer_Verify_ETA",
+    "type": "task",
+    "name": "Contact Customer Verify ETA",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "SHM"
+    ]
+  },
+  {
+    "id": "Task_Create_Submit_Damage_Claim",
+    "type": "task",
+    "name": "Create Submit Damage Claim",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "CAMS"
+    ]
+  },
+  {
+    "id": "Task_Isolate_Resolve",
+    "type": "task",
+    "name": "Isolate Resolve",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "LSBBT"
+    ]
+  },
+  {
+    "id": "Task_Log_Into_Device",
+    "type": "task",
+    "name": "Log Into Device",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "Halo E AM"
+    ]
+  },
+  {
+    "id": "Task_Provision_Device",
+    "type": "task",
+    "name": "Provision Device",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "Halo E AM",
+      "MIMDM",
+      "Intune"
+    ]
+  },
+  {
+    "id": "Task_Review_Jobs",
+    "type": "task",
+    "name": "Review Jobs",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "EDGE",
+      "Digital IDP",
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Review_Order_w_Customer",
+    "type": "task",
+    "name": "Review Order w Customer",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS OMS",
+      "Atlas UI",
+      "EDGE",
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Select_Job_View_Comments",
+    "type": "task",
+    "name": "Select Job View Comments",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "LS OMS",
+      "Atlas UI",
+      "EDGE",
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Submit_Bury_Request",
+    "type": "task",
+    "name": "Submit Bury Request",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "Atlas UI",
+      "ABWS D"
+    ]
+  },
+  {
+    "id": "Task_Upload_True_Test_Scope_Results",
+    "type": "task",
+    "name": "Upload True Test Scope Results",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "EXFOWorx"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2670,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Provision_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Provision_Device",
+    "targetRef": "Task_Log_Into_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Submit_Bury_Request",
+    "targetRef": "Task_Check_Quality_True_Test",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Check_Quality_True_Test",
+    "targetRef": "Task_Upload_True_Test_Scope_Results",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Upload_True_Test_Scope_Results",
+    "targetRef": "Task_Close_Job",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Log_Into_Device",
+    "targetRef": "Task_Review_Jobs",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Review_Jobs",
+    "targetRef": "Task_Select_Job_View_Comments",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Select_Job_View_Comments",
+    "targetRef": "Task_Contact_Customer_Verify_ETA",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Contact_Customer_Verify_ETA",
+    "targetRef": "Task_Arrive_on_Prem_Update_Job",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Arrive_on_Prem_Update_Job",
+    "targetRef": "Task_Review_Order_w_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Review_Order_w_Customer",
+    "targetRef": "Task_Isolate_Resolve",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Isolate_Resolve",
+    "targetRef": "Task_Create_Submit_Damage_Claim",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Create_Submit_Damage_Claim",
+    "targetRef": "Task_Submit_Bury_Request",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Close_Job",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 180
+      },
+      {
+        "x": 2670,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

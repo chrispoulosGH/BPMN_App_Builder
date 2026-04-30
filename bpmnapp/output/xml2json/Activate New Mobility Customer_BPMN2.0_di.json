@@ -1,0 +1,415 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 2146,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Capture_TCP",
+    "type": "task",
+    "name": "Capture TCP",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "Optical",
+      "EDP",
+      "CSI Customer Care",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Check_Credit",
+    "type": "task",
+    "name": "Check Credit",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "OPUS C",
+      "CSI Parent Triage",
+      "CAS"
+    ]
+  },
+  {
+    "id": "Task_Check_for_Fraud",
+    "type": "task",
+    "name": "Check for Fraud",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "Digital IDP",
+      "CSI Customer Care",
+      "FED COMS",
+      "Avertack",
+      "ORACLE SCM"
+    ]
+  },
+  {
+    "id": "Task_Configure_Account",
+    "type": "task",
+    "name": "Configure Account",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CPC",
+      "CPOP",
+      "TLG MOB",
+      "UPM Prime Biller",
+      "ORACLE SCM",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Create_Account",
+    "type": "task",
+    "name": "Create Account",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "Digital IDP",
+      "FED US",
+      "INLAP",
+      "T Data",
+      "Avertack",
+      "TLG MOB",
+      "IDP Customer Graph Cloud"
+    ]
+  },
+  {
+    "id": "Task_Reserve_CTN",
+    "type": "task",
+    "name": "Reserve CTN",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "NNA",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Review_Credit_Policy",
+    "type": "task",
+    "name": "Review Credit Policy",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "CAS",
+      "CSI Customer Care",
+      "OPUS C"
+    ]
+  },
+  {
+    "id": "Task_Setup_Billing",
+    "type": "task",
+    "name": "Setup Billing",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "CAS",
+      "FED iCAS",
+      "OPUS C",
+      "TLG MOB"
+    ]
+  },
+  {
+    "id": "Task_Setup_Payment",
+    "type": "task",
+    "name": "Setup Payment",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "UPM Prime Biller",
+      "CAPM",
+      "YODA",
+      "CSI CPSVC",
+      "OPUS C",
+      "CSI Customer Care"
+    ]
+  },
+  {
+    "id": "Task_Submit_Order",
+    "type": "task",
+    "name": "Submit Order",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OPUS C",
+      "SC Switch Control TSC",
+      "Enabler C",
+      "TLG MOB",
+      "YODA"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 2130,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Create_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Create_Account",
+    "targetRef": "Task_Check_Credit",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Check_Credit",
+    "targetRef": "Task_Configure_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Configure_Account",
+    "targetRef": "Task_Reserve_CTN",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Reserve_CTN",
+    "targetRef": "Task_Review_Credit_Policy",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Review_Credit_Policy",
+    "targetRef": "Task_Setup_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Setup_Billing",
+    "targetRef": "Task_Capture_TCP",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Capture_TCP",
+    "targetRef": "Task_Check_for_Fraud",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Check_for_Fraud",
+    "targetRef": "Task_Setup_Payment",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Setup_Payment",
+    "targetRef": "Task_Submit_Order",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Submit_Order",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

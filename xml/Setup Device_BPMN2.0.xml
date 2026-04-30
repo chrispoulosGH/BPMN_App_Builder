@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Setup_Device" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Setup_Device" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>5</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>CS FOBPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19181</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>IDP Customer Graph Cloud</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>31468</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>MOBNT IMEI Trigger</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21508</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SC Switch Control TSC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18198</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>YODA</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>21053</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Device_Sent_to_Customer</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Device_on_Wi_Fi</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Confirm_Network_Connection</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: Online | Domain: Onboard  Activate | Subdomain: Receive Products | Product: Mobility | Business Flow: Setup Device</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Device_Sent_to_Customer" name="Device Sent to Customer"/>
+    <bpmn:task id="Task_Device_on_Wi_Fi" name="Device on Wi Fi"/>
+    <bpmn:task id="Task_Confirm_Network_Connection" name="Confirm Network Connection"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Device_Sent_to_Customer"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Device_Sent_to_Customer" targetRef="Task_Device_on_Wi_Fi"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Device_on_Wi_Fi" targetRef="Task_Confirm_Network_Connection"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Confirm_Network_Connection" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>YODA, MOBNT IMEI Trigger, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Device_Sent_to_Customer"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>YODA, TLG MOB, SC Switch Control TSC</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Device_on_Wi_Fi"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CS FOBPM, IDP Customer Graph Cloud, TLG MOB, SC Switch Control TSC</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Confirm_Network_Connection"/>
+  </bpmn:process>
+</bpmn:definitions>

@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Activate_Provision_Service" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Activate_Provision_Service" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>3</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>CS FOBPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19181</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Network Management</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20188</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Order and Subscription Mngt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20187</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>FED GEARS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>24095</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRID GDDN</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22509</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>PEARS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18436</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SC Switch Control TSC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18198</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1" name="Sales Agent">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Inquire_Account_Eligibility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Validate_Market_Service_Area</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Manage_Subscriber_Number</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Network Technician">
+        <bpmn:flowNodeRef>Task_Prepare_Number_Port</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Verify_Device_SIM_Status</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Fork_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_Join_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_3" name="Service Agent">
+        <bpmn:flowNodeRef>Task_Activate_Service</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: MVNO | Domain: Onboard  Activate | Subdomain: Setup  Activate | Product: Wholesale Mobility | Business Flow: Activate Provision Service</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Inquire_Account_Eligibility" name="Inquire Account Eligibility"/>
+    <bpmn:task id="Task_Prepare_Number_Port" name="Prepare Number Port"/>
+    <bpmn:task id="Task_Verify_Device_SIM_Status" name="Verify Device SIM Status"/>
+    <bpmn:task id="Task_Validate_Market_Service_Area" name="Validate Market Service Area"/>
+    <bpmn:task id="Task_Manage_Subscriber_Number" name="Manage Subscriber Number"/>
+    <bpmn:task id="Task_Activate_Service" name="Activate Service"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:exclusiveGateway id="Gateway_Fork_1" name="Fork 0"/>
+    <bpmn:exclusiveGateway id="Gateway_Join_1" name="Join 0"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Inquire_Account_Eligibility"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Prepare_Number_Port" targetRef="Task_Verify_Device_SIM_Status"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Validate_Market_Service_Area" targetRef="Task_Manage_Subscriber_Number"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Inquire_Account_Eligibility" targetRef="Gateway_Fork_1"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Gateway_Fork_1" targetRef="Task_Prepare_Number_Port"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Gateway_Fork_1" targetRef="Task_Validate_Market_Service_Area"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Verify_Device_SIM_Status" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Manage_Subscriber_Number" targetRef="Gateway_Join_1"/>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Gateway_Join_1" targetRef="Task_Activate_Service"/>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_Activate_Service" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>PEARS, CSI Customer Care, CSI Product and Offer Mgt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Inquire_Account_Eligibility"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>CSI Network Management, PEARS, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Prepare_Number_Port"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>TLG MOB, CSI Product and Offer Mgt, CSI Network Management, CSI Customer Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Verify_Device_SIM_Status"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>CSI Parent Triage, CSI Order and Subscription Mngt, FED GEARS</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Validate_Market_Service_Area"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>TLG MOB, CSI Network Management</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Manage_Subscriber_Number"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>CSI Network Management, TLG MOB, SC Switch Control TSC, CSI Product and Offer Mgt, CSI Customer Care, CS FOBPM, GRID GDDN, CSI Order and Subscription Mngt</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Activate_Service"/>
+  </bpmn:process>
+</bpmn:definitions>

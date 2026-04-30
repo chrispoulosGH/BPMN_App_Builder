@@ -1,0 +1,631 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 3406,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Change_Security_Questions",
+    "type": "task",
+    "name": "Change Security Questions",
+    "x": 1050,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "MPSYS",
+      "IDP IDM"
+    ]
+  },
+  {
+    "id": "Task_Compare_and_Select_Wireless_Plan",
+    "type": "task",
+    "name": "Compare and Select Wireless Plan",
+    "x": 3030,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP Web Sales",
+      "IDP Upper Funnel Cloud",
+      "IDP Commerce Cart Pricing"
+    ]
+  },
+  {
+    "id": "Task_Go_to_Account_Overview",
+    "type": "task",
+    "name": "Go to Account Overview",
+    "x": 510,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "TLG MOB",
+      "IDP WebAcctMgmt",
+      "MPSYS",
+      "IDP Customer Graph Cloud",
+      "IDP Upper Funnel Cloud",
+      "Products Offers Cloud"
+    ]
+  },
+  {
+    "id": "Task_Go_to_Billing",
+    "type": "task",
+    "name": "Go to Billing",
+    "x": 2310,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Upper Funnel Cloud",
+      "Digital IDP",
+      "IDP WebAcctMgmt"
+    ]
+  },
+  {
+    "id": "Task_Go_to_Payments",
+    "type": "task",
+    "name": "Go to Payments",
+    "x": 1590,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Go_to_Services",
+    "type": "task",
+    "name": "Go to Services",
+    "x": 2670,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt"
+    ]
+  },
+  {
+    "id": "Task_Log_into_AT_T_Account",
+    "type": "task",
+    "name": "Log into AT T Account",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP IDM",
+      "MPSYS",
+      "Halo C AM"
+    ]
+  },
+  {
+    "id": "Task_Manage_Payment_Methods",
+    "type": "task",
+    "name": "Manage Payment Methods",
+    "x": 1770,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP BUPS",
+      "IDP WebAcctMgmt",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Manage_Profile",
+    "type": "task",
+    "name": "Manage Profile",
+    "x": 690,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "MPSYS",
+      "IDP Upper Funnel Cloud",
+      "Products Offers Cloud",
+      "IDP Customer Graph Cloud",
+      "IDP WebAcctMgmt"
+    ]
+  },
+  {
+    "id": "Task_Opt_in_out_of_AutoPay",
+    "type": "task",
+    "name": "Opt in out of AutoPay",
+    "x": 1950,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Opt_in_out_of_Paperless_Billing",
+    "type": "task",
+    "name": "Opt in out of Paperless Billing",
+    "x": 2130,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP BUPS",
+      "IDP Upper Funnel Cloud",
+      "IDP WebAcctMgmt"
+    ]
+  },
+  {
+    "id": "Task_Pay_Activation_Costs",
+    "type": "task",
+    "name": "Pay Activation Costs",
+    "x": 3210,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "OCE",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Select_Change_My_Plan",
+    "type": "task",
+    "name": "Select Change My Plan",
+    "x": 2850,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Update_Billing_Address",
+    "type": "task",
+    "name": "Update Billing Address",
+    "x": 1230,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Customer Graph Cloud",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Update_Marketing_Notifications",
+    "type": "task",
+    "name": "Update Marketing Notifications",
+    "x": 1410,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP Customer Graph Cloud",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_Update_Sign_In_Information",
+    "type": "task",
+    "name": "Update Sign In Information",
+    "x": 870,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP IDM",
+      "MPSYS",
+      "IDP Customer Graph Cloud",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "Task_View_Latest_Bill",
+    "type": "task",
+    "name": "View Latest Bill",
+    "x": 2490,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": [
+      "IDP WebAcctMgmt",
+      "IDP BUPS",
+      "IDP Upper Funnel Cloud"
+    ]
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 3390,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Log_into_AT_T_Account",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Log_into_AT_T_Account",
+    "targetRef": "Task_Go_to_Account_Overview",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 510,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Opt_in_out_of_AutoPay",
+    "targetRef": "Task_Opt_in_out_of_Paperless_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 180
+      },
+      {
+        "x": 2130,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Opt_in_out_of_Paperless_Billing",
+    "targetRef": "Task_Go_to_Billing",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 180
+      },
+      {
+        "x": 2310,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Go_to_Billing",
+    "targetRef": "Task_View_Latest_Bill",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 180
+      },
+      {
+        "x": 2490,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_View_Latest_Bill",
+    "targetRef": "Task_Go_to_Services",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2590,
+        "y": 180
+      },
+      {
+        "x": 2670,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Go_to_Services",
+    "targetRef": "Task_Select_Change_My_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 180
+      },
+      {
+        "x": 2850,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Select_Change_My_Plan",
+    "targetRef": "Task_Compare_and_Select_Wireless_Plan",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2950,
+        "y": 180
+      },
+      {
+        "x": 3030,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Compare_and_Select_Wireless_Plan",
+    "targetRef": "Task_Pay_Activation_Costs",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3130,
+        "y": 180
+      },
+      {
+        "x": 3210,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Go_to_Account_Overview",
+    "targetRef": "Task_Manage_Profile",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 180
+      },
+      {
+        "x": 690,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Manage_Profile",
+    "targetRef": "Task_Update_Sign_In_Information",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 180
+      },
+      {
+        "x": 870,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Update_Sign_In_Information",
+    "targetRef": "Task_Change_Security_Questions",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 180
+      },
+      {
+        "x": 1050,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Change_Security_Questions",
+    "targetRef": "Task_Update_Billing_Address",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 180
+      },
+      {
+        "x": 1230,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Update_Billing_Address",
+    "targetRef": "Task_Update_Marketing_Notifications",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 180
+      },
+      {
+        "x": 1410,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Update_Marketing_Notifications",
+    "targetRef": "Task_Go_to_Payments",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 180
+      },
+      {
+        "x": 1590,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_16",
+    "sourceRef": "Task_Go_to_Payments",
+    "targetRef": "Task_Manage_Payment_Methods",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 180
+      },
+      {
+        "x": 1770,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_17",
+    "sourceRef": "Task_Manage_Payment_Methods",
+    "targetRef": "Task_Opt_in_out_of_AutoPay",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 180
+      },
+      {
+        "x": 1950,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_18",
+    "sourceRef": "Task_Pay_Activation_Costs",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3310,
+        "y": 180
+      },
+      {
+        "x": 3390,
+        "y": 180
+      }
+    ],
+    "color": "blue"
+  }
+]

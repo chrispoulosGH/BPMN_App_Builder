@@ -1,0 +1,156 @@
+<?xml version="1.0" ?>
+<bpmn:definitions xmlns:metadata="http://bpmn-builder/metadata" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Triage_MVNO_Care" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_Triage_MVNO_Care" isExecutable="false">
+    <bpmn:extensionElements>
+      <metadata:journeyMetadata xmlns:metadata="http://bpmn-builder/metadata">
+        <metadata:domainSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:domainSequences>
+        <metadata:subdomainSequences>
+          <metadata:sequence>1</metadata:sequence>
+        </metadata:subdomainSequences>
+        <metadata:businessFlowSequences>
+          <metadata:sequence>2</metadata:sequence>
+        </metadata:businessFlowSequences>
+        <metadata:applications>
+          <metadata:application>
+            <metadata:name>CCR Relational CCR R</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19166</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CS FOBPM</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>19181</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Customer Care</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20182</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Network Management</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20188</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Order and Subscription Mngt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20187</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Parent Triage</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>17690</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>CSI Product and Offer Mgt</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>20180</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>GRID GDDN</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>22509</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>PEARS</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18436</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>SC Switch Control TSC</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18198</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TLG MOB</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18193</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>TORCH</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18187</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+          <metadata:application>
+            <metadata:name>eCDW</metadata:name>
+            <metadata:correlationIds>
+              <metadata:id>18201</metadata:id>
+            </metadata:correlationIds>
+          </metadata:application>
+        </metadata:applications>
+      </metadata:journeyMetadata>
+    </bpmn:extensionElements>
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1">
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_Porting_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_Account_Subscriber_Management_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_Network_Service_Connectivity_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_Service_Features_Functionality_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_Device_or_Equipment_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Assess_General_Issues</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:textAnnotation id="TextAnnotation_DiagramTitle">
+      <bpmn:text>Line of Business: Mass Markets | Channel: MVNO | Domain: Close  Separate | Subdomain: Close Account | Product: Wholesale Mobility | Business Flow: Triage MVNO Care</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:textAnnotation id="TextAnnotation_LastUpdated">
+      <bpmn:text>Last Updated: 02/27/2026</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:startEvent id="StartEvent_1" name="Start"/>
+    <bpmn:task id="Task_Assess_Porting_Issues" name="Assess Porting Issues"/>
+    <bpmn:task id="Task_Assess_Account_Subscriber_Management_Issues" name="Assess Account Subscriber Management Issues"/>
+    <bpmn:task id="Task_Assess_Network_Service_Connectivity_Issues" name="Assess Network Service Connectivity Issues"/>
+    <bpmn:task id="Task_Assess_Service_Features_Functionality_Issues" name="Assess Service Features Functionality Issues"/>
+    <bpmn:task id="Task_Assess_Device_or_Equipment_Issues" name="Assess Device or Equipment Issues"/>
+    <bpmn:task id="Task_Assess_General_Issues" name="Assess General Issues"/>
+    <bpmn:endEvent id="EndEvent_1" name="End"/>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_Assess_Porting_Issues"/>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_Assess_Porting_Issues" targetRef="Task_Assess_Account_Subscriber_Management_Issues"/>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Assess_Account_Subscriber_Management_Issues" targetRef="Task_Assess_Network_Service_Connectivity_Issues"/>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Assess_Network_Service_Connectivity_Issues" targetRef="Task_Assess_Service_Features_Functionality_Issues"/>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Assess_Service_Features_Functionality_Issues" targetRef="Task_Assess_Device_or_Equipment_Issues"/>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Assess_Service_Features_Functionality_Issues" targetRef="Task_Assess_General_Issues"/>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_Assess_Device_or_Equipment_Issues" targetRef="EndEvent_1"/>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_Assess_General_Issues" targetRef="EndEvent_1"/>
+    <bpmn:textAnnotation id="TextAnnotation_1">
+      <bpmn:text>CSI Network Management, TLG MOB, CS FOBPM</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1" sourceRef="TextAnnotation_1" targetRef="Task_Assess_Porting_Issues"/>
+    <bpmn:textAnnotation id="TextAnnotation_2">
+      <bpmn:text>CSI Customer Care, CSI Parent Triage</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_2" sourceRef="TextAnnotation_2" targetRef="Task_Assess_Account_Subscriber_Management_Issues"/>
+    <bpmn:textAnnotation id="TextAnnotation_3">
+      <bpmn:text>CSI Customer Care, CSI Network Management</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_3" sourceRef="TextAnnotation_3" targetRef="Task_Assess_Network_Service_Connectivity_Issues"/>
+    <bpmn:textAnnotation id="TextAnnotation_4">
+      <bpmn:text>SC Switch Control TSC, TORCH, CSI Customer Care, CSI Network Management, TLG MOB</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_4" sourceRef="TextAnnotation_4" targetRef="Task_Assess_Service_Features_Functionality_Issues"/>
+    <bpmn:textAnnotation id="TextAnnotation_5">
+      <bpmn:text>CSI Product and Offer Mgt, CSI Order and Subscription Mngt, TLG MOB, CCR Relational CCR R, TORCH</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_5" sourceRef="TextAnnotation_5" targetRef="Task_Assess_Device_or_Equipment_Issues"/>
+    <bpmn:textAnnotation id="TextAnnotation_6">
+      <bpmn:text>PEARS, CSI Parent Triage, CSI Network Management, eCDW, GRID GDDN</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_6" sourceRef="TextAnnotation_6" targetRef="Task_Assess_General_Issues"/>
+  </bpmn:process>
+</bpmn:definitions>

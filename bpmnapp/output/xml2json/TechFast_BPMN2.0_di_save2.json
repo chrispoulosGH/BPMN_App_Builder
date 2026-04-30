@@ -1,0 +1,1025 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Customer",
+    "x": 70,
+    "y": 80,
+    "height": 200,
+    "width": 3946,
+    "shape": "rectangle",
+    "color": null
+  },
+  {
+    "id": "Lane_2",
+    "type": "lane",
+    "name": "Agent",
+    "x": 70,
+    "y": 280,
+    "height": 480,
+    "width": 3946,
+    "shape": "rectangle",
+    "color": null
+  },
+  {
+    "id": "Lane_3",
+    "type": "lane",
+    "name": "Technician",
+    "x": 70,
+    "y": 760,
+    "height": 480,
+    "width": 3946,
+    "shape": "rectangle",
+    "color": null
+  },
+  {
+    "id": "Lane_4",
+    "type": "lane",
+    "name": "Scheduler",
+    "x": 70,
+    "y": 1240,
+    "height": 200,
+    "width": 3946,
+    "shape": "rectangle",
+    "color": null
+  },
+  {
+    "id": "Task_Arrive_on_Prem_Update_Job",
+    "type": "task",
+    "name": "Arrive on Prem Update Job",
+    "x": 3570,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Atlas UI",
+      "EDGE",
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Authorize_Job_Tools",
+    "type": "task",
+    "name": "Authorize Job Tools",
+    "x": 3030,
+    "y": 810,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Call_in_Trouble",
+    "type": "task",
+    "name": "Call in Trouble",
+    "x": 330,
+    "y": 140,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_Check_Job_Tools",
+    "type": "task",
+    "name": "Check Job Tools",
+    "x": 2850,
+    "y": 810,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Check_Navigation_Directions",
+    "type": "task",
+    "name": "Check Navigation Directions",
+    "x": 2670,
+    "y": 1110,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Complete_Customer_Satisfaction_Survey",
+    "type": "task",
+    "name": "Complete Customer Satisfaction Survey",
+    "x": 3750,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": []
+  },
+  {
+    "id": "Task_Create_Appointment",
+    "type": "task",
+    "name": "Create Appointment",
+    "x": 1590,
+    "y": 1300,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "ISBUS",
+      "IDP Commerce Enabler Services",
+      "TRiP",
+      "IDP Order Graph Cloud",
+      "CSI Work Force",
+      "ISAAC WFE",
+      "CCMule Service",
+      "FORCE DCOE",
+      "EDGE"
+    ]
+  },
+  {
+    "id": "Task_Customer_Confirmation_SMS",
+    "type": "task",
+    "name": "Customer Confirmation SMS",
+    "x": 1770,
+    "y": 1300,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "notifyNow",
+      "CCMule CLM",
+      "BWSFMC",
+      "CEP",
+      "ABPT"
+    ]
+  },
+  {
+    "id": "Task_Dispatch_To_Job",
+    "type": "task",
+    "name": "Dispatch To Job",
+    "x": 3390,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Atlas UI",
+      "FED FASTBPM",
+      "WMS NT"
+    ]
+  },
+  {
+    "id": "Task_Get_Job_Tools",
+    "type": "task",
+    "name": "Get Job Tools",
+    "x": 2670,
+    "y": 810,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "FED FASTBPM"
+    ]
+  },
+  {
+    "id": "Task_Log_Into_Device",
+    "type": "task",
+    "name": "Log Into Device",
+    "x": 2130,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Atlas UI",
+      "Halo E AM"
+    ]
+  },
+  {
+    "id": "Task_Lookup_Customer",
+    "type": "task",
+    "name": "Lookup Customer",
+    "x": 510,
+    "y": 480,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "IDP Customer Graph Cloud",
+      "DPG Sales Sunrise",
+      "CCM Clarify CM",
+      "CCSF",
+      "CCMULE",
+      "Platform Support ATTFEDGOV1",
+      "eTRACS"
+    ]
+  },
+  {
+    "id": "Task_Probe_Customer",
+    "type": "task",
+    "name": "Probe Customer",
+    "x": 1050,
+    "y": 330,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Nimbus"
+    ]
+  },
+  {
+    "id": "Task_Provision_Device",
+    "type": "task",
+    "name": "Provision Device",
+    "x": 1950,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Intune",
+      "Atlas UI",
+      "Halo E AM",
+      "MIMDM"
+    ]
+  },
+  {
+    "id": "Task_Sell_Customer",
+    "type": "task",
+    "name": "Sell Customer",
+    "x": 1050,
+    "y": 630,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Nimbus"
+    ]
+  },
+  {
+    "id": "Task_View_Job",
+    "type": "task",
+    "name": "View Job",
+    "x": 2310,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "DMP",
+      "Atlas UI",
+      "FED FASTBPM",
+      "Digital IDP",
+      "EDGE"
+    ]
+  },
+  {
+    "id": "Task_Troubleshoot",
+    "type": "task",
+    "name": "Troubleshoot",
+    "x": 690,
+    "y": 960,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Avertack",
+      "OPUS C",
+      "CSI Customer Care",
+      "TLG MOB",
+      "Digital IDP"
+    ]
+  },
+  {
+    "id": "Task_Sign_Customer",
+    "type": "task",
+    "name": "Sign Customer",
+    "x": 1230,
+    "y": 630,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": null,
+    "applications": [
+      "Nimbus"
+    ],
+    "subProcessFileName": "Upgrade Device_BPMN2.0_di.json"
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 162,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 3930,
+    "y": 982,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork 2",
+    "soureRef": [
+      "Task_Troubleshoot"
+    ],
+    "targetRef": [
+      "Task_Probe_Customer",
+      "Task_Sell_Customer"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 870,
+    "y": 495,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join 2",
+    "soureRef": [
+      "Task_Probe_Customer",
+      "Task_Sign_Customer"
+    ],
+    "targetRef": [
+      "Task_Create_Appointment"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 1410,
+    "y": 495,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_Fork_2",
+    "name": "Fork 7",
+    "soureRef": [
+      "Task_View_Job"
+    ],
+    "targetRef": [
+      "Task_Get_Job_Tools",
+      "Task_Check_Navigation_Directions"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2490,
+    "y": 975,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Gateway_Join_2",
+    "name": "Join 7",
+    "soureRef": [
+      "Task_Authorize_Job_Tools",
+      "Task_Check_Navigation_Directions"
+    ],
+    "targetRef": [
+      "Task_Dispatch_To_Job"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 3210,
+    "y": 975,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Call_in_Trouble",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 180
+      },
+      {
+        "x": 330,
+        "y": 180
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Task_Call_in_Trouble",
+    "targetRef": "Task_Lookup_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 180
+      },
+      {
+        "x": 460,
+        "y": 520
+      },
+      {
+        "x": 480,
+        "y": 520
+      },
+      {
+        "x": 510,
+        "y": 520
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Task_Arrive_on_Prem_Update_Job",
+    "targetRef": "Task_Complete_Customer_Satisfaction_Survey",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3670,
+        "y": 1000
+      },
+      {
+        "x": 3750,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Task_Lookup_Customer",
+    "targetRef": "Task_Troubleshoot",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 520
+      },
+      {
+        "x": 640,
+        "y": 520
+      },
+      {
+        "x": 640,
+        "y": 1000
+      },
+      {
+        "x": 660,
+        "y": 1000
+      },
+      {
+        "x": 690,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Task_Create_Appointment",
+    "targetRef": "Task_Customer_Confirmation_SMS",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1690,
+        "y": 1340
+      },
+      {
+        "x": 1770,
+        "y": 1340
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Task_Customer_Confirmation_SMS",
+    "targetRef": "Task_Provision_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1870,
+        "y": 1340
+      },
+      {
+        "x": 1900,
+        "y": 1340
+      },
+      {
+        "x": 1900,
+        "y": 1000
+      },
+      {
+        "x": 1920,
+        "y": 1000
+      },
+      {
+        "x": 1950,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "Task_Provision_Device",
+    "targetRef": "Task_Log_Into_Device",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2050,
+        "y": 1000
+      },
+      {
+        "x": 2130,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Log_Into_Device",
+    "targetRef": "Task_View_Job",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 1000
+      },
+      {
+        "x": 2310,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Dispatch_To_Job",
+    "targetRef": "Task_Arrive_on_Prem_Update_Job",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3490,
+        "y": 1000
+      },
+      {
+        "x": 3570,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Sell_Customer",
+    "targetRef": "Task_Sign_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 670
+      },
+      {
+        "x": 1230,
+        "y": 670
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Get_Job_Tools",
+    "targetRef": "Task_Check_Job_Tools",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 850
+      },
+      {
+        "x": 2850,
+        "y": 850
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Check_Job_Tools",
+    "targetRef": "Task_Authorize_Job_Tools",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2950,
+        "y": 850
+      },
+      {
+        "x": 3030,
+        "y": 850
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Troubleshoot",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 1000
+      },
+      {
+        "x": 820,
+        "y": 1000
+      },
+      {
+        "x": 820,
+        "y": 520
+      },
+      {
+        "x": 840,
+        "y": 520
+      },
+      {
+        "x": 870,
+        "y": 520
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Probe_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 920,
+        "y": 520
+      },
+      {
+        "x": 950,
+        "y": 520
+      },
+      {
+        "x": 950,
+        "y": 370
+      },
+      {
+        "x": 1020,
+        "y": 370
+      },
+      {
+        "x": 1050,
+        "y": 370
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Sell_Customer",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 920,
+        "y": 520
+      },
+      {
+        "x": 950,
+        "y": 520
+      },
+      {
+        "x": 950,
+        "y": 670
+      },
+      {
+        "x": 1020,
+        "y": 670
+      },
+      {
+        "x": 1050,
+        "y": 670
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_16",
+    "sourceRef": "Task_Probe_Customer",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 370
+      },
+      {
+        "x": 1180,
+        "y": 370
+      },
+      {
+        "x": 1380,
+        "y": 370
+      },
+      {
+        "x": 1380,
+        "y": 520
+      },
+      {
+        "x": 1410,
+        "y": 520
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_17",
+    "sourceRef": "Task_Sign_Customer",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 670
+      },
+      {
+        "x": 1380,
+        "y": 670
+      },
+      {
+        "x": 1380,
+        "y": 520
+      },
+      {
+        "x": 1410,
+        "y": 520
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_18",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "Task_Create_Appointment",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1460,
+        "y": 520
+      },
+      {
+        "x": 1490,
+        "y": 520
+      },
+      {
+        "x": 1490,
+        "y": 1340
+      },
+      {
+        "x": 1560,
+        "y": 1340
+      },
+      {
+        "x": 1590,
+        "y": 1340
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_19",
+    "sourceRef": "Task_View_Job",
+    "targetRef": "Gateway_Fork_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2410,
+        "y": 1000
+      },
+      {
+        "x": 2490,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_20",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Get_Job_Tools",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2540,
+        "y": 1000
+      },
+      {
+        "x": 2570,
+        "y": 1000
+      },
+      {
+        "x": 2570,
+        "y": 850
+      },
+      {
+        "x": 2640,
+        "y": 850
+      },
+      {
+        "x": 2670,
+        "y": 850
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_21",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Check_Navigation_Directions",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2540,
+        "y": 1000
+      },
+      {
+        "x": 2570,
+        "y": 1000
+      },
+      {
+        "x": 2570,
+        "y": 1150
+      },
+      {
+        "x": 2640,
+        "y": 1150
+      },
+      {
+        "x": 2670,
+        "y": 1150
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_22",
+    "sourceRef": "Task_Authorize_Job_Tools",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3130,
+        "y": 850
+      },
+      {
+        "x": 3160,
+        "y": 850
+      },
+      {
+        "x": 3180,
+        "y": 850
+      },
+      {
+        "x": 3180,
+        "y": 1000
+      },
+      {
+        "x": 3210,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_23",
+    "sourceRef": "Task_Check_Navigation_Directions",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2770,
+        "y": 1150
+      },
+      {
+        "x": 2800,
+        "y": 1150
+      },
+      {
+        "x": 3180,
+        "y": 1150
+      },
+      {
+        "x": 3180,
+        "y": 1000
+      },
+      {
+        "x": 3210,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_24",
+    "sourceRef": "Gateway_Join_2",
+    "targetRef": "Task_Dispatch_To_Job",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3260,
+        "y": 1000
+      },
+      {
+        "x": 3390,
+        "y": 1000
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_25",
+    "sourceRef": "Task_Complete_Customer_Satisfaction_Survey",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 3850,
+        "y": 1000
+      },
+      {
+        "x": 3930,
+        "y": 1000
+      }
+    ],
+    "color": null
+  }
+]

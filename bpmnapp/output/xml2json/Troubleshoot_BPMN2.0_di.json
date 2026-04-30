@@ -1,0 +1,569 @@
+[
+  {
+    "id": "Lane_1",
+    "type": "lane",
+    "name": "Technician",
+    "x": 70,
+    "y": 80,
+    "height": 630,
+    "width": 1966,
+    "shape": "rectangle",
+    "color": "gray"
+  },
+  {
+    "id": "Task_Ask_Custom_to_check_Router_Lights",
+    "type": "task",
+    "name": "Ask Custom to check Router Lights",
+    "x": 330,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Check_router_lights",
+    "type": "task",
+    "name": "Check router lights",
+    "x": 510,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Test_B",
+    "type": "task",
+    "name": "Test B",
+    "x": 1050,
+    "y": 130,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Test_Home_Run_Connectivity",
+    "type": "task",
+    "name": "Test Home Run Connectivity",
+    "x": 1410,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Test_home_LAN_and_wireless",
+    "type": "task",
+    "name": "Test home LAN and wireless",
+    "x": 1410,
+    "y": 580,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Test_local_SNI_connectivity",
+    "type": "task",
+    "name": "Test local SNI connectivity",
+    "x": 1230,
+    "y": 130,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Wan_Light_Check",
+    "type": "task",
+    "name": "Wan Light Check",
+    "x": 690,
+    "y": 280,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Wan_light_Not_working",
+    "type": "task",
+    "name": "Wan light Not working",
+    "x": 1050,
+    "y": 430,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "StartEvent_1",
+    "type": "event",
+    "name": "Start",
+    "x": 150,
+    "y": 302,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "EndEvent_1",
+    "type": "event",
+    "name": "End",
+    "x": 1950,
+    "y": 302,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_1",
+    "name": "Fork P1",
+    "soureRef": [
+      "Task_Wan_Light_Check"
+    ],
+    "targetRef": [
+      "Task_Test_B",
+      "Task_Wan_light_Not_working"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 870,
+    "y": 295,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_1",
+    "name": "Join P1",
+    "soureRef": [
+      "Gateway_Join_2",
+      "Task_Test_local_SNI_connectivity"
+    ],
+    "targetRef": [
+      "EndEvent_1"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1770,
+    "y": 295,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Fork_2",
+    "name": "Fork X1",
+    "soureRef": [
+      "Task_Wan_light_Not_working"
+    ],
+    "targetRef": [
+      "Task_Test_Home_Run_Connectivity",
+      "Task_Test_home_LAN_and_wireless"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 1230,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_Join_2",
+    "name": "Join X1",
+    "soureRef": [
+      "Task_Test_Home_Run_Connectivity",
+      "Task_Test_home_LAN_and_wireless"
+    ],
+    "targetRef": [
+      "Gateway_Join_1"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 1590,
+    "y": 445,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_1",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Test_B",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 920,
+        "y": 320
+      },
+      {
+        "x": 950,
+        "y": 320
+      },
+      {
+        "x": 950,
+        "y": 170
+      },
+      {
+        "x": 1020,
+        "y": 170
+      },
+      {
+        "x": 1050,
+        "y": 170
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_2",
+    "sourceRef": "Gateway_Fork_1",
+    "targetRef": "Task_Wan_light_Not_working",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 920,
+        "y": 320
+      },
+      {
+        "x": 950,
+        "y": 320
+      },
+      {
+        "x": 950,
+        "y": 470
+      },
+      {
+        "x": 1020,
+        "y": 470
+      },
+      {
+        "x": 1050,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_3",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Test_Home_Run_Connectivity",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 470
+      },
+      {
+        "x": 1310,
+        "y": 470
+      },
+      {
+        "x": 1310,
+        "y": 320
+      },
+      {
+        "x": 1380,
+        "y": 320
+      },
+      {
+        "x": 1410,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_4",
+    "sourceRef": "Gateway_Fork_2",
+    "targetRef": "Task_Test_home_LAN_and_wireless",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 470
+      },
+      {
+        "x": 1310,
+        "y": 470
+      },
+      {
+        "x": 1310,
+        "y": 620
+      },
+      {
+        "x": 1380,
+        "y": 620
+      },
+      {
+        "x": 1410,
+        "y": 620
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_5",
+    "sourceRef": "Gateway_Join_1",
+    "targetRef": "EndEvent_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1820,
+        "y": 320
+      },
+      {
+        "x": 1950,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_6",
+    "sourceRef": "Gateway_Join_2",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1640,
+        "y": 470
+      },
+      {
+        "x": 1670,
+        "y": 470
+      },
+      {
+        "x": 1740,
+        "y": 470
+      },
+      {
+        "x": 1740,
+        "y": 320
+      },
+      {
+        "x": 1770,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_7",
+    "sourceRef": "StartEvent_1",
+    "targetRef": "Task_Ask_Custom_to_check_Router_Lights",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 320
+      },
+      {
+        "x": 330,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_8",
+    "sourceRef": "Task_Ask_Custom_to_check_Router_Lights",
+    "targetRef": "Task_Check_router_lights",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 320
+      },
+      {
+        "x": 510,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_9",
+    "sourceRef": "Task_Check_router_lights",
+    "targetRef": "Task_Wan_Light_Check",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 320
+      },
+      {
+        "x": 690,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_10",
+    "sourceRef": "Task_Test_B",
+    "targetRef": "Task_Test_local_SNI_connectivity",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 170
+      },
+      {
+        "x": 1230,
+        "y": 170
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_11",
+    "sourceRef": "Task_Test_Home_Run_Connectivity",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 320
+      },
+      {
+        "x": 1540,
+        "y": 320
+      },
+      {
+        "x": 1560,
+        "y": 320
+      },
+      {
+        "x": 1560,
+        "y": 470
+      },
+      {
+        "x": 1590,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_12",
+    "sourceRef": "Task_Test_home_LAN_and_wireless",
+    "targetRef": "Gateway_Join_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 620
+      },
+      {
+        "x": 1540,
+        "y": 620
+      },
+      {
+        "x": 1560,
+        "y": 620
+      },
+      {
+        "x": 1560,
+        "y": 470
+      },
+      {
+        "x": 1590,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Task_Test_local_SNI_connectivity",
+    "targetRef": "Gateway_Join_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1330,
+        "y": 170
+      },
+      {
+        "x": 1360,
+        "y": 170
+      },
+      {
+        "x": 1740,
+        "y": 170
+      },
+      {
+        "x": 1740,
+        "y": 320
+      },
+      {
+        "x": 1770,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_Wan_Light_Check",
+    "targetRef": "Gateway_Fork_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 320
+      },
+      {
+        "x": 870,
+        "y": 320
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "Task_Wan_light_Not_working",
+    "targetRef": "Gateway_Fork_2",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 470
+      },
+      {
+        "x": 1230,
+        "y": 470
+      }
+    ],
+    "color": "blue"
+  }
+]

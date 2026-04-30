@@ -1,0 +1,434 @@
+[
+  {
+    "id": "Start_1",
+    "type": "event",
+    "name": "Request\nReceived",
+    "x": 180,
+    "y": 414,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "End_1",
+    "type": "event",
+    "name": "Completed",
+    "x": 2640,
+    "y": 414,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": null
+  },
+  {
+    "id": "ParGW_2_fork",
+    "name": "",
+    "soureRef": [
+      "Task_1"
+    ],
+    "targetRef": [
+      "Task_3",
+      "Task_10"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 640,
+    "y": 407,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "ParGW_4_fork",
+    "name": "",
+    "soureRef": [
+      "Task_3"
+    ],
+    "targetRef": [
+      "Task_5",
+      "Task_8"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 1140,
+    "y": 307,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "ParGW_4_join",
+    "name": "",
+    "soureRef": [
+      "Task_7",
+      "Task_9"
+    ],
+    "targetRef": [
+      "ParGW_2_join"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2180,
+    "y": 307,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "ParGW_2_join",
+    "name": "",
+    "soureRef": [
+      "ParGW_4_join",
+      "Task_12"
+    ],
+    "targetRef": [
+      "End_1"
+    ],
+    "type": "parallel",
+    "shape": "diamond",
+    "x": 2410,
+    "y": 407,
+    "width": 50,
+    "height": 50,
+    "color": null
+  },
+  {
+    "id": "Flow_13",
+    "sourceRef": "Start_1",
+    "targetRef": "Task_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 216,
+        "y": 432
+      },
+      {
+        "x": 370,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_14",
+    "sourceRef": "Task_1",
+    "targetRef": "ParGW_2_fork",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 490,
+        "y": 432
+      },
+      {
+        "x": 640,
+        "y": 432
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_15",
+    "sourceRef": "ParGW_2_fork",
+    "targetRef": "Task_3",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 665,
+        "y": 407
+      },
+      {
+        "x": 665,
+        "y": 332
+      },
+      {
+        "x": 870,
+        "y": 332
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_16",
+    "sourceRef": "Task_3",
+    "targetRef": "ParGW_4_fork",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 990,
+        "y": 332
+      },
+      {
+        "x": 1140,
+        "y": 332
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_17",
+    "sourceRef": "ParGW_4_fork",
+    "targetRef": "Task_5",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1165,
+        "y": 307
+      },
+      {
+        "x": 1165,
+        "y": 257
+      },
+      {
+        "x": 1370,
+        "y": 257
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_18",
+    "sourceRef": "Task_5",
+    "targetRef": "Task_6",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1490,
+        "y": 257
+      },
+      {
+        "x": 1640,
+        "y": 257
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_19",
+    "sourceRef": "Task_6",
+    "targetRef": "Task_7",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1760,
+        "y": 257
+      },
+      {
+        "x": 1910,
+        "y": 257
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_20",
+    "sourceRef": "ParGW_4_fork",
+    "targetRef": "Task_8",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1165,
+        "y": 357
+      },
+      {
+        "x": 1165,
+        "y": 407
+      },
+      {
+        "x": 1370,
+        "y": 407
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_21",
+    "sourceRef": "Task_8",
+    "targetRef": "Task_9",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1490,
+        "y": 407
+      },
+      {
+        "x": 1640,
+        "y": 407
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_22",
+    "sourceRef": "Task_7",
+    "targetRef": "ParGW_4_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2030,
+        "y": 257
+      },
+      {
+        "x": 2205,
+        "y": 257
+      },
+      {
+        "x": 2205,
+        "y": 307
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_23",
+    "sourceRef": "Task_9",
+    "targetRef": "ParGW_4_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1760,
+        "y": 407
+      },
+      {
+        "x": 2205,
+        "y": 407
+      },
+      {
+        "x": 2205,
+        "y": 357
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_24",
+    "sourceRef": "ParGW_2_fork",
+    "targetRef": "Task_10",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 665,
+        "y": 457
+      },
+      {
+        "x": 665,
+        "y": 532
+      },
+      {
+        "x": 870,
+        "y": 532
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_25",
+    "sourceRef": "Task_10",
+    "targetRef": "Task_11",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 990,
+        "y": 532
+      },
+      {
+        "x": 1140,
+        "y": 532
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_26",
+    "sourceRef": "Task_11",
+    "targetRef": "Task_12",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1260,
+        "y": 532
+      },
+      {
+        "x": 1410,
+        "y": 532
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_27",
+    "sourceRef": "ParGW_4_join",
+    "targetRef": "ParGW_2_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2230,
+        "y": 332
+      },
+      {
+        "x": 2435,
+        "y": 332
+      },
+      {
+        "x": 2435,
+        "y": 407
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_28",
+    "sourceRef": "Task_12",
+    "targetRef": "ParGW_2_join",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1530,
+        "y": 532
+      },
+      {
+        "x": 2435,
+        "y": 532
+      },
+      {
+        "x": 2435,
+        "y": 457
+      }
+    ],
+    "color": null
+  },
+  {
+    "id": "Flow_29",
+    "sourceRef": "ParGW_2_join",
+    "targetRef": "End_1",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 2460,
+        "y": 432
+      },
+      {
+        "x": 2640,
+        "y": 432
+      }
+    ],
+    "color": null
+  }
+]

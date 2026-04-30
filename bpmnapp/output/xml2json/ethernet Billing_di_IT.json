@@ -1,0 +1,311 @@
+[
+  {
+    "id": "Task_SEAP_PublishRates",
+    "type": "task",
+    "name": "Publish Standard/List Rates (SEAP)",
+    "x": 330,
+    "y": 160,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_ETL_Extract",
+    "type": "task",
+    "name": "Extract Rates from SEAP",
+    "x": 510,
+    "y": 160,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_ETL_Transform",
+    "type": "task",
+    "name": "Transform/Map to SA/SA-UP Schema",
+    "x": 690,
+    "y": 160,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_ETL_Load",
+    "type": "task",
+    "name": "Load Rates into SA/SA-UP (UB)",
+    "x": 870,
+    "y": 160,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Controls_Validate",
+    "type": "task",
+    "name": "Validate Load (counts/effective dates)",
+    "x": 1050,
+    "y": 160,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Task_Incident",
+    "type": "task",
+    "name": "Raise Incident / Rollback / Re-run Load",
+    "x": 1410,
+    "y": 310,
+    "height": 80,
+    "width": 100,
+    "shape": "rectangle",
+    "color": "blue",
+    "applications": []
+  },
+  {
+    "id": "Start_Timer_RateRefresh",
+    "type": "event",
+    "name": "Scheduled Rate Refresh",
+    "x": 150,
+    "y": 182,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "End_RatesAvailable",
+    "type": "event",
+    "name": "Rates Available in UB",
+    "x": 1410,
+    "y": 32,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "End_RateRefreshFailed",
+    "type": "event",
+    "name": "Rate Refresh Failed",
+    "x": 1590,
+    "y": 332,
+    "height": 36,
+    "width": 36,
+    "shape": "circle",
+    "color": "blue"
+  },
+  {
+    "id": "Gateway_ValidatePassed",
+    "name": "Validation Passed?",
+    "soureRef": [
+      "Task_Controls_Validate"
+    ],
+    "targetRef": [
+      "End_RatesAvailable",
+      "Task_Incident"
+    ],
+    "type": "exclusive",
+    "shape": "diamond",
+    "x": 1230,
+    "y": 175,
+    "width": 50,
+    "height": 50,
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_1",
+    "sourceRef": "Start_Timer_RateRefresh",
+    "targetRef": "Task_SEAP_PublishRates",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 186,
+        "y": 200
+      },
+      {
+        "x": 330,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_2",
+    "sourceRef": "Task_SEAP_PublishRates",
+    "targetRef": "Task_ETL_Extract",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 430,
+        "y": 200
+      },
+      {
+        "x": 510,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_3",
+    "sourceRef": "Task_ETL_Extract",
+    "targetRef": "Task_ETL_Transform",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 610,
+        "y": 200
+      },
+      {
+        "x": 690,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_4",
+    "sourceRef": "Task_ETL_Transform",
+    "targetRef": "Task_ETL_Load",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 790,
+        "y": 200
+      },
+      {
+        "x": 870,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_5",
+    "sourceRef": "Task_ETL_Load",
+    "targetRef": "Task_Controls_Validate",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 970,
+        "y": 200
+      },
+      {
+        "x": 1050,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_6",
+    "sourceRef": "Task_Controls_Validate",
+    "targetRef": "Gateway_ValidatePassed",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1150,
+        "y": 200
+      },
+      {
+        "x": 1230,
+        "y": 200
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_Yes",
+    "sourceRef": "Gateway_ValidatePassed",
+    "targetRef": "End_RatesAvailable",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 200
+      },
+      {
+        "x": 1310,
+        "y": 200
+      },
+      {
+        "x": 1310,
+        "y": 50
+      },
+      {
+        "x": 1380,
+        "y": 50
+      },
+      {
+        "x": 1410,
+        "y": 50
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_No",
+    "sourceRef": "Gateway_ValidatePassed",
+    "targetRef": "Task_Incident",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1280,
+        "y": 200
+      },
+      {
+        "x": 1310,
+        "y": 200
+      },
+      {
+        "x": 1310,
+        "y": 350
+      },
+      {
+        "x": 1380,
+        "y": 350
+      },
+      {
+        "x": 1410,
+        "y": 350
+      }
+    ],
+    "color": "blue"
+  },
+  {
+    "id": "Flow_RR_IncidentEnd",
+    "sourceRef": "Task_Incident",
+    "targetRef": "End_RateRefreshFailed",
+    "type": "flow",
+    "shape": "line",
+    "waypoints": [
+      {
+        "x": 1510,
+        "y": 350
+      },
+      {
+        "x": 1590,
+        "y": 350
+      }
+    ],
+    "color": "blue"
+  }
+]
