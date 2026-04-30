@@ -12,7 +12,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4034.5 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4050.7 millisecs"
       ],
       "errors": []
     },
@@ -28,7 +28,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4474.5 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4076.9 millisecs"
       ],
       "errors": []
     },
@@ -44,7 +44,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4005.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4006.1 millisecs"
       ],
       "errors": []
     },
@@ -60,7 +60,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3911.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4016.3 millisecs"
       ],
       "errors": []
     },
@@ -76,7 +76,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3974.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4158.1 millisecs"
       ],
       "errors": []
     },
@@ -92,7 +92,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3828.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3960.4 millisecs"
       ],
       "errors": []
     },
@@ -108,7 +108,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=1852.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2085.0 millisecs"
       ],
       "errors": []
     },
@@ -124,7 +124,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=103.7 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=95.7 millisecs"
       ],
       "errors": []
     },
@@ -140,7 +140,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4822.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4868.8 millisecs"
       ],
       "errors": []
     },
@@ -156,7 +156,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3192.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2962.1 millisecs"
       ],
       "errors": []
     },
@@ -172,7 +172,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3922.4 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3895.7 millisecs"
       ],
       "errors": [
         {
@@ -195,7 +195,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4525.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3951.4 millisecs"
       ],
       "errors": []
     },
@@ -211,7 +211,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3805.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3533.4 millisecs"
       ],
       "errors": []
     },
@@ -227,7 +227,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=1911.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=1808.9 millisecs"
       ],
       "errors": []
     },
@@ -243,7 +243,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=112.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=83.9 millisecs"
       ],
       "errors": []
     },
@@ -259,7 +259,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3843.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3502.1 millisecs"
       ],
       "errors": []
     },
@@ -275,7 +275,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4065.4 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4177.1 millisecs"
       ],
       "errors": []
     },
@@ -291,7 +291,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4238.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3676.4 millisecs"
       ],
       "errors": [
         {
@@ -314,7 +314,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=2621.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=1916.0 millisecs"
       ],
       "errors": []
     },
@@ -330,7 +330,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=339.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=121.2 millisecs"
       ],
       "errors": []
     },
@@ -346,7 +346,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=138.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=239.5 millisecs"
       ],
       "errors": []
     },
@@ -362,7 +362,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4238.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4035.7 millisecs"
       ],
       "errors": []
     },
@@ -378,7 +378,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4002.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4111.4 millisecs"
       ],
       "errors": []
     },
@@ -394,7 +394,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4348.5 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4040.1 millisecs"
       ],
       "errors": []
     },
@@ -410,7 +410,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4107.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3233.9 millisecs"
       ],
       "errors": []
     },
@@ -426,7 +426,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=2093.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=1643.0 millisecs"
       ],
       "errors": []
     },
@@ -442,7 +442,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=68.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=85.9 millisecs"
       ],
       "errors": []
     },
@@ -458,7 +458,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3966.4 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4183.6 millisecs"
       ],
       "errors": []
     },
@@ -474,7 +474,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4242.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4024.2 millisecs"
       ],
       "errors": []
     },
@@ -490,7 +490,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3997.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3890.5 millisecs"
       ],
       "errors": []
     },
@@ -506,7 +506,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4106.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3435.9 millisecs"
       ],
       "errors": []
     },
@@ -522,7 +522,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=1803.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=1805.8 millisecs"
       ],
       "errors": []
     },
@@ -538,7 +538,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=151.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=126.7 millisecs"
       ],
       "errors": []
     },
@@ -554,7 +554,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=5272.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4095.8 millisecs"
       ],
       "errors": []
     },
@@ -570,7 +570,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4970.2 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3989.5 millisecs"
       ],
       "errors": []
     },
@@ -586,7 +586,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4007.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4265.6 millisecs"
       ],
       "errors": []
     },
@@ -602,7 +602,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3914.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4178.0 millisecs"
       ],
       "errors": []
     },
@@ -618,7 +618,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3856.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4154.6 millisecs"
       ],
       "errors": []
     },
@@ -634,7 +634,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=2206.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2487.1 millisecs"
       ],
       "errors": []
     },
@@ -650,7 +650,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=214.7 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=332.5 millisecs"
       ],
       "errors": []
     },
@@ -666,7 +666,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4504.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4146.5 millisecs"
       ],
       "errors": []
     },
@@ -682,7 +682,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4148.4 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4012.9 millisecs"
       ],
       "errors": []
     },
@@ -698,7 +698,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4146.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3919.1 millisecs"
       ],
       "errors": []
     },
@@ -714,7 +714,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3917.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3897.4 millisecs"
       ],
       "errors": []
     },
@@ -730,7 +730,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=1985.7 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2002.6 millisecs"
       ],
       "errors": []
     },
@@ -746,7 +746,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=172.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=151.0 millisecs"
       ],
       "errors": []
     },
@@ -762,7 +762,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4626.4 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4388.9 millisecs"
       ],
       "errors": []
     },
@@ -778,7 +778,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3972.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4323.4 millisecs"
       ],
       "errors": []
     },
@@ -794,7 +794,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4003.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4063.5 millisecs"
       ],
       "errors": []
     },
@@ -810,7 +810,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4183.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3991.2 millisecs"
       ],
       "errors": []
     },
@@ -826,7 +826,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4251.6 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4137.6 millisecs"
       ],
       "errors": []
     },
@@ -842,7 +842,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4171.8 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3928.8 millisecs"
       ],
       "errors": []
     },
@@ -858,7 +858,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=2089.0 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2464.5 millisecs"
       ],
       "errors": []
     },
@@ -874,7 +874,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=80.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=246.1 millisecs"
       ],
       "errors": []
     },
@@ -890,7 +890,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3923.7 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3929.4 millisecs"
       ],
       "errors": []
     },
@@ -906,7 +906,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3848.5 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4238.6 millisecs"
       ],
       "errors": []
     },
@@ -922,7 +922,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4531.5 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3986.0 millisecs"
       ],
       "errors": []
     },
@@ -938,7 +938,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=4003.2 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4523.0 millisecs"
       ],
       "errors": []
     },
@@ -954,7 +954,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3896.3 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=3869.3 millisecs"
       ],
       "errors": []
     },
@@ -970,7 +970,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=3731.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=4125.4 millisecs"
       ],
       "errors": []
     },
@@ -986,7 +986,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=1902.9 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=2816.6 millisecs"
       ],
       "errors": []
     },
@@ -1002,7 +1002,7 @@
       "color": null,
       "applications": [],
       "metrics": [
-        "duarationDataSet\nkey=avg duration\nvalue=28.1 millisecs"
+        "duarationDataSet\nkey=avg duration\nvalue=102.8 millisecs"
       ],
       "errors": []
     },
@@ -2721,13 +2721,13 @@
   ],
   "notes": [
     {
-      "id": "note-1777554766121-2b470e",
-      "x": 1528.6319580078125,
-      "y": 461.53125,
+      "id": "note-1777572264670-eee3d8",
+      "x": 1766.5660400390625,
+      "y": 468.53125,
       "width": 180,
       "height": 130,
-      "color": "#fecaca",
-      "text": "Column removed from table in sprint 7, 4-30-26, request to be readded as it is need for BB Test, light intensity calibration.\n\nC.Poulos"
+      "color": "#fed7aa",
+      "text": "Sql Error C.Poulos"
     }
   ]
 }

@@ -20,6 +20,21 @@ function normalizeRequestedJsonPath(filePath) {
   return path.normalize(trimmedPath)
 }
 
+function resolvePathWithinOutputDir(normalizedPath) {
+  if (!normalizedPath) {
+    return ''
+  }
+
+  const outputDir = path.resolve(__dirname, 'output', 'xml2json')
+  const candidatePath = path.resolve(outputDir, normalizedPath)
+  const relativeToOutput = path.relative(outputDir, candidatePath)
+  if (relativeToOutput.startsWith('..') || path.isAbsolute(relativeToOutput)) {
+    return ''
+  }
+
+  return candidatePath
+}
+
 function resolveDiagramReadPath(filePath) {
   const normalizedPath = normalizeRequestedJsonPath(filePath)
   if (!normalizedPath) {
@@ -30,8 +45,7 @@ function resolveDiagramReadPath(filePath) {
     return normalizedPath
   }
 
-  const outputDir = path.resolve(__dirname, 'output', 'xml2json')
-  return path.join(outputDir, path.basename(normalizedPath))
+  return resolvePathWithinOutputDir(normalizedPath)
 }
 
 function resolveDiagramWritePath(filePath) {
@@ -44,11 +58,10 @@ function resolveDiagramWritePath(filePath) {
     return normalizedPath
   }
 
-  const targetFileName = normalizedPath.toLowerCase().endsWith('.json')
-    ? path.basename(normalizedPath)
-    : `${path.basename(normalizedPath)}.json`
-  const outputDir = path.resolve(__dirname, 'output', 'xml2json')
-  return path.join(outputDir, targetFileName)
+  const targetPath = normalizedPath.toLowerCase().endsWith('.json')
+    ? normalizedPath
+    : `${normalizedPath}.json`
+  return resolvePathWithinOutputDir(targetPath)
 }
 
 function saveDiagramPlugin() {
@@ -63,15 +76,14 @@ function saveDiagramPlugin() {
 
         try {
           const requestUrl = new URL(req.url || '/', 'http://localhost')
-          const rawName = requestUrl.pathname.replace(/^\/+/, '')
-          const fileName = path.basename(decodeURIComponent(rawName || '')).trim()
-          if (!fileName) {
+          const rawPath = requestUrl.pathname.replace(/^\/+/, '')
+          const requestedPath = normalizeRequestedJsonPath(decodeURIComponent(rawPath || ''))
+          const targetPath = resolvePathWithinOutputDir(requestedPath)
+          if (!targetPath) {
             next()
             return
           }
 
-          const outputDir = path.resolve(__dirname, 'output', 'xml2json')
-          const targetPath = path.join(outputDir, fileName)
           const fileContent = await fs.readFile(targetPath)
           res.statusCode = 200
           res.setHeader('Content-Type', 'application/json; charset=utf-8')

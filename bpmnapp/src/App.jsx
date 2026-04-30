@@ -3094,7 +3094,13 @@ function App() {
                   <button type="button" onClick={() => onDialogOptionClick('SubProcesses')}>SubProcesses</button>
                   <button type="button" onClick={() => onDialogOptionClick('Metrics')}>Metrics</button>
                   <button type="button" onClick={() => onDialogOptionClick('Volumes')}>Volumes</button>
-                  <button type="button" onClick={() => onDialogOptionClick('Outages')}>Outages</button>
+                  <button
+                    type="button"
+                    onClick={() => onDialogOptionClick('Outages')}
+                    style={{ color: getTaskErrors(taskMenuState.taskId).length ? '#dc2626' : undefined }}
+                  >
+                    Outages
+                  </button>
                   <button type="button" onClick={() => onDialogOptionClick('Performance Score')}>Performance Score</button>
                 </div>
               </div>
