@@ -935,6 +935,13 @@ function drawDiagram(
   const flows = items.filter((item) => item.shape === 'line')
   const shapes = items.filter((item) => item.shape !== 'line')
   const flowStatsByNodeId = new Map()
+  const maxFlowTransactionCount = flows.reduce((maxValue, flow) => {
+    const txn = parseNumber(flow?.transactionCount)
+    if (Number.isFinite(txn) && txn > maxValue) {
+      return txn
+    }
+    return maxValue
+  }, 1)
 
   const ensureStats = (nodeId) => {
     const key = String(nodeId || '')
@@ -942,6 +949,84 @@ function drawDiagram(
       flowStatsByNodeId.set(key, { incoming: 0, outgoing: 0 })
     }
     return flowStatsByNodeId.get(key)
+  }
+
+  const getFlowStrokeWidth = (flow) => {
+    const explicitStrokeWidth = parseNumber(flow?.strokeWidth)
+    if (Number.isFinite(explicitStrokeWidth) && explicitStrokeWidth > 0) {
+      return explicitStrokeWidth
+    }
+
+    const explicitLineWidth = parseNumber(flow?.lineWidth)
+    if (Number.isFinite(explicitLineWidth) && explicitLineWidth > 0) {
+      return explicitLineWidth
+    }
+
+    const txnCount = parseNumber(flow?.transactionCount)
+    if (Number.isFinite(txnCount) && txnCount > 0) {
+      return Math.max(1, Math.min(18, txnCount / 5))
+    }
+
+    return 2
+  }
+
+  const getFlowLabelPoint = (waypoints) => {
+    if (!Array.isArray(waypoints) || waypoints.length < 2) {
+      return null
+    }
+
+    let totalLength = 0
+    const segments = []
+    for (let i = 1; i < waypoints.length; i += 1) {
+      const x1 = parseNumber(waypoints[i - 1]?.x) ?? 0
+      const y1 = parseNumber(waypoints[i - 1]?.y) ?? 0
+      const x2 = parseNumber(waypoints[i]?.x) ?? 0
+      const y2 = parseNumber(waypoints[i]?.y) ?? 0
+      const length = Math.hypot(x2 - x1, y2 - y1)
+      segments.push({ x1, y1, x2, y2, length })
+      totalLength += length
+    }
+
+    if (totalLength <= 0) {
+      const first = waypoints[0]
+      return { x: (parseNumber(first?.x) ?? 0) + offsetX, y: (parseNumber(first?.y) ?? 0) + offsetY }
+    }
+
+    const half = totalLength / 2
+    let traversed = 0
+    for (const segment of segments) {
+      if (traversed + segment.length >= half) {
+        const t = (half - traversed) / segment.length
+        const x = segment.x1 + (segment.x2 - segment.x1) * t
+        const y = segment.y1 + (segment.y2 - segment.y1) * t
+        return { x: x + offsetX, y: y + offsetY }
+      }
+      traversed += segment.length
+    }
+
+    const last = waypoints[waypoints.length - 1]
+    return { x: (parseNumber(last?.x) ?? 0) + offsetX, y: (parseNumber(last?.y) ?? 0) + offsetY }
+  }
+
+  const getRateColorForFlow = (flow) => {
+    const txnCount = parseNumber(flow?.transactionCount)
+    if (!Number.isFinite(txnCount) || txnCount <= 0) {
+      return '#2563eb'
+    }
+
+    if (txnCount <= 10) {
+      return '#2563eb'
+    }
+
+    const maxRedTxn = Math.max(11, maxFlowTransactionCount)
+    const ratio = Math.max(0, Math.min(1, (txnCount - 11) / (maxRedTxn - 11 || 1)))
+
+    const start = { r: 248, g: 113, b: 113 }
+    const end = { r: 127, g: 29, b: 29 }
+    const r = Math.round(start.r + (end.r - start.r) * ratio)
+    const g = Math.round(start.g + (end.g - start.g) * ratio)
+    const b = Math.round(start.b + (end.b - start.b) * ratio)
+    return `rgb(${r}, ${g}, ${b})`
   }
 
   for (const flow of flows) {
@@ -959,8 +1044,9 @@ function drawDiagram(
 
     ctx.save()
     ctx.beginPath()
-    ctx.strokeStyle = flow.color || '#2563eb'
-    ctx.lineWidth = 2
+    const flowColor = getRateColorForFlow(flow)
+    ctx.strokeStyle = flowColor
+    ctx.lineWidth = getFlowStrokeWidth(flow)
 
     for (let i = 0; i < waypoints.length; i += 1) {
       const x = (waypoints[i]?.x ?? 0) + offsetX
@@ -982,7 +1068,34 @@ function drawDiagram(
       const fromY = (secondLast?.y ?? 0) + offsetY
       const toX = (last?.x ?? 0) + offsetX
       const toY = (last?.y ?? 0) + offsetY
-      drawArrowHead(ctx, fromX, fromY, toX, toY, flow.color || '#2563eb')
+      drawArrowHead(ctx, fromX, fromY, toX, toY, flowColor)
+    }
+
+    const txnCount = parseNumber(flow?.transactionCount)
+    if (Number.isFinite(txnCount) && txnCount >= 0) {
+      const labelPoint = getFlowLabelPoint(waypoints)
+      if (labelPoint) {
+        const text = String(Math.round(txnCount))
+        ctx.save()
+        ctx.font = '11px Arial, sans-serif'
+        ctx.textAlign = 'center'
+        ctx.textBaseline = 'middle'
+        const textWidth = ctx.measureText(text).width
+        const boxWidth = Math.max(16, textWidth + 10)
+        const boxHeight = 14
+        const boxX = labelPoint.x - boxWidth / 2
+        const boxY = labelPoint.y - boxHeight / 2 - 10
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)'
+        ctx.strokeStyle = '#94a3b8'
+        ctx.lineWidth = 1
+        ctx.fillRect(boxX, boxY, boxWidth, boxHeight)
+        ctx.strokeRect(boxX, boxY, boxWidth, boxHeight)
+
+        ctx.fillStyle = '#0f172a'
+        ctx.fillText(text, labelPoint.x, boxY + boxHeight / 2)
+        ctx.restore()
+      }
     }
   }
 
