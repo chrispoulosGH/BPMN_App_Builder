@@ -935,6 +935,9 @@ function drawDiagram(
   const flows = items.filter((item) => item.shape === 'line')
   const shapes = items.filter((item) => item.shape !== 'line')
   const flowStatsByNodeId = new Map()
+  const baseFlowColor = '#2563eb'
+  const baseFlowWidth = 2
+  const shadowFlowColor = 'rgba(34, 197, 94, 0.28)'
   const maxFlowTransactionCount = flows.reduce((maxValue, flow) => {
     const txn = parseNumber(flow?.transactionCount)
     if (Number.isFinite(txn) && txn > maxValue) {
@@ -951,23 +954,22 @@ function drawDiagram(
     return flowStatsByNodeId.get(key)
   }
 
-  const getFlowStrokeWidth = (flow) => {
-    const explicitStrokeWidth = parseNumber(flow?.strokeWidth)
-    if (Number.isFinite(explicitStrokeWidth) && explicitStrokeWidth > 0) {
-      return explicitStrokeWidth
-    }
-
-    const explicitLineWidth = parseNumber(flow?.lineWidth)
-    if (Number.isFinite(explicitLineWidth) && explicitLineWidth > 0) {
-      return explicitLineWidth
-    }
-
+  const getFlowShadowWidth = (flow) => {
     const txnCount = parseNumber(flow?.transactionCount)
-    if (Number.isFinite(txnCount) && txnCount > 0) {
-      return Math.max(1, Math.min(18, txnCount / 5))
+    
+    // 0 count = no shadow
+    if (!Number.isFinite(txnCount) || txnCount <= 0) {
+      return 0
     }
-
-    return 2
+    
+    // 1+ counts: scale shadow width proportionally to transaction count
+    if (maxFlowTransactionCount <= 0) {
+      return 0
+    }
+    
+    const ratio = txnCount / maxFlowTransactionCount
+    // Shadow width (2x pronounced): 4px minimum at count=1, scales up to 40px at max count
+    return 4 + (ratio * 36)
   }
 
   const getFlowLabelPoint = (waypoints) => {
@@ -1008,27 +1010,6 @@ function drawDiagram(
     return { x: (parseNumber(last?.x) ?? 0) + offsetX, y: (parseNumber(last?.y) ?? 0) + offsetY }
   }
 
-  const getRateColorForFlow = (flow) => {
-    const txnCount = parseNumber(flow?.transactionCount)
-    if (!Number.isFinite(txnCount) || txnCount <= 0) {
-      return '#2563eb'
-    }
-
-    if (txnCount <= 10) {
-      return '#2563eb'
-    }
-
-    const maxRedTxn = Math.max(11, maxFlowTransactionCount)
-    const ratio = Math.max(0, Math.min(1, (txnCount - 11) / (maxRedTxn - 11 || 1)))
-
-    const start = { r: 248, g: 113, b: 113 }
-    const end = { r: 127, g: 29, b: 29 }
-    const r = Math.round(start.r + (end.r - start.r) * ratio)
-    const g = Math.round(start.g + (end.g - start.g) * ratio)
-    const b = Math.round(start.b + (end.b - start.b) * ratio)
-    return `rgb(${r}, ${g}, ${b})`
-  }
-
   for (const flow of flows) {
     const sourceStats = ensureStats(flow.sourceRef)
     sourceStats.outgoing += 1
@@ -1044,9 +1025,7 @@ function drawDiagram(
 
     ctx.save()
     ctx.beginPath()
-    const flowColor = getRateColorForFlow(flow)
-    ctx.strokeStyle = flowColor
-    ctx.lineWidth = getFlowStrokeWidth(flow)
+    const shadowWidth = getFlowShadowWidth(flow)
 
     for (let i = 0; i < waypoints.length; i += 1) {
       const x = (waypoints[i]?.x ?? 0) + offsetX
@@ -1058,6 +1037,22 @@ function drawDiagram(
       }
     }
 
+    if (shadowWidth > 0) {
+      ctx.save()
+      ctx.strokeStyle = shadowFlowColor
+      ctx.lineWidth = shadowWidth
+      ctx.lineCap = 'butt'
+      ctx.lineJoin = 'round'
+      ctx.stroke()
+      ctx.restore()
+    }
+
+    ctx.save()
+    ctx.strokeStyle = baseFlowColor
+    ctx.lineWidth = baseFlowWidth
+    ctx.lineCap = 'butt'
+    ctx.lineJoin = 'round'
+
     ctx.stroke()
     ctx.restore()
 
@@ -1068,7 +1063,7 @@ function drawDiagram(
       const fromY = (secondLast?.y ?? 0) + offsetY
       const toX = (last?.x ?? 0) + offsetX
       const toY = (last?.y ?? 0) + offsetY
-      drawArrowHead(ctx, fromX, fromY, toX, toY, flowColor)
+      drawArrowHead(ctx, fromX, fromY, toX, toY, baseFlowColor)
     }
 
     const txnCount = parseNumber(flow?.transactionCount)
